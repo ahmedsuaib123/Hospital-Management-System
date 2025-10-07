@@ -32,6 +32,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.SignupButton = new System.Windows.Forms.Button();
+            this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
+            this.ForgetPasswordLinkLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -66,17 +70,70 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Password";
             // 
-            // Form1
+            // LoginButton
+            // 
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.Location = new System.Drawing.Point(401, 263);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(67, 33);
+            this.LoginButton.TabIndex = 9;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            // 
+            // SignupButton
+            // 
+            this.SignupButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SignupButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupButton.Location = new System.Drawing.Point(167, 263);
+            this.SignupButton.Name = "SignupButton";
+            this.SignupButton.Size = new System.Drawing.Size(165, 33);
+            this.SignupButton.TabIndex = 10;
+            this.SignupButton.Text = "Create Account";
+            this.SignupButton.UseVisualStyleBackColor = true;
+            // 
+            // ShowPasswordCheckBox
+            // 
+            this.ShowPasswordCheckBox.AutoSize = true;
+            this.ShowPasswordCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(266, 221);
+            this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
+            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(102, 17);
+            this.ShowPasswordCheckBox.TabIndex = 11;
+            this.ShowPasswordCheckBox.Text = "Show Password";
+            this.ShowPasswordCheckBox.UseVisualStyleBackColor = false;
+            // 
+            // ForgetPasswordLinkLabel
+            // 
+            this.ForgetPasswordLinkLabel.ActiveLinkColor = System.Drawing.Color.Black;
+            this.ForgetPasswordLinkLabel.AutoSize = true;
+            this.ForgetPasswordLinkLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ForgetPasswordLinkLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ForgetPasswordLinkLabel.LinkColor = System.Drawing.Color.Black;
+            this.ForgetPasswordLinkLabel.Location = new System.Drawing.Point(382, 221);
+            this.ForgetPasswordLinkLabel.Name = "ForgetPasswordLinkLabel";
+            this.ForgetPasswordLinkLabel.Size = new System.Drawing.Size(86, 13);
+            this.ForgetPasswordLinkLabel.TabIndex = 12;
+            this.ForgetPasswordLinkLabel.TabStop = true;
+            this.ForgetPasswordLinkLabel.Text = "Forget Password";
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ForgetPasswordLinkLabel);
+            this.Controls.Add(this.ShowPasswordCheckBox);
+            this.Controls.Add(this.SignupButton);
+            this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Login";
+            this.Text = "Hospital Management System";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,6 +145,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.Button SignupButton;
+        private System.Windows.Forms.CheckBox ShowPasswordCheckBox;
+        private System.Windows.Forms.LinkLabel ForgetPasswordLinkLabel;
     }
 }
 
