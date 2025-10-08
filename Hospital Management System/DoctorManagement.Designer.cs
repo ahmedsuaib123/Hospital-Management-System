@@ -57,6 +57,7 @@
             this.DoctorsDataGridView.ReadOnly = true;
             this.DoctorsDataGridView.Size = new System.Drawing.Size(647, 258);
             this.DoctorsDataGridView.TabIndex = 2;
+            this.DoctorsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoctorsDataGridView_CellContentClick);
             // 
             // BackButton
             // 
@@ -117,6 +118,7 @@
             this.Name = "DoctorManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Management System";
+            this.Load += new System.EventHandler(this.DoctorManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DoctorsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

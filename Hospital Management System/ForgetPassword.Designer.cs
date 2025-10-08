@@ -44,7 +44,7 @@
             // UsernameLabel
             // 
             this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Location = new System.Drawing.Point(196, 133);
+            this.UsernameLabel.Location = new System.Drawing.Point(187, 101);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(83, 13);
             this.UsernameLabel.TabIndex = 0;
@@ -52,14 +52,14 @@
             // 
             // UsernameTextBox
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(318, 130);
+            this.UsernameTextBox.Location = new System.Drawing.Point(309, 98);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(181, 20);
             this.UsernameTextBox.TabIndex = 1;
             // 
             // ContactTextBox
             // 
-            this.ContactTextBox.Location = new System.Drawing.Point(318, 182);
+            this.ContactTextBox.Location = new System.Drawing.Point(309, 150);
             this.ContactTextBox.Name = "ContactTextBox";
             this.ContactTextBox.Size = new System.Drawing.Size(181, 20);
             this.ContactTextBox.TabIndex = 3;
@@ -67,7 +67,7 @@
             // ContactLabel
             // 
             this.ContactLabel.AutoSize = true;
-            this.ContactLabel.Location = new System.Drawing.Point(173, 185);
+            this.ContactLabel.Location = new System.Drawing.Point(164, 153);
             this.ContactLabel.Name = "ContactLabel";
             this.ContactLabel.Size = new System.Drawing.Size(106, 13);
             this.ContactLabel.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             // NewPasswordTextBox
             // 
-            this.NewPasswordTextBox.Location = new System.Drawing.Point(318, 235);
+            this.NewPasswordTextBox.Location = new System.Drawing.Point(309, 203);
             this.NewPasswordTextBox.Name = "NewPasswordTextBox";
             this.NewPasswordTextBox.Size = new System.Drawing.Size(181, 20);
             this.NewPasswordTextBox.TabIndex = 5;
@@ -84,7 +84,7 @@
             // NewPasswordLabel
             // 
             this.NewPasswordLabel.AutoSize = true;
-            this.NewPasswordLabel.Location = new System.Drawing.Point(173, 238);
+            this.NewPasswordLabel.Location = new System.Drawing.Point(164, 206);
             this.NewPasswordLabel.Name = "NewPasswordLabel";
             this.NewPasswordLabel.Size = new System.Drawing.Size(106, 13);
             this.NewPasswordLabel.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             // ConfirmPasswordTextBox
             // 
-            this.ConfirmPasswordTextBox.Location = new System.Drawing.Point(318, 289);
+            this.ConfirmPasswordTextBox.Location = new System.Drawing.Point(309, 257);
             this.ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
             this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(181, 20);
             this.ConfirmPasswordTextBox.TabIndex = 7;
@@ -101,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 292);
+            this.label3.Location = new System.Drawing.Point(151, 260);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 13);
             this.label3.TabIndex = 6;
@@ -111,7 +111,7 @@
             // 
             this.VerifyButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.VerifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.VerifyButton.Location = new System.Drawing.Point(540, 125);
+            this.VerifyButton.Location = new System.Drawing.Point(531, 93);
             this.VerifyButton.Name = "VerifyButton";
             this.VerifyButton.Size = new System.Drawing.Size(87, 29);
             this.VerifyButton.TabIndex = 12;
@@ -122,7 +122,7 @@
             // 
             this.VerifyButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.VerifyButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.VerifyButton1.Location = new System.Drawing.Point(540, 177);
+            this.VerifyButton1.Location = new System.Drawing.Point(531, 145);
             this.VerifyButton1.Name = "VerifyButton1";
             this.VerifyButton1.Size = new System.Drawing.Size(87, 29);
             this.VerifyButton1.TabIndex = 13;
@@ -133,7 +133,7 @@
             // 
             this.ConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ConfirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ConfirmButton.Location = new System.Drawing.Point(366, 348);
+            this.ConfirmButton.Location = new System.Drawing.Point(357, 316);
             this.ConfirmButton.Name = "ConfirmButton";
             this.ConfirmButton.Size = new System.Drawing.Size(87, 29);
             this.ConfirmButton.TabIndex = 14;

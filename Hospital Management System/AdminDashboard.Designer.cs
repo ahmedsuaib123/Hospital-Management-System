@@ -35,7 +35,7 @@
             // 
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutButton.Location = new System.Drawing.Point(492, 371);
+            this.LogoutButton.Location = new System.Drawing.Point(651, 394);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(87, 33);
             this.LogoutButton.TabIndex = 10;

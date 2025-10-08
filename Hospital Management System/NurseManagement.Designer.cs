@@ -132,6 +132,7 @@
             this.Name = "NurseManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Management System";
+            this.Load += new System.EventHandler(this.NurseManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NurseDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
