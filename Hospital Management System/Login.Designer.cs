@@ -28,81 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordLabel = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
             this.SignupButton = new System.Windows.Forms.Button();
             this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.ForgetPasswordLinkLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // label1
+            // UsernameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(129, 174);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username";
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Location = new System.Drawing.Point(219, 118);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(55, 13);
+            this.UsernameLabel.TabIndex = 0;
+            this.UsernameLabel.Text = "Username";
             // 
-            // textBox1
+            // UsernameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(231, 171);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 20);
-            this.textBox1.TabIndex = 1;
+            this.UsernameTextBox.Location = new System.Drawing.Point(321, 115);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(202, 20);
+            this.UsernameTextBox.TabIndex = 1;
             // 
-            // textBox2
+            // PasswordTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(231, 219);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(202, 20);
-            this.textBox2.TabIndex = 3;
+            this.PasswordTextBox.Location = new System.Drawing.Point(321, 163);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(202, 20);
+            this.PasswordTextBox.TabIndex = 3;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
-            // label2
+            // PasswordLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 222);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Password";
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Location = new System.Drawing.Point(219, 166);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(53, 13);
+            this.PasswordLabel.TabIndex = 2;
+            this.PasswordLabel.Text = "Password";
             // 
             // LoginButton
             // 
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.Location = new System.Drawing.Point(366, 287);
+            this.LoginButton.Location = new System.Drawing.Point(456, 231);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(67, 33);
             this.LoginButton.TabIndex = 9;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // SignupButton
             // 
             this.SignupButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SignupButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignupButton.Location = new System.Drawing.Point(132, 287);
+            this.SignupButton.Location = new System.Drawing.Point(222, 231);
             this.SignupButton.Name = "SignupButton";
             this.SignupButton.Size = new System.Drawing.Size(165, 33);
             this.SignupButton.TabIndex = 10;
             this.SignupButton.Text = "Create Account";
             this.SignupButton.UseVisualStyleBackColor = true;
+            this.SignupButton.Click += new System.EventHandler(this.SignupButton_Click);
             // 
             // ShowPasswordCheckBox
             // 
             this.ShowPasswordCheckBox.AutoSize = true;
             this.ShowPasswordCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.Black;
-            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(231, 245);
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(321, 189);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
             this.ShowPasswordCheckBox.Size = new System.Drawing.Size(102, 17);
             this.ShowPasswordCheckBox.TabIndex = 11;
             this.ShowPasswordCheckBox.Text = "Show Password";
             this.ShowPasswordCheckBox.UseVisualStyleBackColor = false;
+            this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
             // 
             // ForgetPasswordLinkLabel
             // 
@@ -111,26 +115,27 @@
             this.ForgetPasswordLinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.ForgetPasswordLinkLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ForgetPasswordLinkLabel.LinkColor = System.Drawing.Color.Black;
-            this.ForgetPasswordLinkLabel.Location = new System.Drawing.Point(347, 245);
+            this.ForgetPasswordLinkLabel.Location = new System.Drawing.Point(437, 189);
             this.ForgetPasswordLinkLabel.Name = "ForgetPasswordLinkLabel";
             this.ForgetPasswordLinkLabel.Size = new System.Drawing.Size(86, 13);
             this.ForgetPasswordLinkLabel.TabIndex = 12;
             this.ForgetPasswordLinkLabel.TabStop = true;
             this.ForgetPasswordLinkLabel.Text = "Forget Password";
+            this.ForgetPasswordLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ForgetPasswordLinkLabel_LinkClicked);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 382);
             this.Controls.Add(this.ForgetPasswordLinkLabel);
             this.Controls.Add(this.ShowPasswordCheckBox);
             this.Controls.Add(this.SignupButton);
             this.Controls.Add(this.LoginButton);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.PasswordTextBox);
+            this.Controls.Add(this.PasswordLabel);
+            this.Controls.Add(this.UsernameTextBox);
+            this.Controls.Add(this.UsernameLabel);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Management System";
@@ -142,10 +147,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label UsernameLabel;
+        private System.Windows.Forms.TextBox UsernameTextBox;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Button SignupButton;
         private System.Windows.Forms.CheckBox ShowPasswordCheckBox;
