@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Hospital_Management_System
 {
-    public partial class DoctorMangement : Form
+    public partial class DoctorManagement : Form
     {
-        public DoctorMangement()
+        public DoctorManagement()
         {
             InitializeComponent();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            new AdminDashboard().Show();
+            this.Hide();
         }
     }
 }

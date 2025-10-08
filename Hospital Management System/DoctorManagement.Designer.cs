@@ -1,6 +1,6 @@
 ﻿namespace Hospital_Management_System
 {
-    partial class DoctorMangement
+    partial class DoctorManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -68,6 +68,7 @@
             this.BackButton.TabIndex = 19;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // UpdateButton
             // 
