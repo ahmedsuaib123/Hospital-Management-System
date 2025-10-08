@@ -1,6 +1,6 @@
 ﻿namespace Hospital_Management_System
 {
-    partial class DoctorManagement
+    partial class NurseManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -28,56 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DoctorTitleLabel = new System.Windows.Forms.Label();
-            this.DoctorsDataGridView = new System.Windows.Forms.DataGridView();
             this.BackButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DoctorsDataGridView)).BeginInit();
+            this.NurseDataGridView = new System.Windows.Forms.DataGridView();
+            this.NurseTitleLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.NurseDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DoctorTitleLabel
-            // 
-            this.DoctorTitleLabel.AutoSize = true;
-            this.DoctorTitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DoctorTitleLabel.Location = new System.Drawing.Point(344, 24);
-            this.DoctorTitleLabel.Name = "DoctorTitleLabel";
-            this.DoctorTitleLabel.Size = new System.Drawing.Size(76, 23);
-            this.DoctorTitleLabel.TabIndex = 1;
-            this.DoctorTitleLabel.Text = "Doctors";
-            // 
-            // DoctorsDataGridView
-            // 
-            this.DoctorsDataGridView.AllowUserToAddRows = false;
-            this.DoctorsDataGridView.AllowUserToDeleteRows = false;
-            this.DoctorsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DoctorsDataGridView.Location = new System.Drawing.Point(78, 88);
-            this.DoctorsDataGridView.Name = "DoctorsDataGridView";
-            this.DoctorsDataGridView.ReadOnly = true;
-            this.DoctorsDataGridView.Size = new System.Drawing.Size(647, 258);
-            this.DoctorsDataGridView.TabIndex = 2;
             // 
             // BackButton
             // 
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(638, 387);
+            this.BackButton.Location = new System.Drawing.Point(638, 394);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(87, 33);
-            this.BackButton.TabIndex = 19;
+            this.BackButton.TabIndex = 21;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // UpdateButton
             // 
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateButton.Location = new System.Drawing.Point(444, 387);
+            this.UpdateButton.Location = new System.Drawing.Point(444, 394);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(87, 33);
-            this.UpdateButton.TabIndex = 18;
+            this.UpdateButton.TabIndex = 20;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = true;
             // 
@@ -85,10 +63,10 @@
             // 
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteButton.Location = new System.Drawing.Point(271, 387);
+            this.DeleteButton.Location = new System.Drawing.Point(271, 394);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(87, 33);
-            this.DeleteButton.TabIndex = 17;
+            this.DeleteButton.TabIndex = 19;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
             // 
@@ -96,14 +74,38 @@
             // 
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddButton.Location = new System.Drawing.Point(76, 387);
+            this.AddButton.Location = new System.Drawing.Point(76, 394);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(87, 33);
-            this.AddButton.TabIndex = 16;
+            this.AddButton.TabIndex = 18;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             // 
-            // DoctorManagement
+            // NurseDataGridView
+            // 
+            this.NurseDataGridView.AllowUserToAddRows = false;
+            this.NurseDataGridView.AllowUserToDeleteRows = false;
+            this.NurseDataGridView.AllowUserToResizeColumns = false;
+            this.NurseDataGridView.AllowUserToResizeRows = false;
+            this.NurseDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NurseDataGridView.Location = new System.Drawing.Point(76, 79);
+            this.NurseDataGridView.Name = "NurseDataGridView";
+            this.NurseDataGridView.ReadOnly = true;
+            this.NurseDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.NurseDataGridView.Size = new System.Drawing.Size(649, 286);
+            this.NurseDataGridView.TabIndex = 17;
+            // 
+            // NurseTitleLabel
+            // 
+            this.NurseTitleLabel.AutoSize = true;
+            this.NurseTitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NurseTitleLabel.Location = new System.Drawing.Point(362, 24);
+            this.NurseTitleLabel.Name = "NurseTitleLabel";
+            this.NurseTitleLabel.Size = new System.Drawing.Size(68, 23);
+            this.NurseTitleLabel.TabIndex = 16;
+            this.NurseTitleLabel.Text = "Nurses";
+            // 
+            // NurseManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,12 +114,12 @@
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.DoctorsDataGridView);
-            this.Controls.Add(this.DoctorTitleLabel);
-            this.Name = "DoctorManagement";
+            this.Controls.Add(this.NurseDataGridView);
+            this.Controls.Add(this.NurseTitleLabel);
+            this.Name = "NurseManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Management System";
-            ((System.ComponentModel.ISupportInitialize)(this.DoctorsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NurseDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,11 +127,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label DoctorTitleLabel;
-        private System.Windows.Forms.DataGridView DoctorsDataGridView;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.DataGridView NurseDataGridView;
+        private System.Windows.Forms.Label NurseTitleLabel;
     }
 }

@@ -82,6 +82,12 @@
     <Compile Include="NurseDashboard.Designer.cs">
       <DependentUpon>NurseDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="NurseManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseManagement.Designer.cs">
+      <DependentUpon>NurseManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="PatientDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NurseDashboard.resx">
       <DependentUpon>NurseDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseManagement.resx">
+      <DependentUpon>NurseManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientDashboard.resx">
       <DependentUpon>PatientDashboard.cs</DependentUpon>

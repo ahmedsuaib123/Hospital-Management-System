@@ -49,9 +49,15 @@
             // 
             // PatientDataGridView
             // 
+            this.PatientDataGridView.AllowUserToAddRows = false;
+            this.PatientDataGridView.AllowUserToDeleteRows = false;
+            this.PatientDataGridView.AllowUserToResizeColumns = false;
+            this.PatientDataGridView.AllowUserToResizeRows = false;
             this.PatientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PatientDataGridView.Location = new System.Drawing.Point(58, 79);
             this.PatientDataGridView.Name = "PatientDataGridView";
+            this.PatientDataGridView.ReadOnly = true;
+            this.PatientDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.PatientDataGridView.Size = new System.Drawing.Size(649, 286);
             this.PatientDataGridView.TabIndex = 1;
             // 
@@ -111,6 +117,7 @@
             this.Controls.Add(this.PatientDataGridView);
             this.Controls.Add(this.label1);
             this.Name = "PatientManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Management System";
             this.Load += new System.EventHandler(this.PatientManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PatientDataGridView)).EndInit();
