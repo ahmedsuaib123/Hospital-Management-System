@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(164, 150);
+            this.label1.Location = new System.Drawing.Point(129, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 0;
@@ -49,14 +49,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(266, 147);
+            this.textBox1.Location = new System.Drawing.Point(231, 171);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 20);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(266, 195);
+            this.textBox2.Location = new System.Drawing.Point(231, 219);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(202, 20);
             this.textBox2.TabIndex = 3;
@@ -64,7 +64,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(164, 198);
+            this.label2.Location = new System.Drawing.Point(129, 222);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.Location = new System.Drawing.Point(401, 263);
+            this.LoginButton.Location = new System.Drawing.Point(366, 287);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(67, 33);
             this.LoginButton.TabIndex = 9;
@@ -85,7 +85,7 @@
             // 
             this.SignupButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SignupButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignupButton.Location = new System.Drawing.Point(167, 263);
+            this.SignupButton.Location = new System.Drawing.Point(132, 287);
             this.SignupButton.Name = "SignupButton";
             this.SignupButton.Size = new System.Drawing.Size(165, 33);
             this.SignupButton.TabIndex = 10;
@@ -97,7 +97,7 @@
             this.ShowPasswordCheckBox.AutoSize = true;
             this.ShowPasswordCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.Black;
-            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(266, 221);
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(231, 245);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
             this.ShowPasswordCheckBox.Size = new System.Drawing.Size(102, 17);
             this.ShowPasswordCheckBox.TabIndex = 11;
@@ -111,7 +111,7 @@
             this.ForgetPasswordLinkLabel.BackColor = System.Drawing.Color.Transparent;
             this.ForgetPasswordLinkLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ForgetPasswordLinkLabel.LinkColor = System.Drawing.Color.Black;
-            this.ForgetPasswordLinkLabel.Location = new System.Drawing.Point(382, 221);
+            this.ForgetPasswordLinkLabel.Location = new System.Drawing.Point(347, 245);
             this.ForgetPasswordLinkLabel.Name = "ForgetPasswordLinkLabel";
             this.ForgetPasswordLinkLabel.Size = new System.Drawing.Size(86, 13);
             this.ForgetPasswordLinkLabel.TabIndex = 12;
