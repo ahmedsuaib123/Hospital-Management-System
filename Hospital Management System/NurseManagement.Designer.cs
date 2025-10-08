@@ -34,6 +34,7 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.NurseDataGridView = new System.Windows.Forms.DataGridView();
             this.NurseTitleLabel = new System.Windows.Forms.Label();
+            this.DutyScheduleButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NurseDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,17 +100,29 @@
             // 
             this.NurseTitleLabel.AutoSize = true;
             this.NurseTitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NurseTitleLabel.Location = new System.Drawing.Point(362, 24);
+            this.NurseTitleLabel.Location = new System.Drawing.Point(353, 9);
             this.NurseTitleLabel.Name = "NurseTitleLabel";
             this.NurseTitleLabel.Size = new System.Drawing.Size(68, 23);
             this.NurseTitleLabel.TabIndex = 16;
             this.NurseTitleLabel.Text = "Nurses";
+            // 
+            // DutyScheduleButton
+            // 
+            this.DutyScheduleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DutyScheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DutyScheduleButton.Location = new System.Drawing.Point(551, 32);
+            this.DutyScheduleButton.Name = "DutyScheduleButton";
+            this.DutyScheduleButton.Size = new System.Drawing.Size(174, 32);
+            this.DutyScheduleButton.TabIndex = 22;
+            this.DutyScheduleButton.Text = "Duty Schedule";
+            this.DutyScheduleButton.UseVisualStyleBackColor = true;
             // 
             // NurseManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DutyScheduleButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.DeleteButton);
@@ -133,5 +146,6 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.DataGridView NurseDataGridView;
         private System.Windows.Forms.Label NurseTitleLabel;
+        private System.Windows.Forms.Button DutyScheduleButton;
     }
 }
