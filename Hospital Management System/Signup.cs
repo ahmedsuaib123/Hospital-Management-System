@@ -26,5 +26,15 @@ namespace Hospital_Management_System
         {
 
         }
+
+        private void QualificationTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void QualificationLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

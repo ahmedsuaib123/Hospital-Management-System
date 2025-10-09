@@ -51,11 +51,15 @@
             this.AddressLabel = new System.Windows.Forms.Label();
             this.QualificationTextBox = new System.Windows.Forms.TextBox();
             this.QualificationLabel = new System.Windows.Forms.Label();
+            this.AvailableSlotTextBox = new System.Windows.Forms.TextBox();
+            this.AvailableSlotLabel = new System.Windows.Forms.Label();
             this.GeneralInformationsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // GeneralInformationsPanel
             // 
+            this.GeneralInformationsPanel.Controls.Add(this.AvailableSlotTextBox);
+            this.GeneralInformationsPanel.Controls.Add(this.AvailableSlotLabel);
             this.GeneralInformationsPanel.Controls.Add(this.QualificationTextBox);
             this.GeneralInformationsPanel.Controls.Add(this.QualificationLabel);
             this.GeneralInformationsPanel.Controls.Add(this.AddressTextBox);
@@ -91,7 +95,7 @@
             "Patient",
             "Doctor",
             "Nurse"});
-            this.CategoryComboBox.Location = new System.Drawing.Point(255, 289);
+            this.CategoryComboBox.Location = new System.Drawing.Point(261, 291);
             this.CategoryComboBox.Name = "CategoryComboBox";
             this.CategoryComboBox.Size = new System.Drawing.Size(74, 25);
             this.CategoryComboBox.TabIndex = 32;
@@ -100,7 +104,7 @@
             // 
             this.CategoryLabel.AutoSize = true;
             this.CategoryLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.CategoryLabel.Location = new System.Drawing.Point(164, 292);
+            this.CategoryLabel.Location = new System.Drawing.Point(170, 294);
             this.CategoryLabel.Name = "CategoryLabel";
             this.CategoryLabel.Size = new System.Drawing.Size(62, 17);
             this.CategoryLabel.TabIndex = 31;
@@ -118,7 +122,7 @@
             "O-",
             "AB+",
             "AB-"});
-            this.BloodGroupComboBox.Location = new System.Drawing.Point(255, 245);
+            this.BloodGroupComboBox.Location = new System.Drawing.Point(261, 250);
             this.BloodGroupComboBox.Name = "BloodGroupComboBox";
             this.BloodGroupComboBox.Size = new System.Drawing.Size(74, 25);
             this.BloodGroupComboBox.TabIndex = 30;
@@ -127,7 +131,7 @@
             // 
             this.BloodGroupLabel.AutoSize = true;
             this.BloodGroupLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.BloodGroupLabel.Location = new System.Drawing.Point(144, 248);
+            this.BloodGroupLabel.Location = new System.Drawing.Point(150, 253);
             this.BloodGroupLabel.Name = "BloodGroupLabel";
             this.BloodGroupLabel.Size = new System.Drawing.Size(82, 17);
             this.BloodGroupLabel.TabIndex = 29;
@@ -135,7 +139,7 @@
             // 
             // ContactTextBox
             // 
-            this.ContactTextBox.Location = new System.Drawing.Point(255, 203);
+            this.ContactTextBox.Location = new System.Drawing.Point(261, 208);
             this.ContactTextBox.Name = "ContactTextBox";
             this.ContactTextBox.Size = new System.Drawing.Size(246, 24);
             this.ContactTextBox.TabIndex = 28;
@@ -144,7 +148,7 @@
             // 
             this.ContactLabel.AutoSize = true;
             this.ContactLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.ContactLabel.Location = new System.Drawing.Point(172, 203);
+            this.ContactLabel.Location = new System.Drawing.Point(178, 208);
             this.ContactLabel.Name = "ContactLabel";
             this.ContactLabel.Size = new System.Drawing.Size(54, 17);
             this.ContactLabel.TabIndex = 27;
@@ -157,7 +161,7 @@
             "Male",
             "Female",
             "Others"});
-            this.comboBox1.Location = new System.Drawing.Point(255, 160);
+            this.comboBox1.Location = new System.Drawing.Point(261, 165);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(84, 25);
             this.comboBox1.TabIndex = 26;
@@ -166,7 +170,7 @@
             // 
             this.GenderLabel.AutoSize = true;
             this.GenderLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.GenderLabel.Location = new System.Drawing.Point(175, 163);
+            this.GenderLabel.Location = new System.Drawing.Point(181, 168);
             this.GenderLabel.Name = "GenderLabel";
             this.GenderLabel.Size = new System.Drawing.Size(51, 17);
             this.GenderLabel.TabIndex = 25;
@@ -174,7 +178,7 @@
             // 
             // AgeTextBox
             // 
-            this.AgeTextBox.Location = new System.Drawing.Point(255, 118);
+            this.AgeTextBox.Location = new System.Drawing.Point(261, 123);
             this.AgeTextBox.Name = "AgeTextBox";
             this.AgeTextBox.ReadOnly = true;
             this.AgeTextBox.Size = new System.Drawing.Size(74, 24);
@@ -184,7 +188,7 @@
             // 
             this.AgeLabel.AutoSize = true;
             this.AgeLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.AgeLabel.Location = new System.Drawing.Point(193, 121);
+            this.AgeLabel.Location = new System.Drawing.Point(199, 126);
             this.AgeLabel.Name = "AgeLabel";
             this.AgeLabel.Size = new System.Drawing.Size(33, 17);
             this.AgeLabel.TabIndex = 23;
@@ -193,7 +197,7 @@
             // DateOfTimeDateTimePicker
             // 
             this.DateOfTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateOfTimeDateTimePicker.Location = new System.Drawing.Point(255, 79);
+            this.DateOfTimeDateTimePicker.Location = new System.Drawing.Point(261, 84);
             this.DateOfTimeDateTimePicker.Name = "DateOfTimeDateTimePicker";
             this.DateOfTimeDateTimePicker.Size = new System.Drawing.Size(84, 24);
             this.DateOfTimeDateTimePicker.TabIndex = 22;
@@ -202,7 +206,7 @@
             // 
             this.DateOfBirthLabel.AutoSize = true;
             this.DateOfBirthLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.DateOfBirthLabel.Location = new System.Drawing.Point(136, 83);
+            this.DateOfBirthLabel.Location = new System.Drawing.Point(142, 88);
             this.DateOfBirthLabel.Name = "DateOfBirthLabel";
             this.DateOfBirthLabel.Size = new System.Drawing.Size(90, 17);
             this.DateOfBirthLabel.TabIndex = 21;
@@ -210,7 +214,7 @@
             // 
             // FullNameTextBox
             // 
-            this.FullNameTextBox.Location = new System.Drawing.Point(255, 39);
+            this.FullNameTextBox.Location = new System.Drawing.Point(261, 44);
             this.FullNameTextBox.Name = "FullNameTextBox";
             this.FullNameTextBox.Size = new System.Drawing.Size(246, 24);
             this.FullNameTextBox.TabIndex = 20;
@@ -219,7 +223,7 @@
             // 
             this.FullNameLabel.AutoSize = true;
             this.FullNameLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.FullNameLabel.Location = new System.Drawing.Point(157, 42);
+            this.FullNameLabel.Location = new System.Drawing.Point(163, 47);
             this.FullNameLabel.Name = "FullNameLabel";
             this.FullNameLabel.Size = new System.Drawing.Size(69, 17);
             this.FullNameLabel.TabIndex = 19;
@@ -271,7 +275,7 @@
             // 
             // AddressTextBox
             // 
-            this.AddressTextBox.Location = new System.Drawing.Point(255, 329);
+            this.AddressTextBox.Location = new System.Drawing.Point(261, 325);
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(133, 24);
             this.AddressTextBox.TabIndex = 37;
@@ -282,7 +286,7 @@
             // 
             this.AddressLabel.AutoSize = true;
             this.AddressLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.AddressLabel.Location = new System.Drawing.Point(172, 332);
+            this.AddressLabel.Location = new System.Drawing.Point(178, 328);
             this.AddressLabel.Name = "AddressLabel";
             this.AddressLabel.Size = new System.Drawing.Size(57, 17);
             this.AddressLabel.TabIndex = 36;
@@ -292,22 +296,43 @@
             // 
             // QualificationTextBox
             // 
-            this.QualificationTextBox.Location = new System.Drawing.Point(255, 372);
+            this.QualificationTextBox.Location = new System.Drawing.Point(261, 325);
             this.QualificationTextBox.Name = "QualificationTextBox";
             this.QualificationTextBox.Size = new System.Drawing.Size(133, 24);
             this.QualificationTextBox.TabIndex = 39;
             this.QualificationTextBox.Visible = false;
+            this.QualificationTextBox.TextChanged += new System.EventHandler(this.QualificationTextBox_TextChanged);
             // 
             // QualificationLabel
             // 
             this.QualificationLabel.AutoSize = true;
             this.QualificationLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.QualificationLabel.Location = new System.Drawing.Point(147, 375);
+            this.QualificationLabel.Location = new System.Drawing.Point(150, 328);
             this.QualificationLabel.Name = "QualificationLabel";
             this.QualificationLabel.Size = new System.Drawing.Size(82, 17);
             this.QualificationLabel.TabIndex = 38;
             this.QualificationLabel.Text = "Qualification";
             this.QualificationLabel.Visible = false;
+            this.QualificationLabel.Click += new System.EventHandler(this.QualificationLabel_Click);
+            // 
+            // AvailableSlotTextBox
+            // 
+            this.AvailableSlotTextBox.Location = new System.Drawing.Point(261, 370);
+            this.AvailableSlotTextBox.Name = "AvailableSlotTextBox";
+            this.AvailableSlotTextBox.Size = new System.Drawing.Size(133, 24);
+            this.AvailableSlotTextBox.TabIndex = 41;
+            this.AvailableSlotTextBox.Visible = false;
+            // 
+            // AvailableSlotLabel
+            // 
+            this.AvailableSlotLabel.AutoSize = true;
+            this.AvailableSlotLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.AvailableSlotLabel.Location = new System.Drawing.Point(147, 373);
+            this.AvailableSlotLabel.Name = "AvailableSlotLabel";
+            this.AvailableSlotLabel.Size = new System.Drawing.Size(88, 17);
+            this.AvailableSlotLabel.TabIndex = 40;
+            this.AvailableSlotLabel.Text = "Available Slot";
+            this.AvailableSlotLabel.Visible = false;
             // 
             // Signup
             // 
@@ -348,5 +373,7 @@
         private System.Windows.Forms.Label AddressLabel;
         private System.Windows.Forms.TextBox QualificationTextBox;
         private System.Windows.Forms.Label QualificationLabel;
+        private System.Windows.Forms.TextBox AvailableSlotTextBox;
+        private System.Windows.Forms.Label AvailableSlotLabel;
     }
 }

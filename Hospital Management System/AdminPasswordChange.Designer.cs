@@ -1,6 +1,6 @@
 ﻿namespace Hospital_Management_System
 {
-    partial class CheckAccountStatus
+    partial class AdminPasswordChange
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // CheckAccountStatus
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "CheckAccountStatus";
-            this.Text = "Hospital Management System";
-            this.ResumeLayout(false);
-
+            this.Text = "AdminPasswordChange";
         }
 
         #endregion
