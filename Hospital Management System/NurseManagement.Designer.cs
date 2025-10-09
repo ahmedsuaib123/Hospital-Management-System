@@ -116,6 +116,7 @@
             this.DutyScheduleButton.TabIndex = 22;
             this.DutyScheduleButton.Text = "Duty Schedule";
             this.DutyScheduleButton.UseVisualStyleBackColor = true;
+            this.DutyScheduleButton.Click += new System.EventHandler(this.DutyScheduleButton_Click);
             // 
             // NurseManagement
             // 

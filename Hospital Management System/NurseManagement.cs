@@ -43,5 +43,11 @@ namespace Hospital_Management_System
 
 
         }
+
+        private void DutyScheduleButton_Click(object sender, EventArgs e)
+        {
+            new NurseDutySchedule().Show();
+            this.Hide();
+        }
     }
 }
