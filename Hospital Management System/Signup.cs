@@ -36,5 +36,19 @@ namespace Hospital_Management_System
         {
 
         }
+
+        private void ShowPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ShowPasswordCheckBox.Checked)
+            {
+                PasswordTextBox.UseSystemPasswordChar = false;
+                ConfirmPasswordTextBox.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                PasswordTextBox.UseSystemPasswordChar = true;
+                ConfirmPasswordTextBox.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
