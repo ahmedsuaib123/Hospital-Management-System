@@ -1,6 +1,6 @@
 ﻿namespace Hospital_Management_System
 {
-    partial class NurseManagement
+    partial class AdminManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -32,22 +32,21 @@
             this.UpdateButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            this.NurseDataGridView = new System.Windows.Forms.DataGridView();
-            this.NurseTitleLabel = new System.Windows.Forms.Label();
-            this.DutyScheduleButton = new System.Windows.Forms.Button();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.AdminsDataGridView = new System.Windows.Forms.DataGridView();
+            this.AdminTitleLabel = new System.Windows.Forms.Label();
             this.SearchLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.NurseDataGridView)).BeginInit();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // BackButton
             // 
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(638, 394);
+            this.BackButton.Location = new System.Drawing.Point(633, 385);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(87, 33);
-            this.BackButton.TabIndex = 21;
+            this.BackButton.TabIndex = 25;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
             // 
@@ -55,10 +54,10 @@
             // 
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateButton.Location = new System.Drawing.Point(444, 394);
+            this.UpdateButton.Location = new System.Drawing.Point(439, 385);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(87, 33);
-            this.UpdateButton.TabIndex = 20;
+            this.UpdateButton.TabIndex = 24;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = true;
             // 
@@ -66,10 +65,10 @@
             // 
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteButton.Location = new System.Drawing.Point(271, 394);
+            this.DeleteButton.Location = new System.Drawing.Point(266, 385);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(87, 33);
-            this.DeleteButton.TabIndex = 19;
+            this.DeleteButton.TabIndex = 23;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseVisualStyleBackColor = true;
             // 
@@ -77,86 +76,68 @@
             // 
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddButton.Location = new System.Drawing.Point(76, 394);
+            this.AddButton.Location = new System.Drawing.Point(71, 385);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(87, 33);
-            this.AddButton.TabIndex = 18;
+            this.AddButton.TabIndex = 22;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             // 
-            // NurseDataGridView
+            // AdminsDataGridView
             // 
-            this.NurseDataGridView.AllowUserToAddRows = false;
-            this.NurseDataGridView.AllowUserToDeleteRows = false;
-            this.NurseDataGridView.AllowUserToResizeColumns = false;
-            this.NurseDataGridView.AllowUserToResizeRows = false;
-            this.NurseDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NurseDataGridView.Location = new System.Drawing.Point(76, 79);
-            this.NurseDataGridView.Name = "NurseDataGridView";
-            this.NurseDataGridView.ReadOnly = true;
-            this.NurseDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.NurseDataGridView.Size = new System.Drawing.Size(649, 286);
-            this.NurseDataGridView.TabIndex = 17;
+            this.AdminsDataGridView.AllowUserToAddRows = false;
+            this.AdminsDataGridView.AllowUserToDeleteRows = false;
+            this.AdminsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AdminsDataGridView.Location = new System.Drawing.Point(73, 96);
+            this.AdminsDataGridView.Name = "AdminsDataGridView";
+            this.AdminsDataGridView.ReadOnly = true;
+            this.AdminsDataGridView.Size = new System.Drawing.Size(647, 258);
+            this.AdminsDataGridView.TabIndex = 21;
             // 
-            // NurseTitleLabel
+            // AdminTitleLabel
             // 
-            this.NurseTitleLabel.AutoSize = true;
-            this.NurseTitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NurseTitleLabel.Location = new System.Drawing.Point(353, 9);
-            this.NurseTitleLabel.Name = "NurseTitleLabel";
-            this.NurseTitleLabel.Size = new System.Drawing.Size(68, 23);
-            this.NurseTitleLabel.TabIndex = 16;
-            this.NurseTitleLabel.Text = "Nurses";
-            // 
-            // DutyScheduleButton
-            // 
-            this.DutyScheduleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DutyScheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DutyScheduleButton.Location = new System.Drawing.Point(551, 32);
-            this.DutyScheduleButton.Name = "DutyScheduleButton";
-            this.DutyScheduleButton.Size = new System.Drawing.Size(174, 32);
-            this.DutyScheduleButton.TabIndex = 22;
-            this.DutyScheduleButton.Text = "Duty Schedule";
-            this.DutyScheduleButton.UseVisualStyleBackColor = true;
-            this.DutyScheduleButton.Click += new System.EventHandler(this.DutyScheduleButton_Click);
-            // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.Location = new System.Drawing.Point(165, 44);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(193, 20);
-            this.SearchTextBox.TabIndex = 42;
-            this.SearchTextBox.Visible = false;
+            this.AdminTitleLabel.AutoSize = true;
+            this.AdminTitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminTitleLabel.Location = new System.Drawing.Point(365, 20);
+            this.AdminTitleLabel.Name = "AdminTitleLabel";
+            this.AdminTitleLabel.Size = new System.Drawing.Size(72, 23);
+            this.AdminTitleLabel.TabIndex = 20;
+            this.AdminTitleLabel.Text = "Admins";
             // 
             // SearchLabel
             // 
             this.SearchLabel.AutoSize = true;
             this.SearchLabel.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.SearchLabel.Location = new System.Drawing.Point(78, 44);
+            this.SearchLabel.Location = new System.Drawing.Point(73, 63);
             this.SearchLabel.Name = "SearchLabel";
             this.SearchLabel.Size = new System.Drawing.Size(58, 20);
-            this.SearchLabel.TabIndex = 41;
+            this.SearchLabel.TabIndex = 26;
             this.SearchLabel.Text = "Search";
             // 
-            // NurseManagement
+            // SearchTextBox
+            // 
+            this.SearchTextBox.Location = new System.Drawing.Point(160, 63);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(193, 20);
+            this.SearchTextBox.TabIndex = 40;
+            this.SearchTextBox.Visible = false;
+            // 
+            // AdminManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.SearchLabel);
-            this.Controls.Add(this.DutyScheduleButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.NurseDataGridView);
-            this.Controls.Add(this.NurseTitleLabel);
-            this.Name = "NurseManagement";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Controls.Add(this.AdminsDataGridView);
+            this.Controls.Add(this.AdminTitleLabel);
+            this.Name = "AdminManagement";
             this.Text = "Hospital Management System";
-            this.Load += new System.EventHandler(this.NurseManagement_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.NurseDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,10 +149,9 @@
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.DataGridView NurseDataGridView;
-        private System.Windows.Forms.Label NurseTitleLabel;
-        private System.Windows.Forms.Button DutyScheduleButton;
-        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.DataGridView AdminsDataGridView;
+        private System.Windows.Forms.Label AdminTitleLabel;
         private System.Windows.Forms.Label SearchLabel;
+        private System.Windows.Forms.TextBox SearchTextBox;
     }
 }
