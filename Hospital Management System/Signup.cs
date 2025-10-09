@@ -16,5 +16,15 @@ namespace Hospital_Management_System
         {
             InitializeComponent();
         }
+
+        private void AddressLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddressTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
