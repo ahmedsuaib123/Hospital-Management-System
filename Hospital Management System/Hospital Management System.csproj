@@ -52,6 +52,12 @@
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckAccountStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckAccountStatus.Designer.cs">
+      <DependentUpon>CheckAccountStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
