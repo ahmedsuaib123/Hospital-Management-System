@@ -156,6 +156,9 @@
     <EmbeddedResource Include="AdminManagement.resx">
       <DependentUpon>AdminManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminPasswordChange.resx">
+      <DependentUpon>AdminPasswordChange.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CheckAccountStatus.resx">
       <DependentUpon>CheckAccountStatus.cs</DependentUpon>
     </EmbeddedResource>

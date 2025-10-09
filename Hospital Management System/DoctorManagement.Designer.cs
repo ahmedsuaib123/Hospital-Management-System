@@ -62,7 +62,7 @@
             // BackButton
             // 
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackButton.Font = new System.Drawing.Font("Times New Roman", 13F);
             this.BackButton.Location = new System.Drawing.Point(638, 387);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(87, 33);
@@ -74,7 +74,7 @@
             // UpdateButton
             // 
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateButton.Font = new System.Drawing.Font("Times New Roman", 13F);
             this.UpdateButton.Location = new System.Drawing.Point(444, 387);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(87, 33);
@@ -85,7 +85,7 @@
             // DeleteButton
             // 
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteButton.Font = new System.Drawing.Font("Times New Roman", 13F);
             this.DeleteButton.Location = new System.Drawing.Point(271, 387);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(87, 33);
@@ -96,7 +96,7 @@
             // AddButton
             // 
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.Font = new System.Drawing.Font("Times New Roman", 13F);
             this.AddButton.Location = new System.Drawing.Point(76, 387);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(87, 33);

@@ -16,5 +16,10 @@ namespace Hospital_Management_System
         {
             InitializeComponent();
         }
+
+        private void AdminPasswordChange_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
