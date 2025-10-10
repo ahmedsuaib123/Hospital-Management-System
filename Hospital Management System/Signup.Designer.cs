@@ -29,6 +29,15 @@
         private void InitializeComponent()
         {
             this.GeneralInformationsPanel = new System.Windows.Forms.Panel();
+            this.AvailableSlotTextBox = new System.Windows.Forms.TextBox();
+            this.AvailableSlotLabel = new System.Windows.Forms.Label();
+            this.QualificationTextBox = new System.Windows.Forms.TextBox();
+            this.QualificationLabel = new System.Windows.Forms.Label();
+            this.AddressTextBox = new System.Windows.Forms.TextBox();
+            this.AddressLabel = new System.Windows.Forms.Label();
+            this.NextButton = new System.Windows.Forms.Button();
+            this.ResetButton = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.CategoryLabel = new System.Windows.Forms.Label();
             this.BloodGroupComboBox = new System.Windows.Forms.ComboBox();
@@ -44,26 +53,17 @@
             this.FullNameTextBox = new System.Windows.Forms.TextBox();
             this.FullNameLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
-            this.BackButton = new System.Windows.Forms.Button();
-            this.ResetButton = new System.Windows.Forms.Button();
-            this.NextButton = new System.Windows.Forms.Button();
-            this.AddressTextBox = new System.Windows.Forms.TextBox();
-            this.AddressLabel = new System.Windows.Forms.Label();
-            this.QualificationTextBox = new System.Windows.Forms.TextBox();
-            this.QualificationLabel = new System.Windows.Forms.Label();
-            this.AvailableSlotTextBox = new System.Windows.Forms.TextBox();
-            this.AvailableSlotLabel = new System.Windows.Forms.Label();
             this.AccountInformationPanel = new System.Windows.Forms.Panel();
-            this.AccountInformationLabel = new System.Windows.Forms.Label();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.UsernameLabel = new System.Windows.Forms.Label();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
-            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.BackButton1 = new System.Windows.Forms.Button();
+            this.SignupButton = new System.Windows.Forms.Button();
+            this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.ConfirmPasswordTextBox = new System.Windows.Forms.TextBox();
             this.ConfirmPasswordLabel = new System.Windows.Forms.Label();
-            this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
-            this.SignupButton = new System.Windows.Forms.Button();
-            this.BackButton1 = new System.Windows.Forms.Button();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.AccountInformationLabel = new System.Windows.Forms.Label();
             this.GeneralInformationsPanel.SuspendLayout();
             this.AccountInformationPanel.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,101 @@
             this.GeneralInformationsPanel.Name = "GeneralInformationsPanel";
             this.GeneralInformationsPanel.Size = new System.Drawing.Size(801, 447);
             this.GeneralInformationsPanel.TabIndex = 0;
+            // 
+            // AvailableSlotTextBox
+            // 
+            this.AvailableSlotTextBox.Location = new System.Drawing.Point(261, 370);
+            this.AvailableSlotTextBox.Name = "AvailableSlotTextBox";
+            this.AvailableSlotTextBox.Size = new System.Drawing.Size(133, 24);
+            this.AvailableSlotTextBox.TabIndex = 41;
+            this.AvailableSlotTextBox.Visible = false;
+            // 
+            // AvailableSlotLabel
+            // 
+            this.AvailableSlotLabel.AutoSize = true;
+            this.AvailableSlotLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.AvailableSlotLabel.Location = new System.Drawing.Point(147, 373);
+            this.AvailableSlotLabel.Name = "AvailableSlotLabel";
+            this.AvailableSlotLabel.Size = new System.Drawing.Size(88, 17);
+            this.AvailableSlotLabel.TabIndex = 40;
+            this.AvailableSlotLabel.Text = "Available Slot";
+            this.AvailableSlotLabel.Visible = false;
+            // 
+            // QualificationTextBox
+            // 
+            this.QualificationTextBox.Location = new System.Drawing.Point(261, 325);
+            this.QualificationTextBox.Name = "QualificationTextBox";
+            this.QualificationTextBox.Size = new System.Drawing.Size(133, 24);
+            this.QualificationTextBox.TabIndex = 39;
+            this.QualificationTextBox.Visible = false;
+            this.QualificationTextBox.TextChanged += new System.EventHandler(this.QualificationTextBox_TextChanged);
+            // 
+            // QualificationLabel
+            // 
+            this.QualificationLabel.AutoSize = true;
+            this.QualificationLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.QualificationLabel.Location = new System.Drawing.Point(150, 328);
+            this.QualificationLabel.Name = "QualificationLabel";
+            this.QualificationLabel.Size = new System.Drawing.Size(82, 17);
+            this.QualificationLabel.TabIndex = 38;
+            this.QualificationLabel.Text = "Qualification";
+            this.QualificationLabel.Visible = false;
+            this.QualificationLabel.Click += new System.EventHandler(this.QualificationLabel_Click);
+            // 
+            // AddressTextBox
+            // 
+            this.AddressTextBox.Location = new System.Drawing.Point(261, 325);
+            this.AddressTextBox.Name = "AddressTextBox";
+            this.AddressTextBox.Size = new System.Drawing.Size(133, 24);
+            this.AddressTextBox.TabIndex = 37;
+            this.AddressTextBox.Visible = false;
+            this.AddressTextBox.TextChanged += new System.EventHandler(this.AddressTextBox_TextChanged);
+            // 
+            // AddressLabel
+            // 
+            this.AddressLabel.AutoSize = true;
+            this.AddressLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.AddressLabel.Location = new System.Drawing.Point(178, 328);
+            this.AddressLabel.Name = "AddressLabel";
+            this.AddressLabel.Size = new System.Drawing.Size(57, 17);
+            this.AddressLabel.TabIndex = 36;
+            this.AddressLabel.Text = "Address";
+            this.AddressLabel.Visible = false;
+            this.AddressLabel.Click += new System.EventHandler(this.AddressLabel_Click);
+            // 
+            // NextButton
+            // 
+            this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.NextButton.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.Location = new System.Drawing.Point(685, 411);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.NextButton.Size = new System.Drawing.Size(87, 33);
+            this.NextButton.TabIndex = 35;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = true;
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ResetButton.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.ResetButton.Location = new System.Drawing.Point(321, 411);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(87, 33);
+            this.ResetButton.TabIndex = 34;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            // 
+            // BackButton
+            // 
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BackButton.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.BackButton.Location = new System.Drawing.Point(9, 411);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(87, 33);
+            this.BackButton.TabIndex = 33;
+            this.BackButton.Text = "Back";
+            this.BackButton.UseVisualStyleBackColor = true;
             // 
             // CategoryComboBox
             // 
@@ -251,101 +346,6 @@
             this.TitleLabel.TabIndex = 18;
             this.TitleLabel.Text = "General Informations";
             // 
-            // BackButton
-            // 
-            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BackButton.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.BackButton.Location = new System.Drawing.Point(9, 411);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(87, 33);
-            this.BackButton.TabIndex = 33;
-            this.BackButton.Text = "Back";
-            this.BackButton.UseVisualStyleBackColor = true;
-            // 
-            // ResetButton
-            // 
-            this.ResetButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ResetButton.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.ResetButton.Location = new System.Drawing.Point(321, 411);
-            this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(87, 33);
-            this.ResetButton.TabIndex = 34;
-            this.ResetButton.Text = "Reset";
-            this.ResetButton.UseVisualStyleBackColor = true;
-            // 
-            // NextButton
-            // 
-            this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.NextButton.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextButton.Location = new System.Drawing.Point(685, 411);
-            this.NextButton.Name = "NextButton";
-            this.NextButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.NextButton.Size = new System.Drawing.Size(87, 33);
-            this.NextButton.TabIndex = 35;
-            this.NextButton.Text = "Next";
-            this.NextButton.UseVisualStyleBackColor = true;
-            // 
-            // AddressTextBox
-            // 
-            this.AddressTextBox.Location = new System.Drawing.Point(261, 325);
-            this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(133, 24);
-            this.AddressTextBox.TabIndex = 37;
-            this.AddressTextBox.Visible = false;
-            this.AddressTextBox.TextChanged += new System.EventHandler(this.AddressTextBox_TextChanged);
-            // 
-            // AddressLabel
-            // 
-            this.AddressLabel.AutoSize = true;
-            this.AddressLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.AddressLabel.Location = new System.Drawing.Point(178, 328);
-            this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(57, 17);
-            this.AddressLabel.TabIndex = 36;
-            this.AddressLabel.Text = "Address";
-            this.AddressLabel.Visible = false;
-            this.AddressLabel.Click += new System.EventHandler(this.AddressLabel_Click);
-            // 
-            // QualificationTextBox
-            // 
-            this.QualificationTextBox.Location = new System.Drawing.Point(261, 325);
-            this.QualificationTextBox.Name = "QualificationTextBox";
-            this.QualificationTextBox.Size = new System.Drawing.Size(133, 24);
-            this.QualificationTextBox.TabIndex = 39;
-            this.QualificationTextBox.Visible = false;
-            this.QualificationTextBox.TextChanged += new System.EventHandler(this.QualificationTextBox_TextChanged);
-            // 
-            // QualificationLabel
-            // 
-            this.QualificationLabel.AutoSize = true;
-            this.QualificationLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.QualificationLabel.Location = new System.Drawing.Point(150, 328);
-            this.QualificationLabel.Name = "QualificationLabel";
-            this.QualificationLabel.Size = new System.Drawing.Size(82, 17);
-            this.QualificationLabel.TabIndex = 38;
-            this.QualificationLabel.Text = "Qualification";
-            this.QualificationLabel.Visible = false;
-            this.QualificationLabel.Click += new System.EventHandler(this.QualificationLabel_Click);
-            // 
-            // AvailableSlotTextBox
-            // 
-            this.AvailableSlotTextBox.Location = new System.Drawing.Point(261, 370);
-            this.AvailableSlotTextBox.Name = "AvailableSlotTextBox";
-            this.AvailableSlotTextBox.Size = new System.Drawing.Size(133, 24);
-            this.AvailableSlotTextBox.TabIndex = 41;
-            this.AvailableSlotTextBox.Visible = false;
-            // 
-            // AvailableSlotLabel
-            // 
-            this.AvailableSlotLabel.AutoSize = true;
-            this.AvailableSlotLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.AvailableSlotLabel.Location = new System.Drawing.Point(147, 373);
-            this.AvailableSlotLabel.Name = "AvailableSlotLabel";
-            this.AvailableSlotLabel.Size = new System.Drawing.Size(88, 17);
-            this.AvailableSlotLabel.TabIndex = 40;
-            this.AvailableSlotLabel.Text = "Available Slot";
-            this.AvailableSlotLabel.Visible = false;
-            // 
             // AccountInformationPanel
             // 
             this.AccountInformationPanel.Controls.Add(this.BackButton1);
@@ -362,51 +362,42 @@
             this.AccountInformationPanel.Name = "AccountInformationPanel";
             this.AccountInformationPanel.Size = new System.Drawing.Size(798, 447);
             this.AccountInformationPanel.TabIndex = 42;
+            this.AccountInformationPanel.Visible = false;
             // 
-            // AccountInformationLabel
+            // BackButton1
             // 
-            this.AccountInformationLabel.AutoSize = true;
-            this.AccountInformationLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountInformationLabel.Location = new System.Drawing.Point(274, 47);
-            this.AccountInformationLabel.Name = "AccountInformationLabel";
-            this.AccountInformationLabel.Size = new System.Drawing.Size(183, 23);
-            this.AccountInformationLabel.TabIndex = 17;
-            this.AccountInformationLabel.Text = "Account Information";
+            this.BackButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BackButton1.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.BackButton1.Location = new System.Drawing.Point(104, 373);
+            this.BackButton1.Name = "BackButton1";
+            this.BackButton1.Size = new System.Drawing.Size(87, 30);
+            this.BackButton1.TabIndex = 49;
+            this.BackButton1.Text = "Back";
+            this.BackButton1.UseVisualStyleBackColor = true;
             // 
-            // UsernameTextBox
+            // SignupButton
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(251, 128);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(246, 20);
-            this.UsernameTextBox.TabIndex = 22;
+            this.SignupButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SignupButton.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.SignupButton.Location = new System.Drawing.Point(506, 373);
+            this.SignupButton.Name = "SignupButton";
+            this.SignupButton.Size = new System.Drawing.Size(145, 33);
+            this.SignupButton.TabIndex = 28;
+            this.SignupButton.Text = "Create Account";
+            this.SignupButton.UseVisualStyleBackColor = true;
             // 
-            // UsernameLabel
+            // ShowPasswordCheckBox
             // 
-            this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.UsernameLabel.Location = new System.Drawing.Point(150, 131);
-            this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(69, 17);
-            this.UsernameLabel.TabIndex = 21;
-            this.UsernameLabel.Text = "Username";
-            // 
-            // PasswordTextBox
-            // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(251, 196);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(246, 20);
-            this.PasswordTextBox.TabIndex = 24;
-            this.PasswordTextBox.UseSystemPasswordChar = true;
-            // 
-            // PasswordLabel
-            // 
-            this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.PasswordLabel.Location = new System.Drawing.Point(153, 199);
-            this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(66, 17);
-            this.PasswordLabel.TabIndex = 23;
-            this.PasswordLabel.Text = "Password";
+            this.ShowPasswordCheckBox.AutoSize = true;
+            this.ShowPasswordCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(549, 266);
+            this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
+            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(102, 17);
+            this.ShowPasswordCheckBox.TabIndex = 27;
+            this.ShowPasswordCheckBox.Text = "Show Password";
+            this.ShowPasswordCheckBox.UseVisualStyleBackColor = false;
+            this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
             // 
             // ConfirmPasswordTextBox
             // 
@@ -426,40 +417,50 @@
             this.ConfirmPasswordLabel.TabIndex = 25;
             this.ConfirmPasswordLabel.Text = "Confirm Password";
             // 
-            // ShowPasswordCheckBox
+            // PasswordTextBox
             // 
-            this.ShowPasswordCheckBox.AutoSize = true;
-            this.ShowPasswordCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.Black;
-            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(549, 266);
-            this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
-            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(102, 17);
-            this.ShowPasswordCheckBox.TabIndex = 27;
-            this.ShowPasswordCheckBox.Text = "Show Password";
-            this.ShowPasswordCheckBox.UseVisualStyleBackColor = false;
-            this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
+            this.PasswordTextBox.Location = new System.Drawing.Point(251, 196);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(246, 20);
+            this.PasswordTextBox.TabIndex = 24;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
-            // SignupButton
+            // PasswordLabel
             // 
-            this.SignupButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SignupButton.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.SignupButton.Location = new System.Drawing.Point(506, 373);
-            this.SignupButton.Name = "SignupButton";
-            this.SignupButton.Size = new System.Drawing.Size(145, 33);
-            this.SignupButton.TabIndex = 28;
-            this.SignupButton.Text = "Create Account";
-            this.SignupButton.UseVisualStyleBackColor = true;
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.PasswordLabel.Location = new System.Drawing.Point(153, 199);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(66, 17);
+            this.PasswordLabel.TabIndex = 23;
+            this.PasswordLabel.Text = "Password";
             // 
-            // BackButton1
+            // UsernameTextBox
             // 
-            this.BackButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BackButton1.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.BackButton1.Location = new System.Drawing.Point(104, 373);
-            this.BackButton1.Name = "BackButton1";
-            this.BackButton1.Size = new System.Drawing.Size(87, 30);
-            this.BackButton1.TabIndex = 49;
-            this.BackButton1.Text = "Back";
-            this.BackButton1.UseVisualStyleBackColor = true;
+            this.UsernameTextBox.Location = new System.Drawing.Point(251, 128);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(246, 20);
+            this.UsernameTextBox.TabIndex = 22;
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.UsernameLabel.Location = new System.Drawing.Point(150, 131);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(69, 17);
+            this.UsernameLabel.TabIndex = 21;
+            this.UsernameLabel.Text = "Username";
+            // 
+            // AccountInformationLabel
+            // 
+            this.AccountInformationLabel.AutoSize = true;
+            this.AccountInformationLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountInformationLabel.Location = new System.Drawing.Point(274, 47);
+            this.AccountInformationLabel.Name = "AccountInformationLabel";
+            this.AccountInformationLabel.Size = new System.Drawing.Size(183, 23);
+            this.AccountInformationLabel.TabIndex = 17;
+            this.AccountInformationLabel.Text = "Account Information";
             // 
             // Signup
             // 
@@ -469,6 +470,7 @@
             this.Controls.Add(this.AccountInformationPanel);
             this.Controls.Add(this.GeneralInformationsPanel);
             this.Name = "Signup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Management System";
             this.GeneralInformationsPanel.ResumeLayout(false);
             this.GeneralInformationsPanel.PerformLayout();

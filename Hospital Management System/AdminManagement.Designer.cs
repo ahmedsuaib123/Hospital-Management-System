@@ -137,6 +137,7 @@
             this.Controls.Add(this.AdminTitleLabel);
             this.Name = "AdminManagement";
             this.Text = "Hospital Management System";
+            this.Load += new System.EventHandler(this.AdminManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

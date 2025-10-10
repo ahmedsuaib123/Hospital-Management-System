@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Hospital_Management_System
 {
-    public partial class AdminManagement : Form
+    public partial class AddPatient : Form
     {
-        public AdminManagement()
+        public AddPatient()
         {
             InitializeComponent();
-        }
-
-        private void AdminManagement_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
