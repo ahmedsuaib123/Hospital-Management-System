@@ -37,24 +37,19 @@ namespace Hospital_Management_System
 
         private void ViewAppointments_Load(object sender, EventArgs e)
         {
-            
-                
-                string query = "select a.AppointmentIDd.DoctorName,a.AppointmentDate,a.AppointmentSlot from Appointment a,Patient p,Doctor d where a.PatientID=p.PatientID and a.DoctorID=d.DoctorID and p.PatientUsername='" + Login.username + "'";
+            string query = "select a.AppointmentID,d.DoctorName,a.AppointmentDate,a.AppointmentSlot from Appointment a,Patient p,Doctor d where a.PatientID=p.PatientID and a.DoctorID=d.DoctorID and p.PatientUsername='" + Login.username + "'";
 
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
 
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-                AppointmentsDataGridView.DataSource = dt;
-                AppointmentsDataGridView.Columns["AppointmentID"].HeaderText = "ID";
-                AppointmentsDataGridView.Columns["PatientName"].HeaderText = "Patient Name";
-                AppointmentsDataGridView.Columns["DoctorName"].HeaderText = "Doctor Name";
-                AppointmentsDataGridView.Columns["AppointmentDate"].HeaderText = "Date";
-                AppointmentsDataGridView.Columns["AppointmentSlot"].HeaderText = "Time";
-                AppointmentsDataGridView.Columns["PatientContact"].HeaderText = "Contact";
-
-
-
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            AppointmentsDataGridView.DataSource = dt;
+            AppointmentsDataGridView.Columns["AppointmentID"].HeaderText = "ID";
+            AppointmentsDataGridView.Columns["PatientName"].HeaderText = "Patient Name";
+            AppointmentsDataGridView.Columns["DoctorName"].HeaderText = "Doctor Name";
+            AppointmentsDataGridView.Columns["AppointmentDate"].HeaderText = "Date";
+            AppointmentsDataGridView.Columns["AppointmentSlot"].HeaderText = "Time";
+            AppointmentsDataGridView.Columns["PatientContact"].HeaderText = "Contact";
         }
     }
 }
