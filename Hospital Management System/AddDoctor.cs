@@ -46,5 +46,26 @@ namespace Hospital_Management_System
         {
 
         }
+
+        private void ContactTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string input = ContactTextBox.Text;
+            if (input.Length > 11)
+            {
+                MessageBox.Show("Phone number must be 11 digits.");
+                ContactTextBox.Text = input.Substring(0, 11);
+                ContactTextBox.SelectionStart = ContactTextBox.Text.Length;
+            }
+            if (input.Length >= 2 && !input.StartsWith("01"))
+            {
+                MessageBox.Show("Phone number must start with 01.");
+                ContactTextBox.Clear();
+            }
+        }
+
+        private void DateOfTimeDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

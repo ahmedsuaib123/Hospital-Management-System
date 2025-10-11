@@ -118,7 +118,7 @@
             this.Controls.Add(this.NurseDataGridView);
             this.Name = "NurseDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Nurse Dashboard";
+            this.Text = "Hospital Management System";
             ((System.ComponentModel.ISupportInitialize)(this.NurseDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

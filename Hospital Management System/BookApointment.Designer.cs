@@ -50,16 +50,16 @@
             // DoctorIDComboBox
             // 
             this.DoctorIDComboBox.FormattingEnabled = true;
-            this.DoctorIDComboBox.Location = new System.Drawing.Point(210, 63);
+            this.DoctorIDComboBox.Location = new System.Drawing.Point(145, 82);
             this.DoctorIDComboBox.Name = "DoctorIDComboBox";
-            this.DoctorIDComboBox.Size = new System.Drawing.Size(121, 21);
+            this.DoctorIDComboBox.Size = new System.Drawing.Size(106, 21);
             this.DoctorIDComboBox.TabIndex = 0;
             this.DoctorIDComboBox.SelectedIndexChanged += new System.EventHandler(this.DoctorIDComboBox_SelectedIndexChanged);
             // 
             // DoctorIDLabel
             // 
             this.DoctorIDLabel.AutoSize = true;
-            this.DoctorIDLabel.Location = new System.Drawing.Point(102, 63);
+            this.DoctorIDLabel.Location = new System.Drawing.Point(37, 82);
             this.DoctorIDLabel.Name = "DoctorIDLabel";
             this.DoctorIDLabel.Size = new System.Drawing.Size(62, 13);
             this.DoctorIDLabel.TabIndex = 1;
@@ -68,7 +68,7 @@
             // DoctorNameLabel
             // 
             this.DoctorNameLabel.AutoSize = true;
-            this.DoctorNameLabel.Location = new System.Drawing.Point(102, 108);
+            this.DoctorNameLabel.Location = new System.Drawing.Point(37, 127);
             this.DoctorNameLabel.Name = "DoctorNameLabel";
             this.DoctorNameLabel.Size = new System.Drawing.Size(79, 13);
             this.DoctorNameLabel.TabIndex = 2;
@@ -77,7 +77,7 @@
             // AvailableSlotLlabel
             // 
             this.AvailableSlotLlabel.AutoSize = true;
-            this.AvailableSlotLlabel.Location = new System.Drawing.Point(102, 201);
+            this.AvailableSlotLlabel.Location = new System.Drawing.Point(37, 220);
             this.AvailableSlotLlabel.Name = "AvailableSlotLlabel";
             this.AvailableSlotLlabel.Size = new System.Drawing.Size(80, 13);
             this.AvailableSlotLlabel.TabIndex = 3;
@@ -86,7 +86,7 @@
             // DepartmentLabel
             // 
             this.DepartmentLabel.AutoSize = true;
-            this.DepartmentLabel.Location = new System.Drawing.Point(102, 155);
+            this.DepartmentLabel.Location = new System.Drawing.Point(37, 174);
             this.DepartmentLabel.Name = "DepartmentLabel";
             this.DepartmentLabel.Size = new System.Drawing.Size(71, 13);
             this.DepartmentLabel.TabIndex = 4;
@@ -95,7 +95,7 @@
             // DiagnosisLabel
             // 
             this.DiagnosisLabel.AutoSize = true;
-            this.DiagnosisLabel.Location = new System.Drawing.Point(102, 245);
+            this.DiagnosisLabel.Location = new System.Drawing.Point(37, 264);
             this.DiagnosisLabel.Name = "DiagnosisLabel";
             this.DiagnosisLabel.Size = new System.Drawing.Size(62, 13);
             this.DiagnosisLabel.TabIndex = 5;
@@ -104,7 +104,7 @@
             // AppointmentDateLabel
             // 
             this.AppointmentDateLabel.AutoSize = true;
-            this.AppointmentDateLabel.Location = new System.Drawing.Point(102, 286);
+            this.AppointmentDateLabel.Location = new System.Drawing.Point(37, 305);
             this.AppointmentDateLabel.Name = "AppointmentDateLabel";
             this.AppointmentDateLabel.Size = new System.Drawing.Size(101, 13);
             this.AppointmentDateLabel.TabIndex = 6;
@@ -112,46 +112,46 @@
             // 
             // DocNameTextBox
             // 
-            this.DocNameTextBox.Location = new System.Drawing.Point(210, 108);
+            this.DocNameTextBox.Location = new System.Drawing.Point(145, 127);
             this.DocNameTextBox.Name = "DocNameTextBox";
-            this.DocNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DocNameTextBox.Size = new System.Drawing.Size(85, 20);
             this.DocNameTextBox.TabIndex = 7;
             this.DocNameTextBox.TextChanged += new System.EventHandler(this.DocNameTextBox_TextChanged);
             // 
             // DepartmentTextBox
             // 
-            this.DepartmentTextBox.Location = new System.Drawing.Point(210, 152);
+            this.DepartmentTextBox.Location = new System.Drawing.Point(145, 171);
             this.DepartmentTextBox.Name = "DepartmentTextBox";
-            this.DepartmentTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DepartmentTextBox.Size = new System.Drawing.Size(85, 20);
             this.DepartmentTextBox.TabIndex = 8;
             // 
             // DiagnosisTextBox
             // 
-            this.DiagnosisTextBox.Location = new System.Drawing.Point(210, 245);
+            this.DiagnosisTextBox.Location = new System.Drawing.Point(145, 264);
             this.DiagnosisTextBox.Name = "DiagnosisTextBox";
-            this.DiagnosisTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DiagnosisTextBox.Size = new System.Drawing.Size(85, 20);
             this.DiagnosisTextBox.TabIndex = 11;
             // 
             // AvailableSlotComboBox
             // 
             this.AvailableSlotComboBox.FormattingEnabled = true;
-            this.AvailableSlotComboBox.Location = new System.Drawing.Point(210, 198);
+            this.AvailableSlotComboBox.Location = new System.Drawing.Point(145, 217);
             this.AvailableSlotComboBox.Name = "AvailableSlotComboBox";
-            this.AvailableSlotComboBox.Size = new System.Drawing.Size(121, 21);
+            this.AvailableSlotComboBox.Size = new System.Drawing.Size(106, 21);
             this.AvailableSlotComboBox.TabIndex = 12;
             // 
             // AppointmentDatePicker
             // 
-            this.AppointmentDatePicker.Location = new System.Drawing.Point(210, 286);
+            this.AppointmentDatePicker.Location = new System.Drawing.Point(145, 305);
             this.AppointmentDatePicker.Name = "AppointmentDatePicker";
-            this.AppointmentDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.AppointmentDatePicker.Size = new System.Drawing.Size(190, 20);
             this.AppointmentDatePicker.TabIndex = 13;
             // 
             // BookButton
             // 
-            this.BookButton.Location = new System.Drawing.Point(350, 353);
+            this.BookButton.Location = new System.Drawing.Point(275, 372);
             this.BookButton.Name = "BookButton";
-            this.BookButton.Size = new System.Drawing.Size(75, 23);
+            this.BookButton.Size = new System.Drawing.Size(60, 23);
             this.BookButton.TabIndex = 14;
             this.BookButton.Text = "Book Now";
             this.BookButton.UseVisualStyleBackColor = true;
@@ -159,9 +159,9 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(80, 353);
+            this.CancelButton.Location = new System.Drawing.Point(15, 372);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(75, 23);
+            this.CancelButton.Size = new System.Drawing.Size(60, 23);
             this.CancelButton.TabIndex = 15;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -170,16 +170,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(511, 63);
+            this.dataGridView1.Location = new System.Drawing.Point(352, 59);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(394, 313);
+            this.dataGridView1.Size = new System.Drawing.Size(282, 336);
             this.dataGridView1.TabIndex = 106;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(638, 18);
+            this.label3.Location = new System.Drawing.Point(420, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 24);
             this.label3.TabIndex = 105;
@@ -189,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 401);
+            this.ClientSize = new System.Drawing.Size(706, 438);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CancelButton);

@@ -189,6 +189,7 @@
             this.ContactTextBox.Name = "ContactTextBox";
             this.ContactTextBox.Size = new System.Drawing.Size(146, 20);
             this.ContactTextBox.TabIndex = 68;
+            this.ContactTextBox.TextChanged += new System.EventHandler(this.ContactTextBox_TextChanged);
             // 
             // ContactLabel
             // 
@@ -247,6 +248,7 @@
             this.DateOfTimeDateTimePicker.Name = "DateOfTimeDateTimePicker";
             this.DateOfTimeDateTimePicker.Size = new System.Drawing.Size(84, 20);
             this.DateOfTimeDateTimePicker.TabIndex = 62;
+            this.DateOfTimeDateTimePicker.ValueChanged += new System.EventHandler(this.DateOfTimeDateTimePicker_ValueChanged);
             // 
             // DateOfBirthLabel
             // 

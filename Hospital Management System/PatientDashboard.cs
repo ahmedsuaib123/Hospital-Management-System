@@ -103,5 +103,11 @@ namespace Hospital_Management_System
             new BookAppointment().Show();
             this.Hide();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            new ViewAppointments().Show();
+            this.Hide();
+        }
     }
 }

@@ -46,7 +46,7 @@
             this.GenderLabel = new System.Windows.Forms.Label();
             this.AgeTextBox = new System.Windows.Forms.TextBox();
             this.AgeLabel = new System.Windows.Forms.Label();
-            this.DateOfTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DateOfBirthPicker = new System.Windows.Forms.DateTimePicker();
             this.DateOfBirthLabel = new System.Windows.Forms.Label();
             this.FullNameTextBox = new System.Windows.Forms.TextBox();
             this.FullNameLabel = new System.Windows.Forms.Label();
@@ -74,6 +74,8 @@
             this.AddButton.TabIndex = 79;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            // ✅ Fixed event binding (now points to AddButton_Click)
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // ShowPasswordCheckBox
             // 
@@ -144,7 +146,7 @@
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold);
             this.TitleLabel.Location = new System.Drawing.Point(333, 32);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(99, 23);
@@ -155,14 +157,7 @@
             // 
             this.BloodGroupComboBox.FormattingEnabled = true;
             this.BloodGroupComboBox.Items.AddRange(new object[] {
-            "A+",
-            "A-",
-            "B+",
-            "B-",
-            "O+",
-            "O-",
-            "AB+",
-            "AB-"});
+            "A+","A-","B+","B-","O+","O-","AB+","AB-"});
             this.BloodGroupComboBox.Location = new System.Drawing.Point(168, 294);
             this.BloodGroupComboBox.Name = "BloodGroupComboBox";
             this.BloodGroupComboBox.Size = new System.Drawing.Size(74, 21);
@@ -184,6 +179,7 @@
             this.ContactTextBox.Name = "ContactTextBox";
             this.ContactTextBox.Size = new System.Drawing.Size(146, 20);
             this.ContactTextBox.TabIndex = 68;
+            this.ContactTextBox.TextChanged += new System.EventHandler(this.ContactTextBox_TextChanged);
             // 
             // ContactLabel
             // 
@@ -198,10 +194,7 @@
             // GenderComboBox
             // 
             this.GenderComboBox.FormattingEnabled = true;
-            this.GenderComboBox.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Others"});
+            this.GenderComboBox.Items.AddRange(new object[] { "Male", "Female", "Others" });
             this.GenderComboBox.Location = new System.Drawing.Point(168, 209);
             this.GenderComboBox.Name = "GenderComboBox";
             this.GenderComboBox.Size = new System.Drawing.Size(84, 21);
@@ -235,13 +228,14 @@
             this.AgeLabel.TabIndex = 63;
             this.AgeLabel.Text = "Age";
             // 
-            // DateOfTimeDateTimePicker
+            // DateOfBirthPicker
             // 
-            this.DateOfTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateOfTimeDateTimePicker.Location = new System.Drawing.Point(168, 128);
-            this.DateOfTimeDateTimePicker.Name = "DateOfTimeDateTimePicker";
-            this.DateOfTimeDateTimePicker.Size = new System.Drawing.Size(84, 20);
-            this.DateOfTimeDateTimePicker.TabIndex = 62;
+            this.DateOfBirthPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateOfBirthPicker.Location = new System.Drawing.Point(168, 128);
+            this.DateOfBirthPicker.Name = "DateOfBirthPicker";
+            this.DateOfBirthPicker.Size = new System.Drawing.Size(84, 20);
+            this.DateOfBirthPicker.TabIndex = 62;
+            this.DateOfBirthPicker.ValueChanged += new System.EventHandler(this.DateOfTimeDateTimePicker_ValueChanged);
             // 
             // DateOfBirthLabel
             // 
@@ -293,16 +287,15 @@
             this.Controls.Add(this.GenderLabel);
             this.Controls.Add(this.AgeTextBox);
             this.Controls.Add(this.AgeLabel);
-            this.Controls.Add(this.DateOfTimeDateTimePicker);
+            this.Controls.Add(this.DateOfBirthPicker);
             this.Controls.Add(this.DateOfBirthLabel);
             this.Controls.Add(this.FullNameTextBox);
             this.Controls.Add(this.FullNameLabel);
             this.Name = "AddNurse";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddNurse";
+            this.Text = "Add Nurse";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -325,7 +318,7 @@
         private System.Windows.Forms.Label GenderLabel;
         private System.Windows.Forms.TextBox AgeTextBox;
         private System.Windows.Forms.Label AgeLabel;
-        private System.Windows.Forms.DateTimePicker DateOfTimeDateTimePicker;
+        private System.Windows.Forms.DateTimePicker DateOfBirthPicker;
         private System.Windows.Forms.Label DateOfBirthLabel;
         private System.Windows.Forms.TextBox FullNameTextBox;
         private System.Windows.Forms.Label FullNameLabel;
