@@ -2,15 +2,8 @@
 {
     partial class CheckAccountStatus
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,144 +15,158 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.TitleLabel = new System.Windows.Forms.Label();
-            this.AccountStatusDataGridView = new System.Windows.Forms.DataGridView();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.UsernameLabel = new System.Windows.Forms.Label();
-            this.RoleTextBox = new System.Windows.Forms.TextBox();
-            this.RoleLabel = new System.Windows.Forms.Label();
-            this.StatusLabel = new System.Windows.Forms.Label();
-            this.StatusCombobox = new System.Windows.Forms.ComboBox();
-            this.UpdateButton = new System.Windows.Forms.Button();
-            this.BackButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountStatusDataGridView)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
+            this.textBoxRole = new System.Windows.Forms.TextBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.buttonUpdate = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // TitleLabel
+            // label1
             // 
-            this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(204, 22);
-            this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(137, 23);
-            this.TitleLabel.TabIndex = 21;
-            this.TitleLabel.Text = "Account Status";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(277, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Account Status";
             // 
-            // AccountStatusDataGridView
+            // button1
             // 
-            this.AccountStatusDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AccountStatusDataGridView.Location = new System.Drawing.Point(46, 79);
-            this.AccountStatusDataGridView.Name = "AccountStatusDataGridView";
-            this.AccountStatusDataGridView.Size = new System.Drawing.Size(377, 284);
-            this.AccountStatusDataGridView.TabIndex = 22;
-            this.AccountStatusDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AccountStatusDataGridView_CellContentClick);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.button1.Location = new System.Drawing.Point(94, 374);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 35);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Show All";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // UsernameTextBox
+            // button4
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(580, 166);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.ReadOnly = true;
-            this.UsernameTextBox.Size = new System.Drawing.Size(143, 20);
-            this.UsernameTextBox.TabIndex = 24;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.button4.Location = new System.Drawing.Point(435, 374);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(98, 35);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "Back";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // UsernameLabel
+            // dataGridView1
             // 
-            this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.UsernameLabel.Location = new System.Drawing.Point(495, 169);
-            this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(69, 17);
-            this.UsernameLabel.TabIndex = 23;
-            this.UsernameLabel.Text = "Username";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(94, 86);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(439, 251);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // RoleTextBox
+            // label2
             // 
-            this.RoleTextBox.Location = new System.Drawing.Point(580, 210);
-            this.RoleTextBox.Name = "RoleTextBox";
-            this.RoleTextBox.ReadOnly = true;
-            this.RoleTextBox.Size = new System.Drawing.Size(143, 20);
-            this.RoleTextBox.TabIndex = 26;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label2.Location = new System.Drawing.Point(549, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 18);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Username";
             // 
-            // RoleLabel
+            // label3
             // 
-            this.RoleLabel.AutoSize = true;
-            this.RoleLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.RoleLabel.Location = new System.Drawing.Point(529, 213);
-            this.RoleLabel.Name = "RoleLabel";
-            this.RoleLabel.Size = new System.Drawing.Size(35, 17);
-            this.RoleLabel.TabIndex = 25;
-            this.RoleLabel.Text = "Role";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label3.Location = new System.Drawing.Point(582, 171);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 18);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Role";
             // 
-            // StatusLabel
+            // label4
             // 
-            this.StatusLabel.AutoSize = true;
-            this.StatusLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.StatusLabel.Location = new System.Drawing.Point(520, 264);
-            this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(44, 17);
-            this.StatusLabel.TabIndex = 27;
-            this.StatusLabel.Text = "Status";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label4.Location = new System.Drawing.Point(571, 221);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 18);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Status";
             // 
-            // StatusCombobox
+            // textBoxUsername
             // 
-            this.StatusCombobox.FormattingEnabled = true;
-            this.StatusCombobox.Items.AddRange(new object[] {
-            "0",
-            "1"});
-            this.StatusCombobox.Location = new System.Drawing.Point(580, 263);
-            this.StatusCombobox.Name = "StatusCombobox";
-            this.StatusCombobox.Size = new System.Drawing.Size(65, 21);
-            this.StatusCombobox.TabIndex = 28;
+            this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.textBoxUsername.Location = new System.Drawing.Point(638, 116);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.ReadOnly = true;
+            this.textBoxUsername.Size = new System.Drawing.Size(150, 24);
+            this.textBoxUsername.TabIndex = 22;
             // 
-            // UpdateButton
+            // textBoxRole
             // 
-            this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.UpdateButton.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.UpdateButton.Location = new System.Drawing.Point(580, 389);
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(87, 33);
-            this.UpdateButton.TabIndex = 29;
-            this.UpdateButton.Text = "Update";
-            this.UpdateButton.UseVisualStyleBackColor = true;
-            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            this.textBoxRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.textBoxRole.Location = new System.Drawing.Point(638, 168);
+            this.textBoxRole.Name = "textBoxRole";
+            this.textBoxRole.ReadOnly = true;
+            this.textBoxRole.Size = new System.Drawing.Size(150, 24);
+            this.textBoxRole.TabIndex = 23;
             // 
-            // BackButton
+            // comboBoxStatus
             // 
-            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BackButton.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.BackButton.Location = new System.Drawing.Point(46, 389);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(87, 33);
-            this.BackButton.TabIndex = 30;
-            this.BackButton.Text = "Back";
-            this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.comboBoxStatus.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Location = new System.Drawing.Point(638, 218);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(150, 26);
+            this.comboBoxStatus.TabIndex = 24;
+            this.comboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.comboBoxStatus_SelectedIndexChanged);
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.buttonUpdate.Location = new System.Drawing.Point(638, 285);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(98, 35);
+            this.buttonUpdate.TabIndex = 25;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // CheckAccountStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BackButton);
-            this.Controls.Add(this.UpdateButton);
-            this.Controls.Add(this.StatusCombobox);
-            this.Controls.Add(this.StatusLabel);
-            this.Controls.Add(this.RoleTextBox);
-            this.Controls.Add(this.RoleLabel);
-            this.Controls.Add(this.UsernameTextBox);
-            this.Controls.Add(this.UsernameLabel);
-            this.Controls.Add(this.AccountStatusDataGridView);
-            this.Controls.Add(this.TitleLabel);
+            this.Controls.Add(this.buttonUpdate);
+            this.Controls.Add(this.comboBoxStatus);
+            this.Controls.Add(this.textBoxRole);
+            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label1);
             this.Name = "CheckAccountStatus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Management System";
             this.Load += new System.EventHandler(this.CheckAccountStatus_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.AccountStatusDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,15 +174,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label TitleLabel;
-        private System.Windows.Forms.DataGridView AccountStatusDataGridView;
-        private System.Windows.Forms.TextBox UsernameTextBox;
-        private System.Windows.Forms.Label UsernameLabel;
-        private System.Windows.Forms.TextBox RoleTextBox;
-        private System.Windows.Forms.Label RoleLabel;
-        private System.Windows.Forms.Label StatusLabel;
-        private System.Windows.Forms.ComboBox StatusCombobox;
-        private System.Windows.Forms.Button UpdateButton;
-        private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.TextBox textBoxRole;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }

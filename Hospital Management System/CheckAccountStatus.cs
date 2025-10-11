@@ -1,114 +1,90 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-
 
 namespace Hospital_Management_System
 {
     public partial class CheckAccountStatus : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-HOP36BN\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection con = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
 
         public CheckAccountStatus()
         {
             InitializeComponent();
         }
 
-        private void CheckAccountStatus_Load(object sender, EventArgs e)
-        {
-            // Initialize combobox
-            StatusCombobox.Items.Clear();
-            StatusCombobox.Items.Add("0");
-            StatusCombobox.Items.Add("1");
-            StatusCombobox.DropDownStyle = ComboBoxStyle.DropDownList;
-
-            LoadAccountData();
-
-            // Ensure both click events behave the same way
-            AccountStatusDataGridView.CellClick += AccountStatusDataGridView_CellContentClick;
-        }
-
-        private void LoadAccountData()
-        {
-            try
-            {
-                string query = "SELECT Username, Role, Status FROM Login";
-                SqlDataAdapter sda = new SqlDataAdapter(query, con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                AccountStatusDataGridView.DataSource = dt;
-                AccountStatusDataGridView.ReadOnly = true;
-                AccountStatusDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                AccountStatusDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-                // Rename headers
-                AccountStatusDataGridView.Columns["Username"].HeaderText = "Username";
-                AccountStatusDataGridView.Columns["Role"].HeaderText = "Role";
-                AccountStatusDataGridView.Columns["Status"].HeaderText = "Account Status";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading data: " + ex.Message);
-            }
-        }
-
-        private void BackButton_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             new AdminDashboard().Show();
             this.Hide();
         }
 
-        private void AccountStatusDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            // ignore clicks on the header
-            if (e.RowIndex < 0) return;
+            try
+            {
+                con.Open();
+                string select_query = "SELECT Username, Role, Status FROM Login";
+                SqlDataAdapter da = new SqlDataAdapter(select_query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
 
-            DataGridViewRow row = AccountStatusDataGridView.Rows[e.RowIndex];
-
-            UsernameTextBox.Text = row.Cells["Username"].Value?.ToString() ?? "";
-            RoleTextBox.Text = row.Cells["Role"].Value?.ToString() ?? "";
-
-            // handle bit/int/string Status values
-            string statusVal = row.Cells["Status"].Value?.ToString()?.Trim() ?? "";
-
-            if (statusVal.Equals("True", StringComparison.OrdinalIgnoreCase))
-                statusVal = "1";
-            else if (statusVal.Equals("False", StringComparison.OrdinalIgnoreCase))
-                statusVal = "0";
-
-            if (StatusCombobox.Items.Contains(statusVal))
-                StatusCombobox.SelectedItem = statusVal;
-            else
-                StatusCombobox.SelectedIndex = -1;
+                dataGridView1.ReadOnly = true;
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading data: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
-        private void UpdateButton_Click(object sender, EventArgs e)
+        // Handles both CellContentClick and CellClick (wired from Designer)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (UsernameTextBox.Text == "")
+            // if header clicked, ignore
+            if (e.RowIndex < 0) return;
+
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+            textBoxUsername.Text = row.Cells["Username"].Value?.ToString() ?? "";
+            textBoxRole.Text = row.Cells["Role"].Value?.ToString() ?? "";
+
+            // get status as string (works for int/bit/varchar)
+            string statusVal = row.Cells["Status"].Value?.ToString() ?? "";
+
+            // ensure combo contains the value; if yes select it, otherwise clear selection
+            if (comboBoxStatus.Items.Contains(statusVal))
+                comboBoxStatus.SelectedItem = statusVal;
+            else
+                comboBoxStatus.SelectedIndex = -1;
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            if (textBoxUsername.Text == "")
             {
                 MessageBox.Show("Please select a user first!");
                 return;
             }
 
-            if (StatusCombobox.SelectedItem == null)
+            if (comboBoxStatus.SelectedItem == null)
             {
                 MessageBox.Show("Please select a status");
                 return;
             }
 
-            // Validate status
-            if (!int.TryParse(StatusCombobox.SelectedItem.ToString(), out int statusInt))
+            // parse selected status to integer
+            if (!int.TryParse(comboBoxStatus.SelectedItem.ToString(), out int statusInt))
             {
-                MessageBox.Show("Invalid status value. Only 0 or 1 allowed.");
+                MessageBox.Show("Invalid status");
                 return;
             }
 
@@ -119,8 +95,7 @@ namespace Hospital_Management_System
                 using (SqlCommand cmd = new SqlCommand(updateQuery, con))
                 {
                     cmd.Parameters.Add("@status", SqlDbType.Int).Value = statusInt;
-                    cmd.Parameters.AddWithValue("@username", UsernameTextBox.Text);
-
+                    cmd.Parameters.AddWithValue("@username", textBoxUsername.Text);
                     int rows = cmd.ExecuteNonQuery();
                     if (rows > 0)
                         MessageBox.Show("Account status updated successfully!");
@@ -129,12 +104,7 @@ namespace Hospital_Management_System
                 }
 
                 // Refresh grid
-                LoadAccountData();
-
-                // Clear selection
-                UsernameTextBox.Clear();
-                RoleTextBox.Clear();
-                StatusCombobox.SelectedIndex = -1;
+                button1_Click(null, null);
             }
             catch (Exception ex)
             {
@@ -144,6 +114,20 @@ namespace Hospital_Management_System
             {
                 con.Close();
             }
+        }
+
+        private void CheckAccountStatus_Load(object sender, EventArgs e)
+        {
+            // populate combo with 0 and 1
+            comboBoxStatus.Items.Clear();
+            comboBoxStatus.Items.Add("0");
+            comboBoxStatus.Items.Add("1");
+            comboBoxStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void comboBoxStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
