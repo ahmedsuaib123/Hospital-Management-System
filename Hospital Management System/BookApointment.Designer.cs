@@ -1,4 +1,4 @@
-﻿namespace Hospital_Management
+﻿namespace Hospital_Management_System
 {
     partial class BookAppointment
     {
@@ -41,7 +41,7 @@
             this.AvailableSlotComboBox = new System.Windows.Forms.ComboBox();
             this.AppointmentDatePicker = new System.Windows.Forms.DateTimePicker();
             this.BookButton = new System.Windows.Forms.Button();
-            this.BackButton = new System.Windows.Forms.Button();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -157,15 +157,15 @@
             this.BookButton.UseVisualStyleBackColor = true;
             this.BookButton.Click += new System.EventHandler(this.BookButton_Click);
             // 
-            // BackButton
+            // CancelButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(80, 353);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
-            this.BackButton.TabIndex = 15;
-            this.BackButton.Text = "Cancel";
-            this.BackButton.UseVisualStyleBackColor = true;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            this.CancelButton.Location = new System.Drawing.Point(80, 353);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(75, 23);
+            this.CancelButton.TabIndex = 15;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // dataGridView1
             // 
@@ -192,7 +192,7 @@
             this.ClientSize = new System.Drawing.Size(935, 401);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.BackButton);
+            this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.BookButton);
             this.Controls.Add(this.AppointmentDatePicker);
             this.Controls.Add(this.AvailableSlotComboBox);
@@ -231,7 +231,7 @@
         private System.Windows.Forms.ComboBox AvailableSlotComboBox;
         private System.Windows.Forms.DateTimePicker AppointmentDatePicker;
         private System.Windows.Forms.Button BookButton;
-        private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
     }

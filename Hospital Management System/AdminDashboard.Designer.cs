@@ -31,6 +31,9 @@
             this.LogoutButton = new System.Windows.Forms.Button();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.MenuPanel = new System.Windows.Forms.Panel();
+            this.ManageAdminsLabel = new System.Windows.Forms.Label();
+            this.CheckAccountStatusLabel = new System.Windows.Forms.Label();
+            this.DepartmentsLabel = new System.Windows.Forms.Label();
             this.AppointmentLabel = new System.Windows.Forms.Label();
             this.PasswordChangeLabel = new System.Windows.Forms.Label();
             this.MedicalRecordsLabel = new System.Windows.Forms.Label();
@@ -38,25 +41,24 @@
             this.ManageNurseLabel = new System.Windows.Forms.Label();
             this.ManagePatientsLabel = new System.Windows.Forms.Label();
             this.PatientsCountPanel = new System.Windows.Forms.Panel();
+            this.PatientCountLabel = new System.Windows.Forms.Label();
             this.TotalPatientsLabel = new System.Windows.Forms.Label();
             this.PatientsLabel = new System.Windows.Forms.Label();
             this.DoctorsCountPanel = new System.Windows.Forms.Panel();
+            this.DoctorsCountLabel = new System.Windows.Forms.Label();
             this.DoctorCountLabel = new System.Windows.Forms.Label();
             this.DoctorsLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.NursesCountLabel = new System.Windows.Forms.Label();
             this.TotalNursesLabel = new System.Windows.Forms.Label();
             this.NursesLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.AppointmentsCountLabel = new System.Windows.Forms.Label();
             this.TotalAppointmentsLabel = new System.Windows.Forms.Label();
             this.AppointmentsLabel = new System.Windows.Forms.Label();
-            this.DepartmentsLabel = new System.Windows.Forms.Label();
-            this.PatientCountLabel = new System.Windows.Forms.Label();
-            this.DoctorsCountLabel = new System.Windows.Forms.Label();
-            this.NursesCountLabel = new System.Windows.Forms.Label();
-            this.AppointmentsCountLabel = new System.Windows.Forms.Label();
             this.WelcomeLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ManageAdminsLabel = new System.Windows.Forms.Label();
+            this.ManageReportsButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.MenuPanel.SuspendLayout();
             this.PatientsCountPanel.SuspendLayout();
             this.DoctorsCountPanel.SuspendLayout();
@@ -80,7 +82,7 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold);
-            this.TitleLabel.Location = new System.Drawing.Point(384, 20);
+            this.TitleLabel.Location = new System.Drawing.Point(421, 19);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(145, 26);
             this.TitleLabel.TabIndex = 44;
@@ -90,7 +92,7 @@
             // 
             this.MenuPanel.BackColor = System.Drawing.Color.MintCream;
             this.MenuPanel.Controls.Add(this.ManageAdminsLabel);
-            this.MenuPanel.Controls.Add(this.label1);
+            this.MenuPanel.Controls.Add(this.CheckAccountStatusLabel);
             this.MenuPanel.Controls.Add(this.DepartmentsLabel);
             this.MenuPanel.Controls.Add(this.AppointmentLabel);
             this.MenuPanel.Controls.Add(this.PasswordChangeLabel);
@@ -103,6 +105,44 @@
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(234, 448);
             this.MenuPanel.TabIndex = 45;
+            // 
+            // ManageAdminsLabel
+            // 
+            this.ManageAdminsLabel.AutoSize = true;
+            this.ManageAdminsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ManageAdminsLabel.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
+            this.ManageAdminsLabel.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.ManageAdminsLabel.Location = new System.Drawing.Point(25, 212);
+            this.ManageAdminsLabel.Name = "ManageAdminsLabel";
+            this.ManageAdminsLabel.Size = new System.Drawing.Size(137, 22);
+            this.ManageAdminsLabel.TabIndex = 80;
+            this.ManageAdminsLabel.Text = "Manage Admins";
+            // 
+            // CheckAccountStatusLabel
+            // 
+            this.CheckAccountStatusLabel.AutoSize = true;
+            this.CheckAccountStatusLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.CheckAccountStatusLabel.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
+            this.CheckAccountStatusLabel.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.CheckAccountStatusLabel.Location = new System.Drawing.Point(27, 338);
+            this.CheckAccountStatusLabel.Name = "CheckAccountStatusLabel";
+            this.CheckAccountStatusLabel.Size = new System.Drawing.Size(182, 22);
+            this.CheckAccountStatusLabel.TabIndex = 79;
+            this.CheckAccountStatusLabel.Text = "Check Account Status";
+            this.CheckAccountStatusLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // DepartmentsLabel
+            // 
+            this.DepartmentsLabel.AutoSize = true;
+            this.DepartmentsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DepartmentsLabel.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
+            this.DepartmentsLabel.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.DepartmentsLabel.Location = new System.Drawing.Point(27, 293);
+            this.DepartmentsLabel.Name = "DepartmentsLabel";
+            this.DepartmentsLabel.Size = new System.Drawing.Size(110, 22);
+            this.DepartmentsLabel.TabIndex = 78;
+            this.DepartmentsLabel.Text = "Departments";
+            this.DepartmentsLabel.Click += new System.EventHandler(this.DepartmentsLabel_Click);
             // 
             // AppointmentLabel
             // 
@@ -188,11 +228,20 @@
             this.PatientsCountPanel.Controls.Add(this.PatientCountLabel);
             this.PatientsCountPanel.Controls.Add(this.TotalPatientsLabel);
             this.PatientsCountPanel.Controls.Add(this.PatientsLabel);
-            this.PatientsCountPanel.Location = new System.Drawing.Point(251, 88);
+            this.PatientsCountPanel.Location = new System.Drawing.Point(251, 65);
             this.PatientsCountPanel.Name = "PatientsCountPanel";
-            this.PatientsCountPanel.Size = new System.Drawing.Size(246, 130);
+            this.PatientsCountPanel.Size = new System.Drawing.Size(246, 128);
             this.PatientsCountPanel.TabIndex = 46;
             this.PatientsCountPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.PatientsCountPanel_Paint);
+            // 
+            // PatientCountLabel
+            // 
+            this.PatientCountLabel.AutoSize = true;
+            this.PatientCountLabel.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold);
+            this.PatientCountLabel.Location = new System.Drawing.Point(184, 71);
+            this.PatientCountLabel.Name = "PatientCountLabel";
+            this.PatientCountLabel.Size = new System.Drawing.Size(0, 25);
+            this.PatientCountLabel.TabIndex = 79;
             // 
             // TotalPatientsLabel
             // 
@@ -222,11 +271,20 @@
             this.DoctorsCountPanel.Controls.Add(this.DoctorsCountLabel);
             this.DoctorsCountPanel.Controls.Add(this.DoctorCountLabel);
             this.DoctorsCountPanel.Controls.Add(this.DoctorsLabel);
-            this.DoctorsCountPanel.Location = new System.Drawing.Point(528, 88);
+            this.DoctorsCountPanel.Location = new System.Drawing.Point(528, 65);
             this.DoctorsCountPanel.Name = "DoctorsCountPanel";
-            this.DoctorsCountPanel.Size = new System.Drawing.Size(246, 130);
+            this.DoctorsCountPanel.Size = new System.Drawing.Size(246, 128);
             this.DoctorsCountPanel.TabIndex = 47;
             this.DoctorsCountPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // DoctorsCountLabel
+            // 
+            this.DoctorsCountLabel.AutoSize = true;
+            this.DoctorsCountLabel.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold);
+            this.DoctorsCountLabel.Location = new System.Drawing.Point(184, 67);
+            this.DoctorsCountLabel.Name = "DoctorsCountLabel";
+            this.DoctorsCountLabel.Size = new System.Drawing.Size(0, 25);
+            this.DoctorsCountLabel.TabIndex = 80;
             // 
             // DoctorCountLabel
             // 
@@ -256,10 +314,19 @@
             this.panel2.Controls.Add(this.NursesCountLabel);
             this.panel2.Controls.Add(this.TotalNursesLabel);
             this.panel2.Controls.Add(this.NursesLabel);
-            this.panel2.Location = new System.Drawing.Point(251, 272);
+            this.panel2.Location = new System.Drawing.Point(251, 235);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(246, 130);
+            this.panel2.Size = new System.Drawing.Size(246, 128);
             this.panel2.TabIndex = 48;
+            // 
+            // NursesCountLabel
+            // 
+            this.NursesCountLabel.AutoSize = true;
+            this.NursesCountLabel.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold);
+            this.NursesCountLabel.Location = new System.Drawing.Point(184, 69);
+            this.NursesCountLabel.Name = "NursesCountLabel";
+            this.NursesCountLabel.Size = new System.Drawing.Size(0, 25);
+            this.NursesCountLabel.TabIndex = 83;
             // 
             // TotalNursesLabel
             // 
@@ -289,10 +356,19 @@
             this.panel3.Controls.Add(this.AppointmentsCountLabel);
             this.panel3.Controls.Add(this.TotalAppointmentsLabel);
             this.panel3.Controls.Add(this.AppointmentsLabel);
-            this.panel3.Location = new System.Drawing.Point(528, 272);
+            this.panel3.Location = new System.Drawing.Point(528, 235);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(246, 130);
+            this.panel3.Size = new System.Drawing.Size(246, 128);
             this.panel3.TabIndex = 49;
+            // 
+            // AppointmentsCountLabel
+            // 
+            this.AppointmentsCountLabel.AutoSize = true;
+            this.AppointmentsCountLabel.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold);
+            this.AppointmentsCountLabel.Location = new System.Drawing.Point(184, 69);
+            this.AppointmentsCountLabel.Name = "AppointmentsCountLabel";
+            this.AppointmentsCountLabel.Size = new System.Drawing.Size(0, 25);
+            this.AppointmentsCountLabel.TabIndex = 84;
             // 
             // TotalAppointmentsLabel
             // 
@@ -316,55 +392,6 @@
             this.AppointmentsLabel.TabIndex = 82;
             this.AppointmentsLabel.Text = "Appointments";
             // 
-            // DepartmentsLabel
-            // 
-            this.DepartmentsLabel.AutoSize = true;
-            this.DepartmentsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DepartmentsLabel.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
-            this.DepartmentsLabel.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.DepartmentsLabel.Location = new System.Drawing.Point(27, 293);
-            this.DepartmentsLabel.Name = "DepartmentsLabel";
-            this.DepartmentsLabel.Size = new System.Drawing.Size(110, 22);
-            this.DepartmentsLabel.TabIndex = 78;
-            this.DepartmentsLabel.Text = "Departments";
-            this.DepartmentsLabel.Click += new System.EventHandler(this.DepartmentsLabel_Click);
-            // 
-            // PatientCountLabel
-            // 
-            this.PatientCountLabel.AutoSize = true;
-            this.PatientCountLabel.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold);
-            this.PatientCountLabel.Location = new System.Drawing.Point(184, 71);
-            this.PatientCountLabel.Name = "PatientCountLabel";
-            this.PatientCountLabel.Size = new System.Drawing.Size(0, 25);
-            this.PatientCountLabel.TabIndex = 79;
-            // 
-            // DoctorsCountLabel
-            // 
-            this.DoctorsCountLabel.AutoSize = true;
-            this.DoctorsCountLabel.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold);
-            this.DoctorsCountLabel.Location = new System.Drawing.Point(184, 67);
-            this.DoctorsCountLabel.Name = "DoctorsCountLabel";
-            this.DoctorsCountLabel.Size = new System.Drawing.Size(0, 25);
-            this.DoctorsCountLabel.TabIndex = 80;
-            // 
-            // NursesCountLabel
-            // 
-            this.NursesCountLabel.AutoSize = true;
-            this.NursesCountLabel.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold);
-            this.NursesCountLabel.Location = new System.Drawing.Point(184, 69);
-            this.NursesCountLabel.Name = "NursesCountLabel";
-            this.NursesCountLabel.Size = new System.Drawing.Size(0, 25);
-            this.NursesCountLabel.TabIndex = 83;
-            // 
-            // AppointmentsCountLabel
-            // 
-            this.AppointmentsCountLabel.AutoSize = true;
-            this.AppointmentsCountLabel.Font = new System.Drawing.Font("Times New Roman", 17F, System.Drawing.FontStyle.Bold);
-            this.AppointmentsCountLabel.Location = new System.Drawing.Point(184, 69);
-            this.AppointmentsCountLabel.Name = "AppointmentsCountLabel";
-            this.AppointmentsCountLabel.Size = new System.Drawing.Size(0, 25);
-            this.AppointmentsCountLabel.TabIndex = 84;
-            // 
             // WelcomeLabel
             // 
             this.WelcomeLabel.AutoSize = true;
@@ -376,30 +403,28 @@
             this.WelcomeLabel.TabIndex = 79;
             this.WelcomeLabel.Text = "Welcome, ";
             // 
-            // label1
+            // ManageReportsButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label1.Location = new System.Drawing.Point(27, 338);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 22);
-            this.label1.TabIndex = 79;
-            this.label1.Text = "Check Account Status";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.ManageReportsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ManageReportsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ManageReportsButton.Location = new System.Drawing.Point(251, 398);
+            this.ManageReportsButton.Name = "ManageReportsButton";
+            this.ManageReportsButton.Size = new System.Drawing.Size(246, 31);
+            this.ManageReportsButton.TabIndex = 80;
+            this.ManageReportsButton.Text = "Manage Reports";
+            this.ManageReportsButton.UseVisualStyleBackColor = true;
             // 
-            // ManageAdminsLabel
+            // button1
             // 
-            this.ManageAdminsLabel.AutoSize = true;
-            this.ManageAdminsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ManageAdminsLabel.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold);
-            this.ManageAdminsLabel.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.ManageAdminsLabel.Location = new System.Drawing.Point(25, 212);
-            this.ManageAdminsLabel.Name = "ManageAdminsLabel";
-            this.ManageAdminsLabel.Size = new System.Drawing.Size(137, 22);
-            this.ManageAdminsLabel.TabIndex = 80;
-            this.ManageAdminsLabel.Text = "Manage Admins";
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(528, 398);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(246, 31);
+            this.button1.TabIndex = 81;
+            this.button1.Text = "Manage Prescriptions";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AdminDashboard
             // 
@@ -407,6 +432,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ManageReportsButton);
             this.Controls.Add(this.WelcomeLabel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -462,7 +489,9 @@
         private System.Windows.Forms.Label NursesCountLabel;
         private System.Windows.Forms.Label AppointmentsCountLabel;
         private System.Windows.Forms.Label WelcomeLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CheckAccountStatusLabel;
         private System.Windows.Forms.Label ManageAdminsLabel;
+        private System.Windows.Forms.Button ManageReportsButton;
+        private System.Windows.Forms.Button button1;
     }
 }

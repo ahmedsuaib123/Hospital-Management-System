@@ -94,6 +94,18 @@
     <Compile Include="AdminPasswordChange.Designer.cs">
       <DependentUpon>AdminPasswordChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllPrescriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllPrescriptions.Designer.cs">
+      <DependentUpon>AllPrescriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllReports.Designer.cs">
+      <DependentUpon>AllReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookApointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +228,12 @@
     <EmbeddedResource Include="AdminPasswordChange.resx">
       <DependentUpon>AdminPasswordChange.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllPrescriptions.resx">
+      <DependentUpon>AllPrescriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllReports.resx">
+      <DependentUpon>AllReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookApointment.resx">
       <DependentUpon>BookApointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NurseManagement.resx">
       <DependentUpon>NurseManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseProfile.resx">
+      <DependentUpon>NurseProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientDashboard.resx">
       <DependentUpon>PatientDashboard.cs</DependentUpon>

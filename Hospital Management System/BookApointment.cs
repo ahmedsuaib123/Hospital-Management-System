@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace Hospital_Management
+namespace Hospital_Management_System
 {
     public partial class BookAppointment : Form
     {
@@ -13,8 +13,8 @@ namespace Hospital_Management
         public BookAppointment()
         {
             InitializeComponent();
-            PatientID = Login.patientID;
-            LoadDoctorList(); // Load Doctor List DataGridView
+            //PatientID = Login.patientID;
+            LoadDoctorList(); 
         }
 
         private void BookAppointment_Load(object sender, EventArgs e)
@@ -150,8 +150,7 @@ namespace Hospital_Management
 
         private void LoadDoctorList()
         {
-            try
-            {
+            
                 con.Open();
                 string query = "SELECT DoctorID, DoctorName, Department FROM Doctor";
                 SqlDataAdapter da = new SqlDataAdapter(query, con);
@@ -163,11 +162,8 @@ namespace Hospital_Management
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading doctor list: " + ex.Message);
-            }
+            
+            
         }
     }
 }

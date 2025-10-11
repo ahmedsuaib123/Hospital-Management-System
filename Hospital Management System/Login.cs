@@ -59,13 +59,13 @@ namespace Hospital_Management_System
                         da.Fill(dtt);
                         if (dtt.Rows.Count > 0)
                         {
-                            Login.doctorID = Convert.ToInt32(dtt.Rows[0]["DoctorID"]).ToString();  
-                            Login.fullName = dtt.Rows[0]["DoctorName"].ToString();
-                            Login.contact = dtt.Rows[0]["DoctorContact"].ToString();
-                            Login.age = Convert.ToInt32(dtt.Rows[0]["DoctorAge"]).ToString();
-                            Login.gender = dtt.Rows[0]["Gender"].ToString();
-                            Login.bloodGroup = dtt.Rows[0]["BloodGroup"].ToString();
-                            Login.availableSlot = dtt.Rows[0]["AvailableSlot"].ToString();
+                            doctorID = Convert.ToInt32(dtt.Rows[0]["DoctorID"]).ToString();  
+                            fullName = dtt.Rows[0]["DoctorName"].ToString();
+                            contact = dtt.Rows[0]["DoctorContact"].ToString();
+                            age = Convert.ToInt32(dtt.Rows[0]["DoctorAge"]).ToString();
+                            gender = dtt.Rows[0]["Gender"].ToString();
+                            bloodGroup = dtt.Rows[0]["BloodGroup"].ToString();
+                            availableSlot = dtt.Rows[0]["AvailableSlot"].ToString();
                         }
                     }
                     else if (role == "Patient")
@@ -76,9 +76,9 @@ namespace Hospital_Management_System
                         da.Fill(dtt);
                         if (dtt.Rows.Count > 0)
                         {
-                            Login.patientID = Convert.ToInt32(dtt.Rows[0]["PatientID"]).ToString();   
-                            Login.fullName = dtt.Rows[0]["PatientName"].ToString();
-                            Login.contact = dtt.Rows[0]["PatientContact"].ToString();  
+                            patientID = Convert.ToInt32(dtt.Rows[0]["PatientID"]).ToString();   
+                            fullName = dtt.Rows[0]["PatientName"].ToString();
+                            contact = dtt.Rows[0]["PatientContact"].ToString();  
                         }
                     }
                     else if (role == "Nurse")
@@ -88,13 +88,13 @@ namespace Hospital_Management_System
                         da.Fill(dtt);
                         if (dtt.Rows.Count > 0)
                         {
-                            Login.nurseID = Convert.ToInt32(dtt.Rows[0]["NurseID"]).ToString();   
-                            Login.fullName = dtt.Rows[0]["NurseName"].ToString();
+                            nurseID = Convert.ToInt32(dtt.Rows[0]["NurseID"]).ToString();   
+                            fullName = dtt.Rows[0]["NurseName"].ToString();
                         }
                     }
                     else
                     {
-                        Login.fullName = username;
+                        fullName = username;
                     }
 
                     if (role == "Admin")

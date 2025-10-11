@@ -35,9 +35,10 @@
             this.NewPasswordTextBox = new System.Windows.Forms.TextBox();
             this.NewPasswordLabel = new System.Windows.Forms.Label();
             this.ConfirmPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.ConfirmPasswordLabel = new System.Windows.Forms.Label();
             this.VerifyButton = new System.Windows.Forms.Button();
             this.VerifyButton1 = new System.Windows.Forms.Button();
+            this.CancelButton = new System.Windows.Forms.Button();
             this.ConfirmButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -63,6 +64,7 @@
             this.ContactTextBox.Name = "ContactTextBox";
             this.ContactTextBox.Size = new System.Drawing.Size(181, 20);
             this.ContactTextBox.TabIndex = 3;
+            this.ContactTextBox.Visible = false;
             // 
             // ContactLabel
             // 
@@ -72,6 +74,7 @@
             this.ContactLabel.Size = new System.Drawing.Size(106, 13);
             this.ContactLabel.TabIndex = 2;
             this.ContactLabel.Text = "Enter Phone Number";
+            this.ContactLabel.Visible = false;
             // 
             // NewPasswordTextBox
             // 
@@ -80,6 +83,7 @@
             this.NewPasswordTextBox.Size = new System.Drawing.Size(181, 20);
             this.NewPasswordTextBox.TabIndex = 5;
             this.NewPasswordTextBox.UseSystemPasswordChar = true;
+            this.NewPasswordTextBox.Visible = false;
             // 
             // NewPasswordLabel
             // 
@@ -89,6 +93,7 @@
             this.NewPasswordLabel.Size = new System.Drawing.Size(106, 13);
             this.NewPasswordLabel.TabIndex = 4;
             this.NewPasswordLabel.Text = "Enter New Password";
+            this.NewPasswordLabel.Visible = false;
             // 
             // ConfirmPasswordTextBox
             // 
@@ -97,15 +102,17 @@
             this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(181, 20);
             this.ConfirmPasswordTextBox.TabIndex = 7;
             this.ConfirmPasswordTextBox.UseSystemPasswordChar = true;
+            this.ConfirmPasswordTextBox.Visible = false;
             // 
-            // label3
+            // ConfirmPasswordLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(149, 282);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Enter Confirm Password";
+            this.ConfirmPasswordLabel.AutoSize = true;
+            this.ConfirmPasswordLabel.Location = new System.Drawing.Point(149, 282);
+            this.ConfirmPasswordLabel.Name = "ConfirmPasswordLabel";
+            this.ConfirmPasswordLabel.Size = new System.Drawing.Size(119, 13);
+            this.ConfirmPasswordLabel.TabIndex = 6;
+            this.ConfirmPasswordLabel.Text = "Enter Confirm Password";
+            this.ConfirmPasswordLabel.Visible = false;
             // 
             // VerifyButton
             // 
@@ -117,6 +124,7 @@
             this.VerifyButton.TabIndex = 12;
             this.VerifyButton.Text = "Verify";
             this.VerifyButton.UseVisualStyleBackColor = true;
+            this.VerifyButton.Click += new System.EventHandler(this.VerifyButton_Click);
             // 
             // VerifyButton1
             // 
@@ -128,17 +136,31 @@
             this.VerifyButton1.TabIndex = 13;
             this.VerifyButton1.Text = "Verify";
             this.VerifyButton1.UseVisualStyleBackColor = true;
+            this.VerifyButton1.Visible = false;
+            this.VerifyButton1.Click += new System.EventHandler(this.VerifyButton1_Click);
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.CancelButton.Location = new System.Drawing.Point(181, 367);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(87, 29);
+            this.CancelButton.TabIndex = 14;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
             // 
             // ConfirmButton
             // 
             this.ConfirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ConfirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ConfirmButton.Location = new System.Drawing.Point(355, 338);
+            this.ConfirmButton.Location = new System.Drawing.Point(529, 367);
             this.ConfirmButton.Name = "ConfirmButton";
             this.ConfirmButton.Size = new System.Drawing.Size(87, 29);
-            this.ConfirmButton.TabIndex = 14;
+            this.ConfirmButton.TabIndex = 15;
             this.ConfirmButton.Text = "Confirm";
             this.ConfirmButton.UseVisualStyleBackColor = true;
+            this.ConfirmButton.Visible = false;
             // 
             // ForgetPassword
             // 
@@ -146,10 +168,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ConfirmButton);
+            this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.VerifyButton1);
             this.Controls.Add(this.VerifyButton);
             this.Controls.Add(this.ConfirmPasswordTextBox);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.ConfirmPasswordLabel);
             this.Controls.Add(this.NewPasswordTextBox);
             this.Controls.Add(this.NewPasswordLabel);
             this.Controls.Add(this.ContactTextBox);
@@ -173,9 +196,10 @@
         private System.Windows.Forms.TextBox NewPasswordTextBox;
         private System.Windows.Forms.Label NewPasswordLabel;
         private System.Windows.Forms.TextBox ConfirmPasswordTextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label ConfirmPasswordLabel;
         private System.Windows.Forms.Button VerifyButton;
         private System.Windows.Forms.Button VerifyButton1;
+        private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button ConfirmButton;
     }
 }

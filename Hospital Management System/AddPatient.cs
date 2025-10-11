@@ -19,7 +19,7 @@ namespace Hospital_Management_System
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            new PatientDashboard().Show();
+            new PatientManagement().Show();
             this.Hide();
         }
 

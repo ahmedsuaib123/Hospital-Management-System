@@ -56,12 +56,13 @@
             this.AccountStatusDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AccountStatusDataGridView.Location = new System.Drawing.Point(46, 79);
             this.AccountStatusDataGridView.Name = "AccountStatusDataGridView";
-            this.AccountStatusDataGridView.Size = new System.Drawing.Size(485, 284);
+            this.AccountStatusDataGridView.Size = new System.Drawing.Size(377, 284);
             this.AccountStatusDataGridView.TabIndex = 22;
+            this.AccountStatusDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AccountStatusDataGridView_CellContentClick);
             // 
             // UsernameTextBox
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(636, 174);
+            this.UsernameTextBox.Location = new System.Drawing.Point(580, 166);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.ReadOnly = true;
             this.UsernameTextBox.Size = new System.Drawing.Size(143, 20);
@@ -71,7 +72,7 @@
             // 
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.UsernameLabel.Location = new System.Drawing.Point(551, 177);
+            this.UsernameLabel.Location = new System.Drawing.Point(495, 169);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(69, 17);
             this.UsernameLabel.TabIndex = 23;
@@ -79,7 +80,7 @@
             // 
             // RoleTextBox
             // 
-            this.RoleTextBox.Location = new System.Drawing.Point(636, 218);
+            this.RoleTextBox.Location = new System.Drawing.Point(580, 210);
             this.RoleTextBox.Name = "RoleTextBox";
             this.RoleTextBox.ReadOnly = true;
             this.RoleTextBox.Size = new System.Drawing.Size(143, 20);
@@ -89,7 +90,7 @@
             // 
             this.RoleLabel.AutoSize = true;
             this.RoleLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.RoleLabel.Location = new System.Drawing.Point(585, 221);
+            this.RoleLabel.Location = new System.Drawing.Point(529, 213);
             this.RoleLabel.Name = "RoleLabel";
             this.RoleLabel.Size = new System.Drawing.Size(35, 17);
             this.RoleLabel.TabIndex = 25;
@@ -99,7 +100,7 @@
             // 
             this.StatusLabel.AutoSize = true;
             this.StatusLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.StatusLabel.Location = new System.Drawing.Point(576, 272);
+            this.StatusLabel.Location = new System.Drawing.Point(520, 264);
             this.StatusLabel.Name = "StatusLabel";
             this.StatusLabel.Size = new System.Drawing.Size(44, 17);
             this.StatusLabel.TabIndex = 27;
@@ -111,7 +112,7 @@
             this.StatusCombobox.Items.AddRange(new object[] {
             "0",
             "1"});
-            this.StatusCombobox.Location = new System.Drawing.Point(636, 271);
+            this.StatusCombobox.Location = new System.Drawing.Point(580, 263);
             this.StatusCombobox.Name = "StatusCombobox";
             this.StatusCombobox.Size = new System.Drawing.Size(65, 21);
             this.StatusCombobox.TabIndex = 28;
@@ -120,12 +121,13 @@
             // 
             this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.UpdateButton.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.UpdateButton.Location = new System.Drawing.Point(636, 389);
+            this.UpdateButton.Location = new System.Drawing.Point(580, 389);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(87, 33);
             this.UpdateButton.TabIndex = 29;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // BackButton
             // 

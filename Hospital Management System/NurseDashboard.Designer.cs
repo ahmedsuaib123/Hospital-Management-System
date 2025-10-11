@@ -2,62 +2,127 @@
 {
     partial class NurseDashboard
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.DataGridView NurseDataGridView;
+        private System.Windows.Forms.Button PatientInfoBTN;
+        private System.Windows.Forms.Button DutyScheduleBTN;
+        private System.Windows.Forms.Button NurseDashboardExitBTN;
+        private System.Windows.Forms.Button NurseProfileBTN;
+        private System.Windows.Forms.TextBox PatientSearchTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button LogOutBTN;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.LogoutButton = new System.Windows.Forms.Button();
+            this.NurseDataGridView = new System.Windows.Forms.DataGridView();
+            this.PatientInfoBTN = new System.Windows.Forms.Button();
+            this.DutyScheduleBTN = new System.Windows.Forms.Button();
+            this.NurseDashboardExitBTN = new System.Windows.Forms.Button();
+            this.NurseProfileBTN = new System.Windows.Forms.Button();
+            this.PatientSearchTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LogOutBTN = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.NurseDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // LogoutButton
+            // NurseDataGridView
             // 
-            this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutButton.Location = new System.Drawing.Point(661, 388);
-            this.LogoutButton.Name = "LogoutButton";
-            this.LogoutButton.Size = new System.Drawing.Size(87, 33);
-            this.LogoutButton.TabIndex = 11;
-            this.LogoutButton.Text = "Logout";
-            this.LogoutButton.UseVisualStyleBackColor = true;
-            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
+            this.NurseDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.NurseDataGridView.Location = new System.Drawing.Point(9, 79);
+            this.NurseDataGridView.Name = "NurseDataGridView";
+            this.NurseDataGridView.Size = new System.Drawing.Size(582, 212);
+            this.NurseDataGridView.TabIndex = 7;
+            // 
+            // PatientInfoBTN
+            // 
+            this.PatientInfoBTN.Location = new System.Drawing.Point(12, 312);
+            this.PatientInfoBTN.Name = "PatientInfoBTN";
+            this.PatientInfoBTN.Size = new System.Drawing.Size(77, 34);
+            this.PatientInfoBTN.TabIndex = 6;
+            this.PatientInfoBTN.Text = "Patient Info";
+            this.PatientInfoBTN.UseVisualStyleBackColor = true;
+            this.PatientInfoBTN.Click += new System.EventHandler(this.PatientInfoBTN_Click);
+            // 
+            // DutyScheduleBTN
+            // 
+            this.DutyScheduleBTN.Location = new System.Drawing.Point(143, 312);
+            this.DutyScheduleBTN.Name = "DutyScheduleBTN";
+            this.DutyScheduleBTN.Size = new System.Drawing.Size(110, 34);
+            this.DutyScheduleBTN.TabIndex = 5;
+            this.DutyScheduleBTN.Text = "Duty Schedule";
+            this.DutyScheduleBTN.UseVisualStyleBackColor = true;
+            this.DutyScheduleBTN.Click += new System.EventHandler(this.DutyScheduleBTN_Click);
+            // 
+            // NurseDashboardExitBTN
+            // 
+            this.NurseDashboardExitBTN.Location = new System.Drawing.Point(355, 312);
+            this.NurseDashboardExitBTN.Name = "NurseDashboardExitBTN";
+            this.NurseDashboardExitBTN.Size = new System.Drawing.Size(77, 34);
+            this.NurseDashboardExitBTN.TabIndex = 4;
+            this.NurseDashboardExitBTN.Text = "Exit";
+            this.NurseDashboardExitBTN.UseVisualStyleBackColor = true;
+            this.NurseDashboardExitBTN.Click += new System.EventHandler(this.NurseDashboardExitBTN_Click);
+            // 
+            // NurseProfileBTN
+            // 
+            this.NurseProfileBTN.Location = new System.Drawing.Point(498, 35);
+            this.NurseProfileBTN.Name = "NurseProfileBTN";
+            this.NurseProfileBTN.Size = new System.Drawing.Size(81, 26);
+            this.NurseProfileBTN.TabIndex = 3;
+            this.NurseProfileBTN.Text = "My Profile";
+            this.NurseProfileBTN.UseVisualStyleBackColor = true;
+            this.NurseProfileBTN.Click += new System.EventHandler(this.NurseProfileBTN_Click);
+            // 
+            // PatientSearchTextBox
+            // 
+            this.PatientSearchTextBox.Location = new System.Drawing.Point(128, 41);
+            this.PatientSearchTextBox.Name = "PatientSearchTextBox";
+            this.PatientSearchTextBox.Size = new System.Drawing.Size(186, 20);
+            this.PatientSearchTextBox.TabIndex = 2;
+            this.PatientSearchTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PatientSearchTextBox_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(22, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Search Patient";
+            // 
+            // LogOutBTN
+            // 
+            this.LogOutBTN.Location = new System.Drawing.Point(520, 312);
+            this.LogOutBTN.Name = "LogOutBTN";
+            this.LogOutBTN.Size = new System.Drawing.Size(71, 34);
+            this.LogOutBTN.TabIndex = 0;
+            this.LogOutBTN.Text = "Log Out";
+            this.LogOutBTN.UseVisualStyleBackColor = true;
+            this.LogOutBTN.Click += new System.EventHandler(this.LogOutBTN_Click);
             // 
             // NurseDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.LogoutButton);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.LogOutBTN);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.PatientSearchTextBox);
+            this.Controls.Add(this.NurseProfileBTN);
+            this.Controls.Add(this.NurseDashboardExitBTN);
+            this.Controls.Add(this.DutyScheduleBTN);
+            this.Controls.Add(this.PatientInfoBTN);
+            this.Controls.Add(this.NurseDataGridView);
             this.Name = "NurseDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hospital Management System";
+            this.Text = "Nurse Dashboard";
+            ((System.ComponentModel.ISupportInitialize)(this.NurseDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
-
-        #endregion
-
-        private System.Windows.Forms.Button LogoutButton;
     }
 }
