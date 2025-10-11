@@ -43,7 +43,10 @@ namespace Hospital_Management_System
 
             DataTable dt = new DataTable();
             sda.Fill(dt);
+
             AppointmentsDataGridView.DataSource = dt;
+
+
             AppointmentsDataGridView.Columns["AppointmentID"].HeaderText = "ID";
             AppointmentsDataGridView.Columns["PatientName"].HeaderText = "Patient Name";
             AppointmentsDataGridView.Columns["DoctorName"].HeaderText = "Doctor Name";

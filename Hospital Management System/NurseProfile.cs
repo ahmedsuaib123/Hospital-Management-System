@@ -9,33 +9,25 @@ namespace Hospital_Management_System
     {
         private int nurseId;
         private string loggedInUsername;
-
         SqlConnection con = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
 
-        
         public NurseProfile(int nurseId, string username)
         {
             InitializeComponent();
             this.nurseId = nurseId;
             this.loggedInUsername = username;
 
-            // Auto-fill username and make it read-only
             txtUsername.Text = loggedInUsername;
             txtUsername.ReadOnly = true;
         }
 
         private void ResetPasswordBTN_Click(object sender, EventArgs e)
         {
-            lblUsername.Visible = true;
-            txtUsername.Visible = true;
-            lblOldPassword.Visible = true;
-            txtOldPassword.Visible = true;
-            lblNewPassword.Visible = true;
-            txtNewPassword.Visible = true;
-            lblConfirmPassword.Visible = true;
-            txtConfirmPassword.Visible = true;
-            btnSavePassword.Visible = true;
-            btnCancelPassword.Visible = true;
+            lblUsername.Visible = txtUsername.Visible =
+            lblOldPassword.Visible = txtOldPassword.Visible =
+            lblNewPassword.Visible = txtNewPassword.Visible =
+            lblConfirmPassword.Visible = txtConfirmPassword.Visible =
+            btnSavePassword.Visible = btnCancelPassword.Visible =
             btnClearPassword.Visible = true;
         }
 
@@ -48,22 +40,12 @@ namespace Hospital_Management_System
 
         private void btnCancelPassword_Click(object sender, EventArgs e)
         {
-            lblUsername.Visible = false;
-            txtUsername.Visible = false;
-            lblOldPassword.Visible = false;
-            txtOldPassword.Visible = false;
-            lblNewPassword.Visible = false;
-            txtNewPassword.Visible = false;
-            lblConfirmPassword.Visible = false;
-            txtConfirmPassword.Visible = false;
-            btnSavePassword.Visible = false;
-            btnCancelPassword.Visible = false;
+            lblUsername.Visible = txtUsername.Visible =
+            lblOldPassword.Visible = txtOldPassword.Visible =
+            lblNewPassword.Visible = txtNewPassword.Visible =
+            lblConfirmPassword.Visible = txtConfirmPassword.Visible =
+            btnSavePassword.Visible = btnCancelPassword.Visible =
             btnClearPassword.Visible = false;
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-            // EnablePasswordFields();
         }
 
         private void txtOldPassword_TextChanged(object sender, EventArgs e)
@@ -74,23 +56,19 @@ namespace Hospital_Management_System
         private void EnablePasswordFields()
         {
             string oldPassword = txtOldPassword.Text.Trim();
-
             if (string.IsNullOrEmpty(oldPassword))
             {
-                txtNewPassword.ReadOnly = true;
-                txtConfirmPassword.ReadOnly = true;
+                txtNewPassword.ReadOnly = txtConfirmPassword.ReadOnly = true;
                 return;
             }
 
             try
             {
                 con.Open();
-
                 string queryCheck = @"SELECT * FROM Login 
-                                      WHERE Username = @Username 
-                                        AND Password = @OldPassword COLLATE SQL_Latin1_General_CP1_CS_AS
-                                        AND Role = 'Nurse'";
-
+                                      WHERE Username=@Username 
+                                        AND Password=@OldPassword COLLATE SQL_Latin1_General_CP1_CS_AS
+                                        AND Role='Nurse'";
                 SqlDataAdapter adapter = new SqlDataAdapter(queryCheck, con);
                 adapter.SelectCommand.Parameters.AddWithValue("@Username", loggedInUsername);
                 adapter.SelectCommand.Parameters.AddWithValue("@OldPassword", oldPassword);
@@ -98,21 +76,11 @@ namespace Hospital_Management_System
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
 
-                if (dt.Rows.Count > 0)
-                {
-                    txtNewPassword.ReadOnly = false;
-                    txtConfirmPassword.ReadOnly = false;
-                    txtNewPassword.Visible = true;
-                    txtConfirmPassword.Visible = true;
-                    lblNewPassword.Visible = true;
-                    lblConfirmPassword.Visible = true;
-                    btnSavePassword.Visible = true;
-                }
-                else
-                {
-                    txtNewPassword.ReadOnly = true;
-                    txtConfirmPassword.ReadOnly = true;
-                }
+                bool validOldPass = dt.Rows.Count > 0;
+                txtNewPassword.ReadOnly = txtConfirmPassword.ReadOnly = !validOldPass;
+                txtNewPassword.Visible = txtConfirmPassword.Visible = validOldPass;
+                lblNewPassword.Visible = lblConfirmPassword.Visible = validOldPass;
+                btnSavePassword.Visible = validOldPass;
             }
             catch (Exception ex)
             {
@@ -143,40 +111,38 @@ namespace Hospital_Management_System
                 MessageBox.Show("New password and confirm password do not match.");
                 return;
             }
-            if (!System.Text.RegularExpressions.Regex.IsMatch(newPassword, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$"))
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(newPassword, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{6,}$"))
             {
-                MessageBox.Show("Password must contain at least:\n- One uppercase letter\n- One lowercase letter\n- One number\n- One special character (@$!%*?&)\n- Minimum 6 characters long.");
+                MessageBox.Show("Password must have at least one uppercase, lowercase, number, special char, and min 6 chars.");
                 return;
             }
+
             try
             {
                 con.Open();
-
                 string queryUpdate = @"UPDATE Login 
-                                       SET Password = @NewPassword
-                                       WHERE Username = @Username 
-                                         AND Password = @OldPassword COLLATE SQL_Latin1_General_CP1_CS_AS
-                                         AND Role = 'Nurse'";
-
+                                       SET Password=@NewPassword
+                                       WHERE Username=@Username 
+                                         AND Password=@OldPassword COLLATE SQL_Latin1_General_CP1_CS_AS
+                                         AND Role='Nurse'";
                 SqlCommand cmdUpdate = new SqlCommand(queryUpdate, con);
                 cmdUpdate.Parameters.AddWithValue("@NewPassword", newPassword);
                 cmdUpdate.Parameters.AddWithValue("@Username", loggedInUsername);
                 cmdUpdate.Parameters.AddWithValue("@OldPassword", oldPassword);
 
                 int rowsAffected = cmdUpdate.ExecuteNonQuery();
-
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Password updated successfully!");
                     txtOldPassword.Clear();
                     txtNewPassword.Clear();
                     txtConfirmPassword.Clear();
-                    txtNewPassword.ReadOnly = true;
-                    txtConfirmPassword.ReadOnly = true;
+                    txtNewPassword.ReadOnly = txtConfirmPassword.ReadOnly = true;
                 }
                 else
                 {
-                    MessageBox.Show("Password update failed. Please check Old Password.");
+                    MessageBox.Show("Password update failed. Check old password.");
                 }
             }
             catch (Exception ex)
@@ -191,20 +157,14 @@ namespace Hospital_Management_System
 
         private void NurseProfileBackBTN_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new NurseDashboard().Show();
+            this.Close();
+            new NurseDashboard(nurseId, loggedInUsername).Show();
         }
 
         private void NurseProfileExitBTN_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show(
-                "Are you sure to close the application?",
-                "Exit Confirmation",
-                MessageBoxButtons.YesNoCancel,
-                MessageBoxIcon.Question
-            );
-
-            if (dr == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure to close the application?", "Exit Confirmation",
+                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -215,10 +175,7 @@ namespace Hospital_Management_System
             try
             {
                 con.Open();
-                string query = @"SELECT *
-                              FROM Nurse 
-                              WHERE NurseID = @NurseId";
-
+                string query = "SELECT * FROM Nurse WHERE NurseID=@NurseId";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@NurseId", nurseId);
 
@@ -226,6 +183,7 @@ namespace Hospital_Management_System
                 if (reader.Read())
                 {
                     lblNurseName.Text = reader["NurseName"].ToString();
+                    lblNurseEmail.Text = reader["Email"].ToString();
                     lblPhone.Text = reader["NurseContact"].ToString();
                     lblAge.Text = reader["NurseAge"].ToString();
                     lblGender.Text = reader["Gender"].ToString();
@@ -242,9 +200,6 @@ namespace Hospital_Management_System
             }
         }
 
-        private void lblNurseName_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void lblNurseName_Click(object sender, EventArgs e) { }
     }
 }

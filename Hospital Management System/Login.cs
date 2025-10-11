@@ -30,6 +30,7 @@ namespace Hospital_Management_System
         public static string availableSlot;
 
         SqlConnection con = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
+        internal static int nurseId;
 
         public Login()
         {

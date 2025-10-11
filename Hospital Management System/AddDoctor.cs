@@ -65,7 +65,13 @@ namespace Hospital_Management_System
 
         private void DateOfTimeDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
+            DateOfTimeDateTimePicker.Format = DateTimePickerFormat.Short;
+            DateTime dob = DateOfTimeDateTimePicker.Value;
+            DateTime today = DateTime.Today;
 
+            int age = today.Year - dob.Year;
+            if (dob.Date > today.AddYears(-age)) age--;
+            AgeTextBox.Text = age.ToString();
         }
     }
 }

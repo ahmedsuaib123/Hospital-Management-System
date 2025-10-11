@@ -12,16 +12,19 @@ namespace Hospital_Management_System
 
         private int nurseId;
         private string nurseUsername;
-
-        // Constructor with nurseId and username
         public NurseDashboard()
         {
             InitializeComponent();
-            //this.nurseId = nurseId;
-            //this.nurseUsername = username;
+            nurseId = Login.nurseId;
+            nurseUsername = Login.username;
         }
 
-        
+        public NurseDashboard(int nurseId, string username)
+        {
+            InitializeComponent();
+            this.nurseId = Login.nurseId;
+            this.nurseUsername = Login.username;
+        }
 
         // Show all patients
         private void PatientInfoBTN_Click(object sender, EventArgs e)
@@ -48,21 +51,41 @@ namespace Hospital_Management_System
                 DateTime today = DateTime.Today;
                 DateTime weekLater = today.AddDays(7);
 
-                string query = @"SELECT DutyDate AS [Date], Shift
-                                 FROM NurseDuty nd
-                                 INNER JOIN Nurse n ON nd.NurseID = n.NurseID
-                                 WHERE n.NurseUsername = @username
-                                   AND DutyDate BETWEEN @Today AND @WeekLater
-                                 ORDER BY DutyDate ASC";
+                string query = @"
+            SELECT 
+                
+                CAST(nd.DutyDate AS DATE) AS [Date],
+                nd.Shift
+            FROM NurseDuty nd
+            INNER JOIN Nurse n ON nd.NurseID = n.NurseID
+            WHERE n.NurseUsername = @username
+              AND CAST(nd.DutyDate AS DATE) BETWEEN @Today AND @WeekLater
+            ORDER BY nd.DutyDate ASC";
 
-                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
-                adapter.SelectCommand.Parameters.AddWithValue("@username", nurseUsername);
-                adapter.SelectCommand.Parameters.AddWithValue("@Today", today);
-                adapter.SelectCommand.Parameters.AddWithValue("@WeekLater", weekLater);
+                using (SqlConnection con = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True"))
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@username", Login.username);
+                        cmd.Parameters.AddWithValue("@Today", today);
+                        cmd.Parameters.AddWithValue("@WeekLater", weekLater);
 
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                NurseDataGridView.DataSource = dt;
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+
+                        NurseDataGridView.DataSource = dt;
+
+                        // Optional: set headers for readability
+                        if (NurseDataGridView.Columns.Count > 0)
+                        {
+                            //NurseDataGridView.Columns["DutyID"].HeaderText = "ID";
+                            
+                            NurseDataGridView.Columns["Date"].HeaderText = "Date";
+                            NurseDataGridView.Columns["Shift"].HeaderText = "Shift";
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {
