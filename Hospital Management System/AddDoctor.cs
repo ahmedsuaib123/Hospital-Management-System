@@ -41,5 +41,10 @@ namespace Hospital_Management_System
                 PasswordTextBox.UseSystemPasswordChar = true;
             }
         }
+
+        private void AddDoctor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

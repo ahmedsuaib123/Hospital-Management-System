@@ -152,6 +152,7 @@
             this.Controls.Add(this.AdminsDataGridView);
             this.Controls.Add(this.AdminTitleLabel);
             this.Name = "AdminManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Management System";
             this.Load += new System.EventHandler(this.AdminManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminsDataGridView)).EndInit();

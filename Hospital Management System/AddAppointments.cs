@@ -233,5 +233,25 @@ namespace Hospital_Management
         {
 
         }
+
+        private void AddAppointments_Load(object sender, EventArgs e)
+        {
+            string query="select DoctorID,DoctorName,Department from Doctor";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+
+            DataTable dt = new DataTable();
+
+            sda.Fill(dt);
+
+            DoctorListDataGridView.DataSource = dt;
+
+            DoctorListDataGridView.Columns["DoctorID"].HeaderText = "Doctor ID";
+
+            DoctorListDataGridView.Columns["DoctorName"].HeaderText = "Full Name";
+
+            DoctorListDataGridView.Columns["Department"].HeaderText = "Department";
+
+        }
     }
 }

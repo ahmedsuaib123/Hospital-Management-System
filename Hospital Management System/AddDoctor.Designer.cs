@@ -351,7 +351,9 @@
             this.Controls.Add(this.FullNameTextBox);
             this.Controls.Add(this.FullNameLabel);
             this.Name = "AddDoctor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Management System";
+            this.Load += new System.EventHandler(this.AddDoctor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

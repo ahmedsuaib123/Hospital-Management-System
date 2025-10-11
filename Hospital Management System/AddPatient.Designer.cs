@@ -282,7 +282,6 @@
             this.AddressTextBox.Name = "AddressTextBox";
             this.AddressTextBox.Size = new System.Drawing.Size(133, 20);
             this.AddressTextBox.TabIndex = 60;
-            this.AddressTextBox.Visible = false;
             // 
             // AddressLabel
             // 
@@ -293,7 +292,6 @@
             this.AddressLabel.Size = new System.Drawing.Size(57, 17);
             this.AddressLabel.TabIndex = 59;
             this.AddressLabel.Text = "Address";
-            this.AddressLabel.Visible = false;
             // 
             // AddPatient
             // 

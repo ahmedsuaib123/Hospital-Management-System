@@ -157,6 +157,7 @@
             this.Controls.Add(this.NewPasswordLabel);
             this.Controls.Add(this.AdminTitleLabel);
             this.Name = "AdminPasswordChange";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminPasswordChange";
             this.Load += new System.EventHandler(this.AdminPasswordChange_Load);
             this.ResumeLayout(false);

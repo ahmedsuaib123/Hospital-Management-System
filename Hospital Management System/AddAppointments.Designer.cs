@@ -47,7 +47,7 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.TitleLabel.Location = new System.Drawing.Point(186, 9);
+            this.TitleLabel.Location = new System.Drawing.Point(115, 9);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(172, 24);
             this.TitleLabel.TabIndex = 82;
@@ -56,9 +56,9 @@
             // BackButton
             // 
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.BackButton.Location = new System.Drawing.Point(88, 450);
+            this.BackButton.Location = new System.Drawing.Point(8, 450);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.Size = new System.Drawing.Size(62, 36);
             this.BackButton.TabIndex = 96;
             this.BackButton.Text = "Cancel";
             this.BackButton.UseVisualStyleBackColor = true;
@@ -66,9 +66,10 @@
             // 
             // BookButton
             // 
-            this.BookButton.Location = new System.Drawing.Point(429, 450);
+            this.BookButton.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.BookButton.Location = new System.Drawing.Point(272, 450);
             this.BookButton.Name = "BookButton";
-            this.BookButton.Size = new System.Drawing.Size(75, 23);
+            this.BookButton.Size = new System.Drawing.Size(82, 36);
             this.BookButton.TabIndex = 95;
             this.BookButton.Text = "Book Now";
             this.BookButton.UseVisualStyleBackColor = true;
@@ -76,40 +77,40 @@
             // 
             // AppointmentDatePicker
             // 
-            this.AppointmentDatePicker.Location = new System.Drawing.Point(247, 401);
+            this.AppointmentDatePicker.Location = new System.Drawing.Point(167, 401);
             this.AppointmentDatePicker.Name = "AppointmentDatePicker";
-            this.AppointmentDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.AppointmentDatePicker.Size = new System.Drawing.Size(187, 20);
             this.AppointmentDatePicker.TabIndex = 94;
             // 
             // AvailableSlotComboBox
             // 
             this.AvailableSlotComboBox.FormattingEnabled = true;
-            this.AvailableSlotComboBox.Location = new System.Drawing.Point(247, 305);
+            this.AvailableSlotComboBox.Location = new System.Drawing.Point(167, 305);
             this.AvailableSlotComboBox.Name = "AvailableSlotComboBox";
-            this.AvailableSlotComboBox.Size = new System.Drawing.Size(121, 21);
+            this.AvailableSlotComboBox.Size = new System.Drawing.Size(108, 21);
             this.AvailableSlotComboBox.TabIndex = 93;
             // 
             // DiagnosisTextBox
             // 
-            this.DiagnosisTextBox.Location = new System.Drawing.Point(247, 353);
+            this.DiagnosisTextBox.Location = new System.Drawing.Point(167, 353);
             this.DiagnosisTextBox.Name = "DiagnosisTextBox";
-            this.DiagnosisTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DiagnosisTextBox.Size = new System.Drawing.Size(87, 20);
             this.DiagnosisTextBox.TabIndex = 92;
             // 
             // DepartmentTextBox
             // 
-            this.DepartmentTextBox.Location = new System.Drawing.Point(247, 256);
+            this.DepartmentTextBox.Location = new System.Drawing.Point(167, 256);
             this.DepartmentTextBox.Name = "DepartmentTextBox";
             this.DepartmentTextBox.ReadOnly = true;
-            this.DepartmentTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DepartmentTextBox.Size = new System.Drawing.Size(87, 20);
             this.DepartmentTextBox.TabIndex = 91;
             // 
             // DocNameTextBox
             // 
-            this.DocNameTextBox.Location = new System.Drawing.Point(247, 208);
+            this.DocNameTextBox.Location = new System.Drawing.Point(167, 208);
             this.DocNameTextBox.Name = "DocNameTextBox";
             this.DocNameTextBox.ReadOnly = true;
-            this.DocNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.DocNameTextBox.Size = new System.Drawing.Size(87, 20);
             this.DocNameTextBox.TabIndex = 90;
             this.DocNameTextBox.TextChanged += new System.EventHandler(this.DocNameTextBox_TextChanged);
             // 
@@ -117,7 +118,7 @@
             // 
             this.AppointmentDateLabel.AutoSize = true;
             this.AppointmentDateLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.AppointmentDateLabel.Location = new System.Drawing.Point(113, 404);
+            this.AppointmentDateLabel.Location = new System.Drawing.Point(33, 404);
             this.AppointmentDateLabel.Name = "AppointmentDateLabel";
             this.AppointmentDateLabel.Size = new System.Drawing.Size(120, 16);
             this.AppointmentDateLabel.TabIndex = 89;
@@ -127,7 +128,7 @@
             // 
             this.DiagnosisLabel.AutoSize = true;
             this.DiagnosisLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.DiagnosisLabel.Location = new System.Drawing.Point(113, 353);
+            this.DiagnosisLabel.Location = new System.Drawing.Point(33, 353);
             this.DiagnosisLabel.Name = "DiagnosisLabel";
             this.DiagnosisLabel.Size = new System.Drawing.Size(73, 16);
             this.DiagnosisLabel.TabIndex = 88;
@@ -137,7 +138,7 @@
             // 
             this.DepartmentLabel.AutoSize = true;
             this.DepartmentLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.DepartmentLabel.Location = new System.Drawing.Point(113, 256);
+            this.DepartmentLabel.Location = new System.Drawing.Point(33, 256);
             this.DepartmentLabel.Name = "DepartmentLabel";
             this.DepartmentLabel.Size = new System.Drawing.Size(84, 16);
             this.DepartmentLabel.TabIndex = 87;
@@ -147,7 +148,7 @@
             // 
             this.AvailableSlotLlabel.AutoSize = true;
             this.AvailableSlotLlabel.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.AvailableSlotLlabel.Location = new System.Drawing.Point(113, 305);
+            this.AvailableSlotLlabel.Location = new System.Drawing.Point(33, 305);
             this.AvailableSlotLlabel.Name = "AvailableSlotLlabel";
             this.AvailableSlotLlabel.Size = new System.Drawing.Size(93, 16);
             this.AvailableSlotLlabel.TabIndex = 86;
@@ -157,7 +158,7 @@
             // 
             this.DoctorNameLabel.AutoSize = true;
             this.DoctorNameLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.DoctorNameLabel.Location = new System.Drawing.Point(113, 205);
+            this.DoctorNameLabel.Location = new System.Drawing.Point(33, 205);
             this.DoctorNameLabel.Name = "DoctorNameLabel";
             this.DoctorNameLabel.Size = new System.Drawing.Size(95, 16);
             this.DoctorNameLabel.TabIndex = 85;
@@ -167,7 +168,7 @@
             // 
             this.DoctorIDLabel.AutoSize = true;
             this.DoctorIDLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.DoctorIDLabel.Location = new System.Drawing.Point(114, 168);
+            this.DoctorIDLabel.Location = new System.Drawing.Point(34, 168);
             this.DoctorIDLabel.Name = "DoctorIDLabel";
             this.DoctorIDLabel.Size = new System.Drawing.Size(77, 16);
             this.DoctorIDLabel.TabIndex = 84;
@@ -176,9 +177,9 @@
             // DoctorIDComboBox
             // 
             this.DoctorIDComboBox.FormattingEnabled = true;
-            this.DoctorIDComboBox.Location = new System.Drawing.Point(247, 168);
+            this.DoctorIDComboBox.Location = new System.Drawing.Point(167, 168);
             this.DoctorIDComboBox.Name = "DoctorIDComboBox";
-            this.DoctorIDComboBox.Size = new System.Drawing.Size(121, 21);
+            this.DoctorIDComboBox.Size = new System.Drawing.Size(108, 21);
             this.DoctorIDComboBox.TabIndex = 83;
             this.DoctorIDComboBox.SelectedIndexChanged += new System.EventHandler(this.DoctorIDComboBox_SelectedIndexChanged_1);
             // 
@@ -186,7 +187,7 @@
             // 
             this.PatientIDLabel.AutoSize = true;
             this.PatientIDLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.PatientIDLabel.Location = new System.Drawing.Point(114, 56);
+            this.PatientIDLabel.Location = new System.Drawing.Point(34, 56);
             this.PatientIDLabel.Name = "PatientIDLabel";
             this.PatientIDLabel.Size = new System.Drawing.Size(75, 16);
             this.PatientIDLabel.TabIndex = 98;
@@ -195,9 +196,9 @@
             // PatientIDComboBox
             // 
             this.PatientIDComboBox.FormattingEnabled = true;
-            this.PatientIDComboBox.Location = new System.Drawing.Point(247, 56);
+            this.PatientIDComboBox.Location = new System.Drawing.Point(167, 56);
             this.PatientIDComboBox.Name = "PatientIDComboBox";
-            this.PatientIDComboBox.Size = new System.Drawing.Size(121, 21);
+            this.PatientIDComboBox.Size = new System.Drawing.Size(108, 21);
             this.PatientIDComboBox.TabIndex = 97;
             this.PatientIDComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -205,7 +206,7 @@
             // 
             this.PatientNameLabel.AutoSize = true;
             this.PatientNameLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.PatientNameLabel.Location = new System.Drawing.Point(114, 90);
+            this.PatientNameLabel.Location = new System.Drawing.Point(34, 90);
             this.PatientNameLabel.Name = "PatientNameLabel";
             this.PatientNameLabel.Size = new System.Drawing.Size(89, 16);
             this.PatientNameLabel.TabIndex = 99;
@@ -213,17 +214,17 @@
             // 
             // PatientNameTextBox
             // 
-            this.PatientNameTextBox.Location = new System.Drawing.Point(247, 93);
+            this.PatientNameTextBox.Location = new System.Drawing.Point(167, 93);
             this.PatientNameTextBox.Name = "PatientNameTextBox";
             this.PatientNameTextBox.ReadOnly = true;
-            this.PatientNameTextBox.Size = new System.Drawing.Size(121, 20);
+            this.PatientNameTextBox.Size = new System.Drawing.Size(108, 20);
             this.PatientNameTextBox.TabIndex = 100;
             // 
             // ContactLabel
             // 
             this.ContactLabel.AutoSize = true;
             this.ContactLabel.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.ContactLabel.Location = new System.Drawing.Point(114, 133);
+            this.ContactLabel.Location = new System.Drawing.Point(34, 133);
             this.ContactLabel.Name = "ContactLabel";
             this.ContactLabel.Size = new System.Drawing.Size(58, 16);
             this.ContactLabel.TabIndex = 101;
@@ -231,17 +232,17 @@
             // 
             // ContactTextBox
             // 
-            this.ContactTextBox.Location = new System.Drawing.Point(247, 133);
+            this.ContactTextBox.Location = new System.Drawing.Point(167, 133);
             this.ContactTextBox.Name = "ContactTextBox";
             this.ContactTextBox.ReadOnly = true;
-            this.ContactTextBox.Size = new System.Drawing.Size(121, 20);
+            this.ContactTextBox.Size = new System.Drawing.Size(108, 20);
             this.ContactTextBox.TabIndex = 102;
             // 
             // DoctorListLabel
             // 
             this.DoctorListLabel.AutoSize = true;
             this.DoctorListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.DoctorListLabel.Location = new System.Drawing.Point(691, 9);
+            this.DoctorListLabel.Location = new System.Drawing.Point(445, 9);
             this.DoctorListLabel.Name = "DoctorListLabel";
             this.DoctorListLabel.Size = new System.Drawing.Size(108, 24);
             this.DoctorListLabel.TabIndex = 103;
@@ -251,9 +252,9 @@
             // DoctorListDataGridView
             // 
             this.DoctorListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DoctorListDataGridView.Location = new System.Drawing.Point(560, 56);
+            this.DoctorListDataGridView.Location = new System.Drawing.Point(372, 56);
             this.DoctorListDataGridView.Name = "DoctorListDataGridView";
-            this.DoctorListDataGridView.Size = new System.Drawing.Size(394, 417);
+            this.DoctorListDataGridView.Size = new System.Drawing.Size(273, 417);
             this.DoctorListDataGridView.TabIndex = 104;
             this.DoctorListDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -261,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 498);
+            this.ClientSize = new System.Drawing.Size(691, 498);
             this.Controls.Add(this.DoctorListDataGridView);
             this.Controls.Add(this.DoctorListLabel);
             this.Controls.Add(this.ContactTextBox);
@@ -288,6 +289,7 @@
             this.Name = "AddAppointments";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Management System";
+            this.Load += new System.EventHandler(this.AddAppointments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DoctorListDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

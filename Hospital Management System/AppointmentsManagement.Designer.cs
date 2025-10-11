@@ -129,6 +129,7 @@
             this.Controls.Add(this.AppointmentsDataGridView);
             this.Controls.Add(this.AppointmentsTitleLabel);
             this.Name = "AppointmentsManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Management System";
             this.Load += new System.EventHandler(this.ShowAppointments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AppointmentsDataGridView)).EndInit();

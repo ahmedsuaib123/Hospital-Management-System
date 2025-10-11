@@ -129,6 +129,7 @@
             this.Controls.Add(this.DepartmentDataGridView);
             this.Controls.Add(this.TitleLabel);
             this.Name = "DepartmentManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DepartmentManagement";
             this.Load += new System.EventHandler(this.DepartmentManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DepartmentDataGridView)).EndInit();
