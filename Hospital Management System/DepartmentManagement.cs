@@ -11,17 +11,18 @@ using System.Windows.Forms;
 
 namespace Hospital_Management_System
 {
-    public partial class CheckAccountStatus : Form
+    public partial class DepartmentManagement : Form
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-HOP36BN\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
-        public CheckAccountStatus()
+
+        public DepartmentManagement()
         {
             InitializeComponent();
         }
 
-        private void CheckAccountStatus_Load(object sender, EventArgs e)
+        private void DepartmentManagement_Load(object sender, EventArgs e)
         {
-            string query = "Select Username,Role,Status from Login";
+            string query = "Select * from Department";
 
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
 
@@ -29,19 +30,9 @@ namespace Hospital_Management_System
 
             sda.Fill(dt);
 
-            AccountStatusDataGridView.DataSource = dt;
+            DepartmentDataGridView.DataSource = dt;
 
-            AccountStatusDataGridView.Columns["Username"].HeaderText = "Username";
-
-            AccountStatusDataGridView.Columns["Role"].HeaderText = "Role";
-
-            AccountStatusDataGridView.Columns["Status"].HeaderText = "Account Status";
-        }
-
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            new AdminDashboard().Show();
-            this.Hide();
+            
         }
     }
 }

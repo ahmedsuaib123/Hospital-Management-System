@@ -70,6 +70,7 @@
             // 
             // GeneralInformationsPanel
             // 
+            this.GeneralInformationsPanel.Controls.Add(this.AccountInformationPanel);
             this.GeneralInformationsPanel.Controls.Add(this.AvailableSlotTextBox);
             this.GeneralInformationsPanel.Controls.Add(this.AvailableSlotLabel);
             this.GeneralInformationsPanel.Controls.Add(this.QualificationTextBox);
@@ -358,7 +359,7 @@
             this.AccountInformationPanel.Controls.Add(this.UsernameTextBox);
             this.AccountInformationPanel.Controls.Add(this.UsernameLabel);
             this.AccountInformationPanel.Controls.Add(this.AccountInformationLabel);
-            this.AccountInformationPanel.Location = new System.Drawing.Point(3, 3);
+            this.AccountInformationPanel.Location = new System.Drawing.Point(0, 0);
             this.AccountInformationPanel.Name = "AccountInformationPanel";
             this.AccountInformationPanel.Size = new System.Drawing.Size(798, 447);
             this.AccountInformationPanel.TabIndex = 42;
@@ -393,7 +394,7 @@
             this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.Black;
             this.ShowPasswordCheckBox.Location = new System.Drawing.Point(549, 266);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
-            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(102, 17);
+            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(122, 21);
             this.ShowPasswordCheckBox.TabIndex = 27;
             this.ShowPasswordCheckBox.Text = "Show Password";
             this.ShowPasswordCheckBox.UseVisualStyleBackColor = false;
@@ -403,7 +404,7 @@
             // 
             this.ConfirmPasswordTextBox.Location = new System.Drawing.Point(251, 264);
             this.ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
-            this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(246, 20);
+            this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(246, 24);
             this.ConfirmPasswordTextBox.TabIndex = 26;
             this.ConfirmPasswordTextBox.UseSystemPasswordChar = true;
             // 
@@ -421,7 +422,7 @@
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(251, 196);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(246, 20);
+            this.PasswordTextBox.Size = new System.Drawing.Size(246, 24);
             this.PasswordTextBox.TabIndex = 24;
             this.PasswordTextBox.UseSystemPasswordChar = true;
             // 
@@ -439,7 +440,7 @@
             // 
             this.UsernameTextBox.Location = new System.Drawing.Point(251, 128);
             this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(246, 20);
+            this.UsernameTextBox.Size = new System.Drawing.Size(246, 24);
             this.UsernameTextBox.TabIndex = 22;
             // 
             // UsernameLabel
@@ -467,7 +468,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.AccountInformationPanel);
             this.Controls.Add(this.GeneralInformationsPanel);
             this.Name = "Signup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

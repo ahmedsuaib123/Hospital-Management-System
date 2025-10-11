@@ -22,5 +22,16 @@ namespace Hospital_Management_System
             new NurseManagement().Show();
             this.Hide();
         }
+
+        private void TitleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NurseDutySchedule_Load(object sender, EventArgs e)
+        {
+            string query = "Select NurseID,NurseName from Nurse";
+
+        }
     }
 }

@@ -35,7 +35,7 @@
             // 
             this.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LogoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutButton.Location = new System.Drawing.Point(604, 383);
+            this.LogoutButton.Location = new System.Drawing.Point(661, 388);
             this.LogoutButton.Name = "LogoutButton";
             this.LogoutButton.Size = new System.Drawing.Size(87, 33);
             this.LogoutButton.TabIndex = 11;
@@ -51,7 +51,7 @@
             this.Controls.Add(this.LogoutButton);
             this.Name = "NurseDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NurseDashboard";
+            this.Text = "Hospital Management System";
             this.ResumeLayout(false);
 
         }

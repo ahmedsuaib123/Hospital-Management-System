@@ -55,7 +55,12 @@ namespace Hospital_Management_System
 
             DoctorsDataGridView.Columns["DoctorUsername"].HeaderText = "Username";
 
+        }
 
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            new AddDoctor().Show();
+            this.Hide();
         }
     }
 }

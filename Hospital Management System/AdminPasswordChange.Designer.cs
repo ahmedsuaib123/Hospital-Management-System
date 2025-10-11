@@ -34,7 +34,7 @@
             this.ConfirmPasswordLabel = new System.Windows.Forms.Label();
             this.NewPasswordTextBox = new System.Windows.Forms.TextBox();
             this.NewPasswordLabel = new System.Windows.Forms.Label();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.CurrentPasswordTextBox = new System.Windows.Forms.TextBox();
             this.CurrentPassowrdLabel = new System.Windows.Forms.Label();
             this.ResetButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
@@ -61,6 +61,7 @@
             this.ShowPasswordCheckBox.TabIndex = 32;
             this.ShowPasswordCheckBox.Text = "Show Password";
             this.ShowPasswordCheckBox.UseVisualStyleBackColor = false;
+            this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
             // 
             // ConfirmPasswordTextBox
             // 
@@ -98,13 +99,13 @@
             this.NewPasswordLabel.TabIndex = 28;
             this.NewPasswordLabel.Text = "New Password";
             // 
-            // PasswordTextBox
+            // CurrentPasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(265, 155);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(246, 20);
-            this.PasswordTextBox.TabIndex = 34;
-            this.PasswordTextBox.UseSystemPasswordChar = true;
+            this.CurrentPasswordTextBox.Location = new System.Drawing.Point(265, 155);
+            this.CurrentPasswordTextBox.Name = "CurrentPasswordTextBox";
+            this.CurrentPasswordTextBox.Size = new System.Drawing.Size(246, 20);
+            this.CurrentPasswordTextBox.TabIndex = 34;
+            this.CurrentPasswordTextBox.UseSystemPasswordChar = true;
             // 
             // CurrentPassowrdLabel
             // 
@@ -126,6 +127,7 @@
             this.ResetButton.TabIndex = 35;
             this.ResetButton.Text = "Reset";
             this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // CancelButton
             // 
@@ -137,6 +139,7 @@
             this.CancelButton.TabIndex = 36;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // AdminPasswordChange
             // 
@@ -145,7 +148,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.ResetButton);
-            this.Controls.Add(this.PasswordTextBox);
+            this.Controls.Add(this.CurrentPasswordTextBox);
             this.Controls.Add(this.CurrentPassowrdLabel);
             this.Controls.Add(this.ShowPasswordCheckBox);
             this.Controls.Add(this.ConfirmPasswordTextBox);
@@ -169,7 +172,7 @@
         private System.Windows.Forms.Label ConfirmPasswordLabel;
         private System.Windows.Forms.TextBox NewPasswordTextBox;
         private System.Windows.Forms.Label NewPasswordLabel;
-        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.TextBox CurrentPasswordTextBox;
         private System.Windows.Forms.Label CurrentPassowrdLabel;
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.Button CancelButton;

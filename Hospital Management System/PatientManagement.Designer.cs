@@ -34,6 +34,9 @@
             this.DeleteButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.SearchComboBox = new System.Windows.Forms.ComboBox();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.SearchLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PatientDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(344, 24);
+            this.label1.Location = new System.Drawing.Point(344, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 23);
             this.label1.TabIndex = 0;
@@ -54,11 +57,11 @@
             this.PatientDataGridView.AllowUserToResizeColumns = false;
             this.PatientDataGridView.AllowUserToResizeRows = false;
             this.PatientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PatientDataGridView.Location = new System.Drawing.Point(58, 79);
+            this.PatientDataGridView.Location = new System.Drawing.Point(58, 111);
             this.PatientDataGridView.Name = "PatientDataGridView";
             this.PatientDataGridView.ReadOnly = true;
             this.PatientDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.PatientDataGridView.Size = new System.Drawing.Size(649, 286);
+            this.PatientDataGridView.Size = new System.Drawing.Size(649, 254);
             this.PatientDataGridView.TabIndex = 1;
             // 
             // AddButton
@@ -71,6 +74,7 @@
             this.AddButton.TabIndex = 12;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // DeleteButton
             // 
@@ -104,12 +108,46 @@
             this.BackButton.TabIndex = 15;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // SearchComboBox
+            // 
+            this.SearchComboBox.FormattingEnabled = true;
+            this.SearchComboBox.Items.AddRange(new object[] {
+            "AppointmentID",
+            "PatientName",
+            "DoctorName"});
+            this.SearchComboBox.Location = new System.Drawing.Point(144, 48);
+            this.SearchComboBox.Name = "SearchComboBox";
+            this.SearchComboBox.Size = new System.Drawing.Size(88, 21);
+            this.SearchComboBox.TabIndex = 55;
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.Location = new System.Drawing.Point(58, 80);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(174, 20);
+            this.SearchTextBox.TabIndex = 54;
+            this.SearchTextBox.Visible = false;
+            // 
+            // SearchLabel
+            // 
+            this.SearchLabel.AutoSize = true;
+            this.SearchLabel.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.SearchLabel.Location = new System.Drawing.Point(54, 48);
+            this.SearchLabel.Name = "SearchLabel";
+            this.SearchLabel.Size = new System.Drawing.Size(84, 20);
+            this.SearchLabel.TabIndex = 53;
+            this.SearchLabel.Text = "Search By";
             // 
             // PatientManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SearchComboBox);
+            this.Controls.Add(this.SearchTextBox);
+            this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.DeleteButton);
@@ -134,5 +172,8 @@
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.ComboBox SearchComboBox;
+        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.Label SearchLabel;
     }
 }

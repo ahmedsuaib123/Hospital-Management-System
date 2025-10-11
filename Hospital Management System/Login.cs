@@ -38,135 +38,98 @@ namespace Hospital_Management_System
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string insert_query = "select * from Login where Username = '" + UsernameTextBox.Text + "' and Password = '" + PasswordTextBox.Text + "'";
-
-            SqlDataAdapter sda = new SqlDataAdapter(insert_query, con);
-
+           string query = "select * from Login where Username='" + UsernameTextBox.Text + "' and Password='" + PasswordTextBox.Text + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
             DataTable dt = new DataTable();
-
             sda.Fill(dt);
 
             if (dt.Rows.Count == 1)
             {
-                if (dt.Rows[0]["Status"].ToString() == "1")
+                if (dt.Rows[0][4].ToString() == "1")
                 {
-                    username = dt.Rows[0]["Username"].ToString();
-                    role = dt.Rows[0][3].ToString();
-                    if (role == "Admin")
+                    Login.username = dt.Rows[0]["Username"].ToString();
+                    string role = dt.Rows[0]["Role"].ToString();
+
+                    if (role == "Doctor")
                     {
-                        string admin_query = "select * from Admin where Username = '" + UsernameTextBox.Text + "'";
-
-                        SqlDataAdapter admin_sda = new SqlDataAdapter(admin_query, con);
-
-                        DataTable admin_dt = new DataTable();
-
-                        admin_sda.Fill(admin_dt);
-
-                        if (admin_dt.Rows.Count > 0)
+                        SqlDataAdapter da = new SqlDataAdapter(
+                            "SELECT DoctorID, DoctorName, DoctorContact, DoctorAge, Gender, BloodGroup, AvailableSlot " +
+                            "FROM Doctor WHERE DoctorUsername='" + username + "'", con);
+                        DataTable dtt = new DataTable();
+                        da.Fill(dtt);
+                        if (dtt.Rows.Count > 0)
                         {
-                            adminID = admin_dt.Rows[0]["AdminID"].ToString();
-                            fullName = admin_dt.Rows[0]["AdminName"].ToString();
-                            adminEmail = admin_dt.Rows[0]["AdminEmail"].ToString();
-                            contact = admin_dt.Rows[0]["AdminContact"].ToString();
-
-                            AdminDashboard ad = new AdminDashboard();
-                            ad.Show();
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Admin record not found.");
+                            Login.doctorID = Convert.ToInt32(dtt.Rows[0]["DoctorID"]).ToString();  
+                            Login.fullName = dtt.Rows[0]["DoctorName"].ToString();
+                            Login.contact = dtt.Rows[0]["DoctorContact"].ToString();
+                            Login.age = Convert.ToInt32(dtt.Rows[0]["DoctorAge"]).ToString();
+                            Login.gender = dtt.Rows[0]["Gender"].ToString();
+                            Login.bloodGroup = dtt.Rows[0]["BloodGroup"].ToString();
+                            Login.availableSlot = dtt.Rows[0]["AvailableSlot"].ToString();
                         }
                     }
                     else if (role == "Patient")
                     {
-                        string pat_query = "select * from Patient where PatientUsername = '" + UsernameTextBox.Text + "'";
-
-                        SqlDataAdapter pat_sda = new SqlDataAdapter(pat_query, con);
-
-                        DataTable pat_dt = new DataTable();
-
-                        pat_sda.Fill(pat_dt);
-
-                        if (pat_dt.Rows.Count > 0)
+                        SqlDataAdapter da = new SqlDataAdapter(
+                            "SELECT PatientID, PatientName, PatientContact FROM Patient WHERE PatientUsername='" + username + "'", con);
+                        DataTable dtt = new DataTable();
+                        da.Fill(dtt);
+                        if (dtt.Rows.Count > 0)
                         {
-                            patientID = pat_dt.Rows[0]["PatientID"].ToString();
-                            fullName = pat_dt.Rows[0]["PatientName"].ToString();
-                            age = pat_dt.Rows[0]["PatientAge"].ToString();
-                            gender = pat_dt.Rows[0]["PatientGender"].ToString();
-                            bloodGroup = pat_dt.Rows[0]["PatientBloodGroup"].ToString();
-                            contact = pat_dt.Rows[0]["PatientContact"].ToString();
-
-                            new PatientDashboard().Show();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Patient record not found.");
-                        }
-                    }
-                    else if (role == "Doctor")
-                    {
-                        string doc_query = "select * from Doctor where DoctorUsername = '" + UsernameTextBox.Text + "'";
-
-                        SqlDataAdapter doc_sda = new SqlDataAdapter(doc_query, con);
-
-                        DataTable doc_dt = new DataTable();
-
-                        doc_sda.Fill(doc_dt);
-
-                        if (doc_dt.Rows.Count > 0)
-                        {
-                            doctorID = Convert.ToInt32(doc_dt.Rows[0]["DoctorID"]).ToString();
-                            fullName = doc_dt.Rows[0]["DoctorName"].ToString();
-                            contact = doc_dt.Rows[0]["DoctorContact"].ToString();
-                            age = Convert.ToInt32(doc_dt.Rows[0]["DoctorAge"]).ToString();
-                            gender = doc_dt.Rows[0]["Gender"].ToString();
-                            bloodGroup = doc_dt.Rows[0]["BloodGroup"].ToString();
-                            availableSlot = doc_dt.Rows[0]["AvailableSlot"].ToString();
-
-                            new DoctorDashboard().Show();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Doctor record not found.");
+                            Login.patientID = Convert.ToInt32(dtt.Rows[0]["PatientID"]).ToString();   
+                            Login.fullName = dtt.Rows[0]["PatientName"].ToString();
+                            Login.contact = dtt.Rows[0]["PatientContact"].ToString();  
                         }
                     }
                     else if (role == "Nurse")
                     {
-                        string nurse_query = "select * from Nurse where NurseUsername = '" + UsernameTextBox.Text + "'";
-
-                        SqlDataAdapter nurse_sda = new SqlDataAdapter(nurse_query, con);
-
-                        DataTable nur_dt = new DataTable();
-
-                        nurse_sda.Fill(nur_dt);
-
-                        if (nur_dt.Rows.Count > 0)
+                        SqlDataAdapter da = new SqlDataAdapter("SELECT NurseID, NurseName FROM Nurse WHERE NurseUsername='" + username + "'", con);
+                        DataTable dtt = new DataTable();
+                        da.Fill(dtt);
+                        if (dtt.Rows.Count > 0)
                         {
-                            nurseID = nur_dt.Rows[0]["NurseID"].ToString();
-                            fullName = nur_dt.Rows[0]["NurseName"].ToString();
-                            age = nur_dt.Rows[0]["NurseAge"].ToString();
-                            contact = nur_dt.Rows[0]["NurseContact"].ToString();
+                            Login.nurseID = Convert.ToInt32(dtt.Rows[0]["NurseID"]).ToString();   
+                            Login.fullName = dtt.Rows[0]["NurseName"].ToString();
+                        }
+                    }
+                    else
+                    {
+                        Login.fullName = username;
+                    }
 
-                            new NurseDashboard().Show();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Nurse record not found.");
-                        }
+                    if (role == "Admin")
+                    {
+                        new AdminDashboard().Show();
+                        this.Hide();
+                    }
+                    else if (role == "Patient")
+                    {
+                        new PatientDashboard().Show();
+                        this.Hide();
+                    }
+                    else if (role == "Doctor")
+                    {
+                        new DoctorDashboard().Show();
+                        this.Hide();
+                    }
+                    else if (role == "Nurse")
+                    {
+                        new NurseDashboard().Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unknown Role! Contact admin.");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Your account is blocked. Please contact with Admin.");
+                    MessageBox.Show("Account is disabled. Contact with admin");
                 }
             }
             else
             {
-                MessageBox.Show("Invalid username or password. Please try again.");
+                MessageBox.Show("Wrong Credentials!! Try Again.");
             }
         }
 

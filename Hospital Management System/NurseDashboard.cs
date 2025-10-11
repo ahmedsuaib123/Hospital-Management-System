@@ -19,8 +19,12 @@ namespace Hospital_Management_System
 
         private void LogoutButton_Click(object sender, EventArgs e)
         {
-            new Login().Show();
-            this.Hide();
+            DialogResult dr = MessageBox.Show("Do you really want to Logout?", "Logout", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                new Login().Show();
+                this.Hide();
+            }
         }
     }
 }

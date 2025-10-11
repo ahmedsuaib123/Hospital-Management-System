@@ -34,6 +34,9 @@
             this.UpdateButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
+            this.SearchComboBox = new System.Windows.Forms.ComboBox();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.SearchLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DoctorsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +44,7 @@
             // 
             this.DoctorTitleLabel.AutoSize = true;
             this.DoctorTitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DoctorTitleLabel.Location = new System.Drawing.Point(344, 24);
+            this.DoctorTitleLabel.Location = new System.Drawing.Point(346, 9);
             this.DoctorTitleLabel.Name = "DoctorTitleLabel";
             this.DoctorTitleLabel.Size = new System.Drawing.Size(76, 23);
             this.DoctorTitleLabel.TabIndex = 1;
@@ -103,12 +106,46 @@
             this.AddButton.TabIndex = 16;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // SearchComboBox
+            // 
+            this.SearchComboBox.FormattingEnabled = true;
+            this.SearchComboBox.Items.AddRange(new object[] {
+            "AppointmentID",
+            "PatientName",
+            "DoctorName"});
+            this.SearchComboBox.Location = new System.Drawing.Point(164, 35);
+            this.SearchComboBox.Name = "SearchComboBox";
+            this.SearchComboBox.Size = new System.Drawing.Size(88, 21);
+            this.SearchComboBox.TabIndex = 61;
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.Location = new System.Drawing.Point(78, 62);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(174, 20);
+            this.SearchTextBox.TabIndex = 60;
+            this.SearchTextBox.Visible = false;
+            // 
+            // SearchLabel
+            // 
+            this.SearchLabel.AutoSize = true;
+            this.SearchLabel.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.SearchLabel.Location = new System.Drawing.Point(74, 35);
+            this.SearchLabel.Name = "SearchLabel";
+            this.SearchLabel.Size = new System.Drawing.Size(84, 20);
+            this.SearchLabel.TabIndex = 59;
+            this.SearchLabel.Text = "Search By";
             // 
             // DoctorManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SearchComboBox);
+            this.Controls.Add(this.SearchTextBox);
+            this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.DeleteButton);
@@ -133,5 +170,8 @@
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.ComboBox SearchComboBox;
+        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.Label SearchLabel;
     }
 }

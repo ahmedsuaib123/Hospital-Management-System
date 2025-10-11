@@ -35,6 +35,7 @@
             this.NurseDataGridView = new System.Windows.Forms.DataGridView();
             this.NurseTitleLabel = new System.Windows.Forms.Label();
             this.DutyScheduleButton = new System.Windows.Forms.Button();
+            this.SearchComboBox = new System.Windows.Forms.ComboBox();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.SearchLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NurseDataGridView)).BeginInit();
@@ -50,6 +51,7 @@
             this.BackButton.TabIndex = 21;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // UpdateButton
             // 
@@ -83,6 +85,7 @@
             this.AddButton.TabIndex = 18;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // NurseDataGridView
             // 
@@ -91,11 +94,11 @@
             this.NurseDataGridView.AllowUserToResizeColumns = false;
             this.NurseDataGridView.AllowUserToResizeRows = false;
             this.NurseDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.NurseDataGridView.Location = new System.Drawing.Point(76, 79);
+            this.NurseDataGridView.Location = new System.Drawing.Point(76, 114);
             this.NurseDataGridView.Name = "NurseDataGridView";
             this.NurseDataGridView.ReadOnly = true;
             this.NurseDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.NurseDataGridView.Size = new System.Drawing.Size(649, 286);
+            this.NurseDataGridView.Size = new System.Drawing.Size(649, 261);
             this.NurseDataGridView.TabIndex = 17;
             // 
             // NurseTitleLabel
@@ -112,37 +115,50 @@
             // 
             this.DutyScheduleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DutyScheduleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DutyScheduleButton.Location = new System.Drawing.Point(551, 32);
+            this.DutyScheduleButton.Location = new System.Drawing.Point(551, 43);
             this.DutyScheduleButton.Name = "DutyScheduleButton";
-            this.DutyScheduleButton.Size = new System.Drawing.Size(174, 32);
+            this.DutyScheduleButton.Size = new System.Drawing.Size(174, 46);
             this.DutyScheduleButton.TabIndex = 22;
             this.DutyScheduleButton.Text = "Duty Schedule";
             this.DutyScheduleButton.UseVisualStyleBackColor = true;
             this.DutyScheduleButton.Click += new System.EventHandler(this.DutyScheduleButton_Click);
             // 
+            // SearchComboBox
+            // 
+            this.SearchComboBox.FormattingEnabled = true;
+            this.SearchComboBox.Items.AddRange(new object[] {
+            "AppointmentID",
+            "PatientName",
+            "DoctorName"});
+            this.SearchComboBox.Location = new System.Drawing.Point(162, 43);
+            this.SearchComboBox.Name = "SearchComboBox";
+            this.SearchComboBox.Size = new System.Drawing.Size(88, 21);
+            this.SearchComboBox.TabIndex = 58;
+            // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(165, 44);
+            this.SearchTextBox.Location = new System.Drawing.Point(76, 79);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(193, 20);
-            this.SearchTextBox.TabIndex = 42;
+            this.SearchTextBox.Size = new System.Drawing.Size(174, 20);
+            this.SearchTextBox.TabIndex = 57;
             this.SearchTextBox.Visible = false;
             // 
             // SearchLabel
             // 
             this.SearchLabel.AutoSize = true;
             this.SearchLabel.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.SearchLabel.Location = new System.Drawing.Point(78, 44);
+            this.SearchLabel.Location = new System.Drawing.Point(72, 43);
             this.SearchLabel.Name = "SearchLabel";
-            this.SearchLabel.Size = new System.Drawing.Size(58, 20);
-            this.SearchLabel.TabIndex = 41;
-            this.SearchLabel.Text = "Search";
+            this.SearchLabel.Size = new System.Drawing.Size(84, 20);
+            this.SearchLabel.TabIndex = 56;
+            this.SearchLabel.Text = "Search By";
             // 
             // NurseManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SearchComboBox);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.DutyScheduleButton);
@@ -171,6 +187,7 @@
         private System.Windows.Forms.DataGridView NurseDataGridView;
         private System.Windows.Forms.Label NurseTitleLabel;
         private System.Windows.Forms.Button DutyScheduleButton;
+        private System.Windows.Forms.ComboBox SearchComboBox;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.Label SearchLabel;
     }

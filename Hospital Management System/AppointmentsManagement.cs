@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital_Management;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,17 +12,17 @@ using System.Windows.Forms;
 
 namespace Hospital_Management_System
 {
-    public partial class ShowAppointments : Form
+    public partial class AppointmentsManagement : Form
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-HOP36BN\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
-        public ShowAppointments()
+        public AppointmentsManagement()
         {
             InitializeComponent();
         }
 
         private void ShowAppointments_Load(object sender, EventArgs e)
         {
-            string query = "select a.AppointmentID,p.PatientName,d.DoctorName,a.AppointmentDate,a.AppointmentSlot from Appointment a,Patient p,Doctor d where a.PatientID=p.PatientID and a.DoctorID=d.DoctorID";
+            string query = "select a.AppointmentID,p.PatientName,d.DoctorName,a.PatientContact,a.AppointmentDate,a.AppointmentSlot from Appointment a,Patient p,Doctor d where a.PatientID=p.PatientID and a.DoctorID=d.DoctorID";
 
             SqlDataAdapter sda = new SqlDataAdapter(query, con);
 
@@ -41,8 +42,22 @@ namespace Hospital_Management_System
 
             AppointmentsDataGridView.Columns["AppointmentSlot"].HeaderText = "Time";
 
-            AppointmentsDataGridView.Columns["Status"].HeaderText = "Status";
+            AppointmentsDataGridView.Columns["PatientContact"].HeaderText = "Contact";
 
+            //AppointmentsDataGridView.Columns["Status"].HeaderText = "Status";
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            new AdminDashboard().Show();
+            this.Hide();
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            new AddAppointments().Show();
+            this.Hide();
         }
     }
 }

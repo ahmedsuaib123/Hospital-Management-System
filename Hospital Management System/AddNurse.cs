@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Hospital_Management_System
 {
-    public partial class AddPatient : Form
+    public partial class AddNurse : Form
     {
-        public AddPatient()
+        public AddNurse()
         {
             InitializeComponent();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            new PatientDashboard().Show();
+            new NurseManagement().Show();
             this.Hide();
         }
 

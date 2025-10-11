@@ -47,5 +47,17 @@ namespace Hospital_Management_System
             PatientDataGridView.Columns["PatientUsername"].HeaderText = "Username";
 
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            new AdminDashboard().Show();
+            this.Hide();
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            new AddPatient().Show();
+            this.Hide();
+        }
     }
 }

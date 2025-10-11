@@ -28,12 +28,307 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.BloodGroupComboBox = new System.Windows.Forms.ComboBox();
+            this.BloodGroupLabel = new System.Windows.Forms.Label();
+            this.ContactTextBox = new System.Windows.Forms.TextBox();
+            this.ContactLabel = new System.Windows.Forms.Label();
+            this.GenderComboBox = new System.Windows.Forms.ComboBox();
+            this.GenderLabel = new System.Windows.Forms.Label();
+            this.AgeTextBox = new System.Windows.Forms.TextBox();
+            this.AgeLabel = new System.Windows.Forms.Label();
+            this.DateOfTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DateOfBirthLabel = new System.Windows.Forms.Label();
+            this.FullNameTextBox = new System.Windows.Forms.TextBox();
+            this.FullNameLabel = new System.Windows.Forms.Label();
+            this.TitleLabel = new System.Windows.Forms.Label();
+            this.CancelButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
+            this.ConfirmPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.ConfirmPasswordLabel = new System.Windows.Forms.Label();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // BloodGroupComboBox
+            // 
+            this.BloodGroupComboBox.FormattingEnabled = true;
+            this.BloodGroupComboBox.Items.AddRange(new object[] {
+            "A+",
+            "A-",
+            "B+",
+            "B-",
+            "O+",
+            "O-",
+            "AB+",
+            "AB-"});
+            this.BloodGroupComboBox.Location = new System.Drawing.Point(180, 283);
+            this.BloodGroupComboBox.Name = "BloodGroupComboBox";
+            this.BloodGroupComboBox.Size = new System.Drawing.Size(74, 21);
+            this.BloodGroupComboBox.TabIndex = 42;
+            // 
+            // BloodGroupLabel
+            // 
+            this.BloodGroupLabel.AutoSize = true;
+            this.BloodGroupLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.BloodGroupLabel.Location = new System.Drawing.Point(69, 286);
+            this.BloodGroupLabel.Name = "BloodGroupLabel";
+            this.BloodGroupLabel.Size = new System.Drawing.Size(82, 17);
+            this.BloodGroupLabel.TabIndex = 41;
+            this.BloodGroupLabel.Text = "Blood Group";
+            // 
+            // ContactTextBox
+            // 
+            this.ContactTextBox.Location = new System.Drawing.Point(180, 241);
+            this.ContactTextBox.Name = "ContactTextBox";
+            this.ContactTextBox.Size = new System.Drawing.Size(146, 20);
+            this.ContactTextBox.TabIndex = 40;
+            // 
+            // ContactLabel
+            // 
+            this.ContactLabel.AutoSize = true;
+            this.ContactLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.ContactLabel.Location = new System.Drawing.Point(97, 241);
+            this.ContactLabel.Name = "ContactLabel";
+            this.ContactLabel.Size = new System.Drawing.Size(54, 17);
+            this.ContactLabel.TabIndex = 39;
+            this.ContactLabel.Text = "Contact";
+            // 
+            // GenderComboBox
+            // 
+            this.GenderComboBox.FormattingEnabled = true;
+            this.GenderComboBox.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Others"});
+            this.GenderComboBox.Location = new System.Drawing.Point(180, 198);
+            this.GenderComboBox.Name = "GenderComboBox";
+            this.GenderComboBox.Size = new System.Drawing.Size(84, 21);
+            this.GenderComboBox.TabIndex = 38;
+            // 
+            // GenderLabel
+            // 
+            this.GenderLabel.AutoSize = true;
+            this.GenderLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.GenderLabel.Location = new System.Drawing.Point(100, 201);
+            this.GenderLabel.Name = "GenderLabel";
+            this.GenderLabel.Size = new System.Drawing.Size(51, 17);
+            this.GenderLabel.TabIndex = 37;
+            this.GenderLabel.Text = "Gender";
+            // 
+            // AgeTextBox
+            // 
+            this.AgeTextBox.Location = new System.Drawing.Point(180, 156);
+            this.AgeTextBox.Name = "AgeTextBox";
+            this.AgeTextBox.ReadOnly = true;
+            this.AgeTextBox.Size = new System.Drawing.Size(74, 20);
+            this.AgeTextBox.TabIndex = 36;
+            // 
+            // AgeLabel
+            // 
+            this.AgeLabel.AutoSize = true;
+            this.AgeLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.AgeLabel.Location = new System.Drawing.Point(118, 159);
+            this.AgeLabel.Name = "AgeLabel";
+            this.AgeLabel.Size = new System.Drawing.Size(33, 17);
+            this.AgeLabel.TabIndex = 35;
+            this.AgeLabel.Text = "Age";
+            // 
+            // DateOfTimeDateTimePicker
+            // 
+            this.DateOfTimeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateOfTimeDateTimePicker.Location = new System.Drawing.Point(180, 117);
+            this.DateOfTimeDateTimePicker.Name = "DateOfTimeDateTimePicker";
+            this.DateOfTimeDateTimePicker.Size = new System.Drawing.Size(84, 20);
+            this.DateOfTimeDateTimePicker.TabIndex = 34;
+            // 
+            // DateOfBirthLabel
+            // 
+            this.DateOfBirthLabel.AutoSize = true;
+            this.DateOfBirthLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.DateOfBirthLabel.Location = new System.Drawing.Point(61, 121);
+            this.DateOfBirthLabel.Name = "DateOfBirthLabel";
+            this.DateOfBirthLabel.Size = new System.Drawing.Size(90, 17);
+            this.DateOfBirthLabel.TabIndex = 33;
+            this.DateOfBirthLabel.Text = "Date Of Birth";
+            // 
+            // FullNameTextBox
+            // 
+            this.FullNameTextBox.Location = new System.Drawing.Point(180, 77);
+            this.FullNameTextBox.Name = "FullNameTextBox";
+            this.FullNameTextBox.Size = new System.Drawing.Size(146, 20);
+            this.FullNameTextBox.TabIndex = 32;
+            // 
+            // FullNameLabel
+            // 
+            this.FullNameLabel.AutoSize = true;
+            this.FullNameLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.FullNameLabel.Location = new System.Drawing.Point(82, 80);
+            this.FullNameLabel.Name = "FullNameLabel";
+            this.FullNameLabel.Size = new System.Drawing.Size(69, 17);
+            this.FullNameLabel.TabIndex = 31;
+            this.FullNameLabel.Text = "Full Name";
+            // 
+            // TitleLabel
+            // 
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(345, 21);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(110, 23);
+            this.TitleLabel.TabIndex = 43;
+            this.TitleLabel.Text = "Add Patient";
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CancelButton.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.CancelButton.Location = new System.Drawing.Point(64, 378);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(87, 30);
+            this.CancelButton.TabIndex = 58;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddButton.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.AddButton.Location = new System.Drawing.Point(618, 375);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(145, 33);
+            this.AddButton.TabIndex = 57;
+            this.AddButton.Text = "Add";
+            this.AddButton.UseVisualStyleBackColor = true;
+            // 
+            // ShowPasswordCheckBox
+            // 
+            this.ShowPasswordCheckBox.AutoSize = true;
+            this.ShowPasswordCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(661, 283);
+            this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
+            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(102, 17);
+            this.ShowPasswordCheckBox.TabIndex = 56;
+            this.ShowPasswordCheckBox.Text = "Show Password";
+            this.ShowPasswordCheckBox.UseVisualStyleBackColor = false;
+            this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
+            // 
+            // ConfirmPasswordTextBox
+            // 
+            this.ConfirmPasswordTextBox.Location = new System.Drawing.Point(517, 238);
+            this.ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
+            this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(246, 20);
+            this.ConfirmPasswordTextBox.TabIndex = 55;
+            this.ConfirmPasswordTextBox.UseSystemPasswordChar = true;
+            // 
+            // ConfirmPasswordLabel
+            // 
+            this.ConfirmPasswordLabel.AutoSize = true;
+            this.ConfirmPasswordLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.ConfirmPasswordLabel.Location = new System.Drawing.Point(367, 241);
+            this.ConfirmPasswordLabel.Name = "ConfirmPasswordLabel";
+            this.ConfirmPasswordLabel.Size = new System.Drawing.Size(118, 17);
+            this.ConfirmPasswordLabel.TabIndex = 54;
+            this.ConfirmPasswordLabel.Text = "Confirm Password";
+            // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.Location = new System.Drawing.Point(517, 173);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(246, 20);
+            this.PasswordTextBox.TabIndex = 53;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
+            // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.PasswordLabel.Location = new System.Drawing.Point(419, 176);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(66, 17);
+            this.PasswordLabel.TabIndex = 52;
+            this.PasswordLabel.Text = "Password";
+            // 
+            // UsernameTextBox
+            // 
+            this.UsernameTextBox.Location = new System.Drawing.Point(517, 117);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(246, 20);
+            this.UsernameTextBox.TabIndex = 51;
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.UsernameLabel.Location = new System.Drawing.Point(416, 120);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(69, 17);
+            this.UsernameLabel.TabIndex = 50;
+            this.UsernameLabel.Text = "Username";
+            // 
+            // AddPatient
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.AddButton);
+            this.Controls.Add(this.ShowPasswordCheckBox);
+            this.Controls.Add(this.ConfirmPasswordTextBox);
+            this.Controls.Add(this.ConfirmPasswordLabel);
+            this.Controls.Add(this.PasswordTextBox);
+            this.Controls.Add(this.PasswordLabel);
+            this.Controls.Add(this.UsernameTextBox);
+            this.Controls.Add(this.UsernameLabel);
+            this.Controls.Add(this.TitleLabel);
+            this.Controls.Add(this.BloodGroupComboBox);
+            this.Controls.Add(this.BloodGroupLabel);
+            this.Controls.Add(this.ContactTextBox);
+            this.Controls.Add(this.ContactLabel);
+            this.Controls.Add(this.GenderComboBox);
+            this.Controls.Add(this.GenderLabel);
+            this.Controls.Add(this.AgeTextBox);
+            this.Controls.Add(this.AgeLabel);
+            this.Controls.Add(this.DateOfTimeDateTimePicker);
+            this.Controls.Add(this.DateOfBirthLabel);
+            this.Controls.Add(this.FullNameTextBox);
+            this.Controls.Add(this.FullNameLabel);
+            this.Name = "AddPatient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPatient";
+            //this.Load += new System.EventHandler(this.AddPatient_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox BloodGroupComboBox;
+        private System.Windows.Forms.Label BloodGroupLabel;
+        private System.Windows.Forms.TextBox ContactTextBox;
+        private System.Windows.Forms.Label ContactLabel;
+        private System.Windows.Forms.ComboBox GenderComboBox;
+        private System.Windows.Forms.Label GenderLabel;
+        private System.Windows.Forms.TextBox AgeTextBox;
+        private System.Windows.Forms.Label AgeLabel;
+        private System.Windows.Forms.DateTimePicker DateOfTimeDateTimePicker;
+        private System.Windows.Forms.Label DateOfBirthLabel;
+        private System.Windows.Forms.TextBox FullNameTextBox;
+        private System.Windows.Forms.Label FullNameLabel;
+        private System.Windows.Forms.Label TitleLabel;
+        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.CheckBox ShowPasswordCheckBox;
+        private System.Windows.Forms.TextBox ConfirmPasswordTextBox;
+        private System.Windows.Forms.Label ConfirmPasswordLabel;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.TextBox UsernameTextBox;
+        private System.Windows.Forms.Label UsernameLabel;
     }
 }

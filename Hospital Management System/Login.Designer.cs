@@ -134,7 +134,7 @@ namespace Hospital_Management_System
             // 
             this.LoginTitleLabel.AutoSize = true;
             this.LoginTitleLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginTitleLabel.Location = new System.Drawing.Point(368, 39);
+            this.LoginTitleLabel.Location = new System.Drawing.Point(368, 52);
             this.LoginTitleLabel.Name = "LoginTitleLabel";
             this.LoginTitleLabel.Size = new System.Drawing.Size(58, 23);
             this.LoginTitleLabel.TabIndex = 13;
