@@ -14,7 +14,7 @@ namespace Hospital_Management_System
 {
     public partial class NurseDutySchedule : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-HOP36BN\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection con = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
 
         public NurseDutySchedule()
         {
@@ -49,21 +49,21 @@ namespace Hospital_Management_System
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
+            //if (e.RowIndex < 0) return;
 
-            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+            //DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
 
-            textBoxUsername.Text = row.Cells["Username"].Value?.ToString() ?? "";
-            textBoxRole.Text = row.Cells["Role"].Value?.ToString() ?? "";
+            //textBoxUsername.Text = row.Cells["Username"].Value?.ToString() ?? "";
+            //textBoxRole.Text = row.Cells["Role"].Value?.ToString() ?? "";
 
-            // get status as string (works for int/bit/varchar)
-            string statusVal = row.Cells["Status"].Value?.ToString() ?? "";
+            //// get status as string (works for int/bit/varchar)
+            //string statusVal = row.Cells["Status"].Value?.ToString() ?? "";
 
-            // ensure combo contains the value; if yes select it, otherwise clear selection
-            if (StatusCom.Items.Contains(statusVal))
-                comboBoxStatus.SelectedItem = statusVal;
-            else
-                comboBoxStatus.SelectedIndex = -1;
+            //// ensure combo contains the value; if yes select it, otherwise clear selection
+            //if (StatusCom.Items.Contains(statusVal))
+            //    comboBoxStatus.SelectedItem = statusVal;
+            //else
+            //    comboBoxStatus.SelectedIndex = -1;
         }
     }
 }

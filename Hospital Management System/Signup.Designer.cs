@@ -29,17 +29,6 @@
         private void InitializeComponent()
         {
             this.GeneralInformationsPanel = new System.Windows.Forms.Panel();
-            this.AccountInformationPanel = new System.Windows.Forms.Panel();
-            this.BackButton1 = new System.Windows.Forms.Button();
-            this.SignupButton = new System.Windows.Forms.Button();
-            this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
-            this.ConfirmPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.ConfirmPasswordLabel = new System.Windows.Forms.Label();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
-            this.PasswordLabel = new System.Windows.Forms.Label();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.UsernameLabel = new System.Windows.Forms.Label();
-            this.AccountInformationLabel = new System.Windows.Forms.Label();
             this.AvailableSlotTextBox = new System.Windows.Forms.TextBox();
             this.AvailableSlotLabel = new System.Windows.Forms.Label();
             this.QualificationTextBox = new System.Windows.Forms.TextBox();
@@ -64,6 +53,17 @@
             this.FullNameTextBox = new System.Windows.Forms.TextBox();
             this.FullNameLabel = new System.Windows.Forms.Label();
             this.TitleLabel = new System.Windows.Forms.Label();
+            this.AccountInformationPanel = new System.Windows.Forms.Panel();
+            this.BackButton1 = new System.Windows.Forms.Button();
+            this.SignupButton = new System.Windows.Forms.Button();
+            this.ShowPasswordCheckBox = new System.Windows.Forms.CheckBox();
+            this.ConfirmPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.ConfirmPasswordLabel = new System.Windows.Forms.Label();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.AccountInformationLabel = new System.Windows.Forms.Label();
             this.GeneralInformationsPanel.SuspendLayout();
             this.AccountInformationPanel.SuspendLayout();
             this.SuspendLayout();
@@ -99,124 +99,6 @@
             this.GeneralInformationsPanel.Name = "GeneralInformationsPanel";
             this.GeneralInformationsPanel.Size = new System.Drawing.Size(801, 447);
             this.GeneralInformationsPanel.TabIndex = 0;
-            // 
-            // AccountInformationPanel
-            // 
-            this.AccountInformationPanel.Controls.Add(this.BackButton1);
-            this.AccountInformationPanel.Controls.Add(this.SignupButton);
-            this.AccountInformationPanel.Controls.Add(this.ShowPasswordCheckBox);
-            this.AccountInformationPanel.Controls.Add(this.ConfirmPasswordTextBox);
-            this.AccountInformationPanel.Controls.Add(this.ConfirmPasswordLabel);
-            this.AccountInformationPanel.Controls.Add(this.PasswordTextBox);
-            this.AccountInformationPanel.Controls.Add(this.PasswordLabel);
-            this.AccountInformationPanel.Controls.Add(this.UsernameTextBox);
-            this.AccountInformationPanel.Controls.Add(this.UsernameLabel);
-            this.AccountInformationPanel.Controls.Add(this.AccountInformationLabel);
-            this.AccountInformationPanel.Location = new System.Drawing.Point(3, 3);
-            this.AccountInformationPanel.Name = "AccountInformationPanel";
-            this.AccountInformationPanel.Size = new System.Drawing.Size(798, 447);
-            this.AccountInformationPanel.TabIndex = 42;
-            this.AccountInformationPanel.Visible = false;
-            this.AccountInformationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AccountInformationPanel_Paint);
-            // 
-            // BackButton1
-            // 
-            this.BackButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BackButton1.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.BackButton1.Location = new System.Drawing.Point(104, 373);
-            this.BackButton1.Name = "BackButton1";
-            this.BackButton1.Size = new System.Drawing.Size(87, 30);
-            this.BackButton1.TabIndex = 49;
-            this.BackButton1.Text = "Back";
-            this.BackButton1.UseVisualStyleBackColor = true;
-            // 
-            // SignupButton
-            // 
-            this.SignupButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SignupButton.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.SignupButton.Location = new System.Drawing.Point(506, 373);
-            this.SignupButton.Name = "SignupButton";
-            this.SignupButton.Size = new System.Drawing.Size(145, 33);
-            this.SignupButton.TabIndex = 28;
-            this.SignupButton.Text = "Create Account";
-            this.SignupButton.UseVisualStyleBackColor = true;
-            this.SignupButton.Click += new System.EventHandler(this.SignupButton_Click_1);
-            // 
-            // ShowPasswordCheckBox
-            // 
-            this.ShowPasswordCheckBox.AutoSize = true;
-            this.ShowPasswordCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.Black;
-            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(549, 266);
-            this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
-            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(102, 17);
-            this.ShowPasswordCheckBox.TabIndex = 27;
-            this.ShowPasswordCheckBox.Text = "Show Password";
-            this.ShowPasswordCheckBox.UseVisualStyleBackColor = false;
-            this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
-            // 
-            // ConfirmPasswordTextBox
-            // 
-            this.ConfirmPasswordTextBox.Location = new System.Drawing.Point(251, 264);
-            this.ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
-            this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(246, 20);
-            this.ConfirmPasswordTextBox.TabIndex = 26;
-            this.ConfirmPasswordTextBox.UseSystemPasswordChar = true;
-            // 
-            // ConfirmPasswordLabel
-            // 
-            this.ConfirmPasswordLabel.AutoSize = true;
-            this.ConfirmPasswordLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.ConfirmPasswordLabel.Location = new System.Drawing.Point(101, 267);
-            this.ConfirmPasswordLabel.Name = "ConfirmPasswordLabel";
-            this.ConfirmPasswordLabel.Size = new System.Drawing.Size(118, 17);
-            this.ConfirmPasswordLabel.TabIndex = 25;
-            this.ConfirmPasswordLabel.Text = "Confirm Password";
-            // 
-            // PasswordTextBox
-            // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(251, 196);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(246, 20);
-            this.PasswordTextBox.TabIndex = 24;
-            this.PasswordTextBox.UseSystemPasswordChar = true;
-            // 
-            // PasswordLabel
-            // 
-            this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.PasswordLabel.Location = new System.Drawing.Point(153, 199);
-            this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(66, 17);
-            this.PasswordLabel.TabIndex = 23;
-            this.PasswordLabel.Text = "Password";
-            // 
-            // UsernameTextBox
-            // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(251, 128);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(246, 20);
-            this.UsernameTextBox.TabIndex = 22;
-            // 
-            // UsernameLabel
-            // 
-            this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.UsernameLabel.Location = new System.Drawing.Point(150, 131);
-            this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(69, 17);
-            this.UsernameLabel.TabIndex = 21;
-            this.UsernameLabel.Text = "Username";
-            // 
-            // AccountInformationLabel
-            // 
-            this.AccountInformationLabel.AutoSize = true;
-            this.AccountInformationLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountInformationLabel.Location = new System.Drawing.Point(274, 47);
-            this.AccountInformationLabel.Name = "AccountInformationLabel";
-            this.AccountInformationLabel.Size = new System.Drawing.Size(183, 23);
-            this.AccountInformationLabel.TabIndex = 17;
-            this.AccountInformationLabel.Text = "Account Information";
             // 
             // AvailableSlotTextBox
             // 
@@ -470,6 +352,124 @@
             this.TitleLabel.Size = new System.Drawing.Size(191, 23);
             this.TitleLabel.TabIndex = 18;
             this.TitleLabel.Text = "General Informations";
+            // 
+            // AccountInformationPanel
+            // 
+            this.AccountInformationPanel.Controls.Add(this.BackButton1);
+            this.AccountInformationPanel.Controls.Add(this.SignupButton);
+            this.AccountInformationPanel.Controls.Add(this.ShowPasswordCheckBox);
+            this.AccountInformationPanel.Controls.Add(this.ConfirmPasswordTextBox);
+            this.AccountInformationPanel.Controls.Add(this.ConfirmPasswordLabel);
+            this.AccountInformationPanel.Controls.Add(this.PasswordTextBox);
+            this.AccountInformationPanel.Controls.Add(this.PasswordLabel);
+            this.AccountInformationPanel.Controls.Add(this.UsernameTextBox);
+            this.AccountInformationPanel.Controls.Add(this.UsernameLabel);
+            this.AccountInformationPanel.Controls.Add(this.AccountInformationLabel);
+            this.AccountInformationPanel.Location = new System.Drawing.Point(3, 3);
+            this.AccountInformationPanel.Name = "AccountInformationPanel";
+            this.AccountInformationPanel.Size = new System.Drawing.Size(798, 447);
+            this.AccountInformationPanel.TabIndex = 42;
+            this.AccountInformationPanel.Visible = false;
+            this.AccountInformationPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AccountInformationPanel_Paint);
+            // 
+            // BackButton1
+            // 
+            this.BackButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BackButton1.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.BackButton1.Location = new System.Drawing.Point(104, 373);
+            this.BackButton1.Name = "BackButton1";
+            this.BackButton1.Size = new System.Drawing.Size(87, 30);
+            this.BackButton1.TabIndex = 49;
+            this.BackButton1.Text = "Back";
+            this.BackButton1.UseVisualStyleBackColor = true;
+            // 
+            // SignupButton
+            // 
+            this.SignupButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SignupButton.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.SignupButton.Location = new System.Drawing.Point(506, 373);
+            this.SignupButton.Name = "SignupButton";
+            this.SignupButton.Size = new System.Drawing.Size(145, 33);
+            this.SignupButton.TabIndex = 28;
+            this.SignupButton.Text = "Create Account";
+            this.SignupButton.UseVisualStyleBackColor = true;
+            this.SignupButton.Click += new System.EventHandler(this.SignupButton_Click_1);
+            // 
+            // ShowPasswordCheckBox
+            // 
+            this.ShowPasswordCheckBox.AutoSize = true;
+            this.ShowPasswordCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.ShowPasswordCheckBox.ForeColor = System.Drawing.Color.Black;
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(549, 266);
+            this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
+            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(102, 17);
+            this.ShowPasswordCheckBox.TabIndex = 27;
+            this.ShowPasswordCheckBox.Text = "Show Password";
+            this.ShowPasswordCheckBox.UseVisualStyleBackColor = false;
+            this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
+            // 
+            // ConfirmPasswordTextBox
+            // 
+            this.ConfirmPasswordTextBox.Location = new System.Drawing.Point(251, 264);
+            this.ConfirmPasswordTextBox.Name = "ConfirmPasswordTextBox";
+            this.ConfirmPasswordTextBox.Size = new System.Drawing.Size(246, 20);
+            this.ConfirmPasswordTextBox.TabIndex = 26;
+            this.ConfirmPasswordTextBox.UseSystemPasswordChar = true;
+            // 
+            // ConfirmPasswordLabel
+            // 
+            this.ConfirmPasswordLabel.AutoSize = true;
+            this.ConfirmPasswordLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.ConfirmPasswordLabel.Location = new System.Drawing.Point(101, 267);
+            this.ConfirmPasswordLabel.Name = "ConfirmPasswordLabel";
+            this.ConfirmPasswordLabel.Size = new System.Drawing.Size(118, 17);
+            this.ConfirmPasswordLabel.TabIndex = 25;
+            this.ConfirmPasswordLabel.Text = "Confirm Password";
+            // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.Location = new System.Drawing.Point(251, 196);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(246, 20);
+            this.PasswordTextBox.TabIndex = 24;
+            this.PasswordTextBox.UseSystemPasswordChar = true;
+            // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.PasswordLabel.Location = new System.Drawing.Point(153, 199);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(66, 17);
+            this.PasswordLabel.TabIndex = 23;
+            this.PasswordLabel.Text = "Password";
+            // 
+            // UsernameTextBox
+            // 
+            this.UsernameTextBox.Location = new System.Drawing.Point(251, 128);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(246, 20);
+            this.UsernameTextBox.TabIndex = 22;
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.UsernameLabel.Location = new System.Drawing.Point(150, 131);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(69, 17);
+            this.UsernameLabel.TabIndex = 21;
+            this.UsernameLabel.Text = "Username";
+            // 
+            // AccountInformationLabel
+            // 
+            this.AccountInformationLabel.AutoSize = true;
+            this.AccountInformationLabel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountInformationLabel.Location = new System.Drawing.Point(274, 47);
+            this.AccountInformationLabel.Name = "AccountInformationLabel";
+            this.AccountInformationLabel.Size = new System.Drawing.Size(183, 23);
+            this.AccountInformationLabel.TabIndex = 17;
+            this.AccountInformationLabel.Text = "Account Information";
             // 
             // Signup
             // 

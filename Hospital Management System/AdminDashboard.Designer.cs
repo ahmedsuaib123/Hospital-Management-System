@@ -117,6 +117,7 @@
             this.ManageAdminsLabel.Size = new System.Drawing.Size(137, 22);
             this.ManageAdminsLabel.TabIndex = 80;
             this.ManageAdminsLabel.Text = "Manage Admins";
+            this.ManageAdminsLabel.Click += new System.EventHandler(this.ManageAdminsLabel_Click);
             // 
             // CheckAccountStatusLabel
             // 

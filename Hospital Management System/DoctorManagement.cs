@@ -13,7 +13,7 @@ namespace Hospital_Management_System
 {
     public partial class DoctorManagement : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-HOP36BN\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection con = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
 
         public DoctorManagement()
         {
@@ -61,6 +61,68 @@ namespace Hospital_Management_System
         {
             new AddDoctor().Show();
             this.Hide();
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            string keyword = SearchTextBox.Text;
+            if (keyword.Length == 0)
+            {
+                MessageBox.Show("Please enter a keyword to search.");
+                return;
+            }
+
+            if (SearchComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a search category.");
+                return;
+            }
+
+            string selectedCategory = SearchComboBox.SelectedItem.ToString();
+            string query = "";
+
+            // Build query based on selected category
+            if (selectedCategory == "Doctor ID")
+            {
+                query = "SELECT * FROM Doctor WHERE DoctorID LIKE @keyword";
+            }
+            else if (selectedCategory == "Doctor Name")
+            {
+                query = "SELECT * FROM Doctor WHERE DoctorName LIKE @keyword";
+            }
+            else if (selectedCategory == "Doctor Contact")
+            {
+                query = "SELECT * FROM Doctor WHERE DoctorContact LIKE @keyword";
+            }
+            else if (selectedCategory == "Department")
+            {
+                query = "SELECT * FROM Doctor WHERE Department LIKE @keyword";
+            }
+            else
+            {
+                MessageBox.Show("Invalid search category.");
+                return;
+            }
+
+            // Execute the query
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            da.SelectCommand.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            // Display the result
+            if (dt.Rows.Cast<DataRow>().Any())
+            {
+                DoctorsDataGridView.DataSource = dt;
+            }
+            else
+            {
+                DataTable emptyTable = new DataTable();
+                emptyTable.Columns.Add("Message");
+                emptyTable.Rows.Add("No match found");
+                DoctorsDataGridView.DataSource = emptyTable;
+            }
         }
     }
 }

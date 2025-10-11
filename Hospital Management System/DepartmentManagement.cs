@@ -13,7 +13,7 @@ namespace Hospital_Management_System
 {
     public partial class DepartmentManagement : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-HOP36BN\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
+        SqlConnection con = new SqlConnection("Data Source=localhost\\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True;TrustServerCertificate=True");
 
         public DepartmentManagement()
         {
@@ -33,6 +33,12 @@ namespace Hospital_Management_System
             DepartmentDataGridView.DataSource = dt;
 
             
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            new AdminDashboard().Show();
+            this.Hide();
         }
     }
 }

@@ -65,6 +65,7 @@
             this.BackButton.TabIndex = 46;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // DeleteButton
             // 

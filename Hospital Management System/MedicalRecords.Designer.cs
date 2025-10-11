@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicalRecords));
             this.SearchComboBox = new System.Windows.Forms.ComboBox();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.SearchLabel = new System.Windows.Forms.Label();
             this.BackButton = new System.Windows.Forms.Button();
             this.MedicalRecordsDataGridView = new System.Windows.Forms.DataGridView();
             this.TitleLabel = new System.Windows.Forms.Label();
+            this.SearchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MedicalRecordsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,9 +43,9 @@
             // 
             this.SearchComboBox.FormattingEnabled = true;
             this.SearchComboBox.Items.AddRange(new object[] {
-            "AppointmentID",
-            "PatientName",
-            "DoctorName"});
+            "Record ID",
+            "Patient ID",
+            "Doctor ID"});
             this.SearchComboBox.Location = new System.Drawing.Point(165, 46);
             this.SearchComboBox.Name = "SearchComboBox";
             this.SearchComboBox.Size = new System.Drawing.Size(88, 21);
@@ -55,7 +57,6 @@
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(174, 20);
             this.SearchTextBox.TabIndex = 69;
-            this.SearchTextBox.Visible = false;
             // 
             // SearchLabel
             // 
@@ -100,11 +101,24 @@
             this.TitleLabel.TabIndex = 62;
             this.TitleLabel.Text = "Medical Records";
             // 
+            // SearchButton
+            // 
+            this.SearchButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SearchButton.BackgroundImage")));
+            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.SearchButton.Location = new System.Drawing.Point(259, 44);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(29, 24);
+            this.SearchButton.TabIndex = 71;
+            this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
             // MedicalRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.SearchComboBox);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.SearchLabel);
@@ -129,5 +143,6 @@
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.DataGridView MedicalRecordsDataGridView;
         private System.Windows.Forms.Label TitleLabel;
+        private System.Windows.Forms.Button SearchButton;
     }
 }

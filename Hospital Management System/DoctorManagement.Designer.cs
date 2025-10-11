@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorManagement));
             this.DoctorTitleLabel = new System.Windows.Forms.Label();
             this.DoctorsDataGridView = new System.Windows.Forms.DataGridView();
             this.BackButton = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.SearchComboBox = new System.Windows.Forms.ComboBox();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.SearchLabel = new System.Windows.Forms.Label();
+            this.SearchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DoctorsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,9 +114,10 @@
             // 
             this.SearchComboBox.FormattingEnabled = true;
             this.SearchComboBox.Items.AddRange(new object[] {
-            "AppointmentID",
-            "PatientName",
-            "DoctorName"});
+            "Doctor ID",
+            "Doctor Name",
+            "Doctor Contact",
+            "Department"});
             this.SearchComboBox.Location = new System.Drawing.Point(164, 35);
             this.SearchComboBox.Name = "SearchComboBox";
             this.SearchComboBox.Size = new System.Drawing.Size(88, 21);
@@ -126,7 +129,6 @@
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(174, 20);
             this.SearchTextBox.TabIndex = 60;
-            this.SearchTextBox.Visible = false;
             // 
             // SearchLabel
             // 
@@ -138,11 +140,24 @@
             this.SearchLabel.TabIndex = 59;
             this.SearchLabel.Text = "Search By";
             // 
+            // SearchButton
+            // 
+            this.SearchButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SearchButton.BackgroundImage")));
+            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.SearchButton.Location = new System.Drawing.Point(271, 35);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(29, 24);
+            this.SearchButton.TabIndex = 62;
+            this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            // 
             // DoctorManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.SearchComboBox);
             this.Controls.Add(this.SearchTextBox);
             this.Controls.Add(this.SearchLabel);
@@ -173,5 +188,6 @@
         private System.Windows.Forms.ComboBox SearchComboBox;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.Label SearchLabel;
+        private System.Windows.Forms.Button SearchButton;
     }
 }

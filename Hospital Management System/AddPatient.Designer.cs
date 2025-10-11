@@ -50,6 +50,8 @@
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
             this.UsernameLabel = new System.Windows.Forms.Label();
+            this.AddressTextBox = new System.Windows.Forms.TextBox();
+            this.AddressLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BloodGroupComboBox
@@ -85,6 +87,7 @@
             this.ContactTextBox.Name = "ContactTextBox";
             this.ContactTextBox.Size = new System.Drawing.Size(146, 20);
             this.ContactTextBox.TabIndex = 40;
+            this.ContactTextBox.TextChanged += new System.EventHandler(this.ContactTextBox_TextChanged);
             // 
             // ContactLabel
             // 
@@ -125,6 +128,7 @@
             this.AgeTextBox.ReadOnly = true;
             this.AgeTextBox.Size = new System.Drawing.Size(74, 20);
             this.AgeTextBox.TabIndex = 36;
+            this.AgeTextBox.TextChanged += new System.EventHandler(this.AgeTextBox_TextChanged);
             // 
             // AgeLabel
             // 
@@ -143,6 +147,7 @@
             this.DateOfTimeDateTimePicker.Name = "DateOfTimeDateTimePicker";
             this.DateOfTimeDateTimePicker.Size = new System.Drawing.Size(84, 20);
             this.DateOfTimeDateTimePicker.TabIndex = 34;
+            this.DateOfTimeDateTimePicker.ValueChanged += new System.EventHandler(this.DateOfTimeDateTimePicker_ValueChanged);
             // 
             // DateOfBirthLabel
             // 
@@ -203,6 +208,7 @@
             this.AddButton.TabIndex = 57;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // ShowPasswordCheckBox
             // 
@@ -270,11 +276,32 @@
             this.UsernameLabel.TabIndex = 50;
             this.UsernameLabel.Text = "Username";
             // 
+            // AddressTextBox
+            // 
+            this.AddressTextBox.Location = new System.Drawing.Point(180, 321);
+            this.AddressTextBox.Name = "AddressTextBox";
+            this.AddressTextBox.Size = new System.Drawing.Size(133, 20);
+            this.AddressTextBox.TabIndex = 60;
+            this.AddressTextBox.Visible = false;
+            // 
+            // AddressLabel
+            // 
+            this.AddressLabel.AutoSize = true;
+            this.AddressLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.AddressLabel.Location = new System.Drawing.Point(97, 324);
+            this.AddressLabel.Name = "AddressLabel";
+            this.AddressLabel.Size = new System.Drawing.Size(57, 17);
+            this.AddressLabel.TabIndex = 59;
+            this.AddressLabel.Text = "Address";
+            this.AddressLabel.Visible = false;
+            // 
             // AddPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AddressTextBox);
+            this.Controls.Add(this.AddressLabel);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.ShowPasswordCheckBox);
@@ -300,7 +327,6 @@
             this.Name = "AddPatient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPatient";
-            //this.Load += new System.EventHandler(this.AddPatient_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +356,7 @@
         private System.Windows.Forms.Label PasswordLabel;
         private System.Windows.Forms.TextBox UsernameTextBox;
         private System.Windows.Forms.Label UsernameLabel;
+        private System.Windows.Forms.TextBox AddressTextBox;
+        private System.Windows.Forms.Label AddressLabel;
     }
 }
