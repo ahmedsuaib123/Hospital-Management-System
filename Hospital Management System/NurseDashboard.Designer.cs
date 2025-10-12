@@ -41,7 +41,7 @@
             // 
             // PatientInfoBTN
             // 
-            this.PatientInfoBTN.Location = new System.Drawing.Point(12, 312);
+            this.PatientInfoBTN.Location = new System.Drawing.Point(347, 312);
             this.PatientInfoBTN.Name = "PatientInfoBTN";
             this.PatientInfoBTN.Size = new System.Drawing.Size(77, 34);
             this.PatientInfoBTN.TabIndex = 6;
@@ -51,7 +51,7 @@
             // 
             // DutyScheduleBTN
             // 
-            this.DutyScheduleBTN.Location = new System.Drawing.Point(143, 312);
+            this.DutyScheduleBTN.Location = new System.Drawing.Point(145, 312);
             this.DutyScheduleBTN.Name = "DutyScheduleBTN";
             this.DutyScheduleBTN.Size = new System.Drawing.Size(110, 34);
             this.DutyScheduleBTN.TabIndex = 5;
@@ -61,7 +61,7 @@
             // 
             // NurseDashboardExitBTN
             // 
-            this.NurseDashboardExitBTN.Location = new System.Drawing.Point(355, 312);
+            this.NurseDashboardExitBTN.Location = new System.Drawing.Point(9, 312);
             this.NurseDashboardExitBTN.Name = "NurseDashboardExitBTN";
             this.NurseDashboardExitBTN.Size = new System.Drawing.Size(77, 34);
             this.NurseDashboardExitBTN.TabIndex = 4;

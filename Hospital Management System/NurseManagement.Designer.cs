@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NurseManagement));
             this.BackButton = new System.Windows.Forms.Button();
-            this.UpdateButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.NurseDataGridView = new System.Windows.Forms.DataGridView();
@@ -55,22 +54,11 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // UpdateButton
-            // 
-            this.UpdateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateButton.Location = new System.Drawing.Point(444, 394);
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(87, 33);
-            this.UpdateButton.TabIndex = 20;
-            this.UpdateButton.Text = "Update";
-            this.UpdateButton.UseVisualStyleBackColor = true;
-            // 
             // DeleteButton
             // 
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteButton.Location = new System.Drawing.Point(271, 394);
+            this.DeleteButton.Location = new System.Drawing.Point(346, 394);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(87, 33);
             this.DeleteButton.TabIndex = 19;
@@ -177,7 +165,6 @@
             this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.DutyScheduleButton);
             this.Controls.Add(this.BackButton);
-            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.NurseDataGridView);
@@ -195,7 +182,6 @@
         #endregion
 
         private System.Windows.Forms.Button BackButton;
-        private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.DataGridView NurseDataGridView;

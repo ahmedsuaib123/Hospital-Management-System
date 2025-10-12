@@ -54,6 +54,8 @@
             this.QualificationLabel = new System.Windows.Forms.Label();
             this.AvailableSlotComboBox = new System.Windows.Forms.ComboBox();
             this.AvailableSlotLabel = new System.Windows.Forms.Label();
+            this.DepartmentTextBox = new System.Windows.Forms.TextBox();
+            this.DepartmentLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CancelButton
@@ -298,18 +300,18 @@
             // 
             this.AvailableSlotComboBox.FormattingEnabled = true;
             this.AvailableSlotComboBox.Items.AddRange(new object[] {
-            "A+",
-            "A-",
-            "B+",
-            "B-",
-            "O+",
-            "O-",
-            "AB+",
-            "AB-"});
+            "8:00 AM - 11:00 AM  ",
+            "9:00 AM - 1:00 PM  ",
+            "11:00 AM - 2:00 PM  ",
+            "2:00 PM - 6:00 PM  ",
+            "2:00 PM - 5:00 PM  ",
+            "5:00 PM - 8:00 PM  ",
+            "8:00 PM - 11:00 PM"});
             this.AvailableSlotComboBox.Location = new System.Drawing.Point(172, 352);
             this.AvailableSlotComboBox.Name = "AvailableSlotComboBox";
             this.AvailableSlotComboBox.Size = new System.Drawing.Size(74, 21);
             this.AvailableSlotComboBox.TabIndex = 84;
+            this.AvailableSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.AvailableSlotComboBox_SelectedIndexChanged);
             // 
             // AvailableSlotLabel
             // 
@@ -321,11 +323,30 @@
             this.AvailableSlotLabel.TabIndex = 83;
             this.AvailableSlotLabel.Text = "Available Slot";
             // 
+            // DepartmentTextBox
+            // 
+            this.DepartmentTextBox.Location = new System.Drawing.Point(434, 353);
+            this.DepartmentTextBox.Name = "DepartmentTextBox";
+            this.DepartmentTextBox.Size = new System.Drawing.Size(146, 20);
+            this.DepartmentTextBox.TabIndex = 88;
+            // 
+            // DepartmentLabel
+            // 
+            this.DepartmentLabel.AutoSize = true;
+            this.DepartmentLabel.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.DepartmentLabel.Location = new System.Drawing.Point(334, 356);
+            this.DepartmentLabel.Name = "DepartmentLabel";
+            this.DepartmentLabel.Size = new System.Drawing.Size(78, 17);
+            this.DepartmentLabel.TabIndex = 87;
+            this.DepartmentLabel.Text = "Department";
+            // 
             // AddDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DepartmentTextBox);
+            this.Controls.Add(this.DepartmentLabel);
             this.Controls.Add(this.AvailableSlotComboBox);
             this.Controls.Add(this.AvailableSlotLabel);
             this.Controls.Add(this.QualificationTextBox);
@@ -361,9 +382,7 @@
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Button CancelButton;
+        private new System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.CheckBox ShowPasswordCheckBox;
         private System.Windows.Forms.TextBox ConfirmPasswordTextBox;
@@ -389,5 +408,9 @@
         private System.Windows.Forms.Label QualificationLabel;
         private System.Windows.Forms.ComboBox AvailableSlotComboBox;
         private System.Windows.Forms.Label AvailableSlotLabel;
+        private System.Windows.Forms.TextBox DepartmentTextBox;
+        private System.Windows.Forms.Label DepartmentLabel;
+
+        #endregion
     }
 }

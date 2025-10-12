@@ -34,6 +34,7 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.ProfilePanelExtender = new System.Windows.Forms.Button();
             this.ProfilePanel = new System.Windows.Forms.Panel();
+            this.PasswordChangeButton = new System.Windows.Forms.Button();
             this.BloodGroup1Label = new System.Windows.Forms.Label();
             this.Gender1Label = new System.Windows.Forms.Label();
             this.Age1Label = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
             this.BookAppointmentButton = new System.Windows.Forms.Button();
             this.ReportsButton = new System.Windows.Forms.Button();
             this.PrescriptionsButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.ProfilePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +86,7 @@
             // ProfilePanel
             // 
             this.ProfilePanel.BackColor = System.Drawing.SystemColors.GrayText;
+            this.ProfilePanel.Controls.Add(this.PasswordChangeButton);
             this.ProfilePanel.Controls.Add(this.BloodGroup1Label);
             this.ProfilePanel.Controls.Add(this.Gender1Label);
             this.ProfilePanel.Controls.Add(this.Age1Label);
@@ -95,10 +98,22 @@
             this.ProfilePanel.Controls.Add(this.button1);
             this.ProfilePanel.Controls.Add(this.ContactLabel);
             this.ProfilePanel.Controls.Add(this.NameLabel);
-            this.ProfilePanel.Location = new System.Drawing.Point(790, 0);
+            this.ProfilePanel.Location = new System.Drawing.Point(632, 0);
             this.ProfilePanel.Name = "ProfilePanel";
-            this.ProfilePanel.Size = new System.Drawing.Size(10, 450);
+            this.ProfilePanel.Size = new System.Drawing.Size(168, 450);
             this.ProfilePanel.TabIndex = 24;
+            // 
+            // PasswordChangeButton
+            // 
+            this.PasswordChangeButton.BackColor = System.Drawing.Color.DarkGray;
+            this.PasswordChangeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.PasswordChangeButton.Location = new System.Drawing.Point(32, 311);
+            this.PasswordChangeButton.Name = "PasswordChangeButton";
+            this.PasswordChangeButton.Size = new System.Drawing.Size(111, 34);
+            this.PasswordChangeButton.TabIndex = 34;
+            this.PasswordChangeButton.Text = "Change Password";
+            this.PasswordChangeButton.UseVisualStyleBackColor = false;
+            this.PasswordChangeButton.Click += new System.EventHandler(this.PasswordChangeButton_Click);
             // 
             // BloodGroup1Label
             // 
@@ -204,7 +219,7 @@
             // 
             this.labelLastAppointment.AutoSize = true;
             this.labelLastAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelLastAppointment.Location = new System.Drawing.Point(286, 257);
+            this.labelLastAppointment.Location = new System.Drawing.Point(253, 255);
             this.labelLastAppointment.Name = "labelLastAppointment";
             this.labelLastAppointment.Size = new System.Drawing.Size(148, 20);
             this.labelLastAppointment.TabIndex = 30;
@@ -214,7 +229,7 @@
             // 
             this.labelNextAppointment.AutoSize = true;
             this.labelNextAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelNextAppointment.Location = new System.Drawing.Point(285, 188);
+            this.labelNextAppointment.Location = new System.Drawing.Point(252, 186);
             this.labelNextAppointment.Name = "labelNextAppointment";
             this.labelNextAppointment.Size = new System.Drawing.Size(149, 20);
             this.labelNextAppointment.TabIndex = 28;
@@ -262,11 +277,22 @@
             this.PrescriptionsButton.Text = "Prescriptions";
             this.PrescriptionsButton.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(12, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 18);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Welcome user";
+            // 
             // PatientDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.PrescriptionsButton);
             this.Controls.Add(this.ReportsButton);
             this.Controls.Add(this.labelLastAppointment);
@@ -278,7 +304,7 @@
             this.Controls.Add(this.DateLabel);
             this.Name = "PatientDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PatientDashboard";
+            this.Text = "Hospital Management System";
             this.Load += new System.EventHandler(this.PatientDashboard_Load);
             this.ProfilePanel.ResumeLayout(false);
             this.ProfilePanel.PerformLayout();
@@ -309,5 +335,7 @@
         private System.Windows.Forms.Button BookAppointmentButton;
         private System.Windows.Forms.Button ReportsButton;
         private System.Windows.Forms.Button PrescriptionsButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button PasswordChangeButton;
     }
 }

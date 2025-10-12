@@ -124,5 +124,11 @@ namespace Hospital_Management_System
                 
             
         }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Hide();
+        }
     }
 }

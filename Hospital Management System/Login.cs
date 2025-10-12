@@ -72,19 +72,21 @@ namespace Hospital_Management_System
                     else if (role == "Patient")
                     {
                         SqlDataAdapter da = new SqlDataAdapter(
-                            "SELECT PatientID, PatientName, PatientContact FROM Patient WHERE PatientUsername='" + username + "'", con);
+                            "SELECT * FROM Patient WHERE PatientUsername='" + username + "'", con);
                         DataTable dtt = new DataTable();
                         da.Fill(dtt);
                         if (dtt.Rows.Count > 0)
                         {
                             patientID = Convert.ToInt32(dtt.Rows[0]["PatientID"]).ToString();   
                             fullName = dtt.Rows[0]["PatientName"].ToString();
-                            contact = dtt.Rows[0]["PatientContact"].ToString();  
+                            contact = dtt.Rows[0]["PatientContact"].ToString();
+                            gender = dtt.Rows[0]["Gender"].ToString();
+                            bloodGroup = dtt.Rows[0]["BloodGroup"].ToString();
                         }
                     }
                     else if (role == "Nurse")
                     {
-                        SqlDataAdapter da = new SqlDataAdapter("SELECT NurseID, NurseName FROM Nurse WHERE NurseUsername='" + username + "'", con);
+                        SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Nurse WHERE NurseUsername='" + username + "'", con);
                         DataTable dtt = new DataTable();
                         da.Fill(dtt);
                         if (dtt.Rows.Count > 0)

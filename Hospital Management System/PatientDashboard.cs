@@ -43,6 +43,8 @@ namespace Hospital_Management_System
 
         private void PatientDashboard_Load(object sender, EventArgs e)
         {
+            label1.Text = "Welcome, " + Login.username;
+
             Name1Label.Text = Login.fullName;
             Contact1Label.Text = Login.contact;
             Age1Label.Text = Login.age != null ? Login.age.ToString() : "N/A";
@@ -53,6 +55,74 @@ namespace Hospital_Management_System
             Timer dateTimer = new Timer { Interval = 1000 };
             dateTimer.Tick += (s, ev) => DateLabel.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy hh:mm:ss tt");
             dateTimer.Start();
+
+            LoadAppointments();
+        }
+
+        private void LoadAppointments()
+        {
+            try
+            {
+                con.Open();
+
+                // 🔹 Next Appointment (today or future)
+                string nextQuery = @"
+            SELECT TOP 1 AppointmentDate, AppointmentSlot
+            FROM Appointment
+            WHERE PatientID = @PatientID AND AppointmentDate >= GETDATE()
+            ORDER BY AppointmentDate ASC";
+
+                using (SqlCommand cmdNext = new SqlCommand(nextQuery, con))
+                {
+                    cmdNext.Parameters.AddWithValue("@PatientID", Login.patientID);
+
+                    SqlDataReader reader = cmdNext.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        DateTime nextDate = Convert.ToDateTime(reader["AppointmentDate"]);
+                        string slot = reader["AppointmentSlot"].ToString();
+                        labelNextAppointment.Text = $"Next Appointment: {nextDate:dd MMM yyyy} ";
+                    }
+                    else
+                    {
+                        labelNextAppointment.Text = "Next Appointment: No upcoming appointment";
+                    }
+                    reader.Close();
+                }
+
+                // 🔹 Last Appointment (past)
+                string lastQuery = @"
+            SELECT TOP 1 AppointmentDate, AppointmentSlot
+            FROM Appointment
+            WHERE PatientID = @PatientID AND AppointmentDate < GETDATE()
+            ORDER BY AppointmentDate DESC";
+
+                using (SqlCommand cmdLast = new SqlCommand(lastQuery, con))
+                {
+                    cmdLast.Parameters.AddWithValue("@PatientID", Login.patientID);
+
+                    SqlDataReader reader = cmdLast.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        DateTime lastDate = Convert.ToDateTime(reader["AppointmentDate"]);
+                        string slot = reader["AppointmentSlot"].ToString();
+                        labelLastAppointment.Text = $"Last Appointment: {lastDate:dd MMM yyyy}";
+                    }
+                    else
+                    {
+                        labelLastAppointment.Text = "Last Appointment: No previous appointment";
+                    }
+                    reader.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading appointments: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         private void ProfilePanelExtender_Click(object sender, EventArgs e)
@@ -107,6 +177,12 @@ namespace Hospital_Management_System
         private void button4_Click(object sender, EventArgs e)
         {
             new ViewAppointments().Show();
+            this.Hide();
+        }
+
+        private void PasswordChangeButton_Click(object sender, EventArgs e)
+        {
+            new AdminPasswordChange().Show();
             this.Hide();
         }
     }

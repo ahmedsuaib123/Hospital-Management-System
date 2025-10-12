@@ -23,8 +23,7 @@ namespace Hospital_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+            
                 con.Open();
                 string select_query = "SELECT Username, Role, Status FROM Login";
                 SqlDataAdapter da = new SqlDataAdapter(select_query, con);
@@ -35,15 +34,9 @@ namespace Hospital_Management_System
                 dataGridView1.ReadOnly = true;
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error loading data: " + ex.Message);
-            }
-            finally
-            {
+            
                 con.Close();
-            }
+            
         }
 
         // Handles both CellContentClick and CellClick (wired from Designer)

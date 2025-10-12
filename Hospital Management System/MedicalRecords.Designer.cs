@@ -72,7 +72,7 @@
             // 
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BackButton.Font = new System.Drawing.Font("Times New Roman", 13F);
-            this.BackButton.Location = new System.Drawing.Point(79, 405);
+            this.BackButton.Location = new System.Drawing.Point(371, 394);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(87, 33);
             this.BackButton.TabIndex = 67;
