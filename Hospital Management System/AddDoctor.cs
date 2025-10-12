@@ -18,7 +18,6 @@ namespace Hospital_Management_System
             InitializeComponent();
         }
 
-
         private bool HasSpecialChar(string password) => password.Any(ch => !char.IsLetterOrDigit(ch));
         private bool HasUpperCase(string password) => password.Any(ch => char.IsUpper(ch));
         private bool HasLowerCase(string password) => password.Any(ch => char.IsLower(ch));
